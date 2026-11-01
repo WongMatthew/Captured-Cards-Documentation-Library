@@ -5,7 +5,7 @@ Live, editable versions are at the links below. Files in this bundle are snapsho
 ## 1. Operations documents (Claude Docs → exported PDF)
 
 | # | Document | Version / status | Owner on doc |
-|---|---|---|---|---|
+|---|---|---|---|
 | 01 | Standard Operating Procedures Manual (+ editable .md) | 1.0 | Leon Chan |
 | 02 | Retail Employee Agreement **v1.2 (current)** | 1.2 | Leon Chan |
 | 03 | Code of Conduct | 1.0 DRAFT | "CapturedCards Owner" |
@@ -19,7 +19,7 @@ Live, editable versions are at the links below. Files in this bundle are snapsho
 ## 2. Design & marketing (artifact source folders — open index.html)
 
 | Item | 
-|---|---|
+|---|
 | Brand Guidelines (design version, 31 Oct — newest) | 
 | Buylist Graphics | 
 | Website (Deal Me In) | 
