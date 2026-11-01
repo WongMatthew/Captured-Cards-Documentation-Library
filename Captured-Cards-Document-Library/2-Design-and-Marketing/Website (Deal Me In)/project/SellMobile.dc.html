@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Sell us your cards — Captured! Cards (mobile)</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&amp;family=Instrument+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@900&amp;text=%E8%B2%B7%E5%8F%96&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#17183B}a:hover{color:#2B44D6}
+*:focus-visible{outline:3px solid #2B44D6;outline-offset:3px}
+input::placeholder,textarea::placeholder{color:#5A5B78}
+.kw{max-width:1280px;margin:0 auto;padding-left:24px;padding-right:24px;box-sizing:border-box}
+.kh{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;letter-spacing:-0.025em;line-height:1;margin:0}
+.kjp{font-family:'Noto Sans JP',sans-serif;font-weight:900}
+.kb{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:0 24px;border-radius:14px;border:3px solid #17183B;font-family:inherit;font-size:17px;font-weight:700;text-decoration:none;cursor:pointer;box-sizing:border-box}
+.kb-blue,.kb-blue:hover{background:#2B44D6;color:#FFFFFF}.kb-yel,.kb-yel:hover{background:#FFD447;color:#17183B;box-shadow:5px 5px 0 #17183B}.kb-ink,.kb-ink:hover{background:#17183B;color:#FFD447}.kb-out,.kb-out:hover{background:#FFFFFF;color:#17183B}.kb-ghost,.kb-ghost:hover{background:transparent;color:#FFFFFF;border-color:#FFFFFF}
+.kc{background:#FFFFFF;border:4px solid #17183B;border-radius:20px;box-shadow:6px 6px 0 #17183B}
+.knav{display:flex;flex-wrap:wrap;gap:2px 20px;font-weight:600;font-size:15px}
+.knav a{text-decoration:none;padding:10px 0}
+.knav a[aria-current="page"]{text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:7px}
+.ki{width:44px;height:44px;border-radius:50%;border:3px solid #17183B;background:#FFFFFF;color:#17183B;display:grid;place-items:center;cursor:pointer;box-sizing:border-box;flex-shrink:0}
+.kfield{width:100%;min-height:52px;border:3px solid #17183B;border-radius:12px;background:#FFFFFF;color:#17183B;font:inherit;font-size:16px;padding:0 14px;box-sizing:border-box}
+.klabel{display:block;font-weight:700;font-size:15px;margin-bottom:6px}
+.klift{transition:transform .25s cubic-bezier(.2,.9,.25,1.1)}
+.klift:hover{transform:translateY(-6px) rotate(-1deg)}
+.mscroll{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 20px 18px;scrollbar-width:none}
+.mscroll > *{scroll-snap-align:start}
+details > summary{cursor:pointer;list-style:none}
+details > summary::-webkit-details-marker{display:none}
+details[open] .kplus{transform:rotate(45deg)}
+.kplus{transition:transform .2s}
+.knav a{color:#FFFFFF}.knav a:hover{color:#FFD447}.knav a[aria-current="page"]{color:#FFD447}
+.kib{width:44px;height:44px;border-radius:50%;border:3px solid #17183B;background:#FFD447;color:#17183B;display:grid;place-items:center;cursor:pointer;box-sizing:border-box;position:relative;text-decoration:none}
+.kbadge{position:absolute;top:-6px;right:-6px;min-width:20px;height:20px;border-radius:999px;background:#17183B;color:#FFFFFF;font-size:12px;font-weight:700;display:grid;place-items:center;padding:0 5px;box-sizing:border-box}
+.tl-img{display:block;position:relative;border-radius:12px;transition:transform .3s cubic-bezier(.2,.9,.25,1.1),box-shadow .3s}
+.tl:hover .tl-img{transform:translateY(-6px) rotate(-1.5deg);box-shadow:6px 6px 0 #17183B}
+.tl-heart{position:absolute;right:6px;bottom:6px;width:40px;height:40px;border-radius:50%;border:2px solid #17183B;background:rgba(255,255,255,.92);color:#2B44D6;display:grid;place-items:center;cursor:pointer}
+.tl-title{font-size:14px;line-height:1.35;text-decoration:none;color:#17183B}
+.tl-title:hover{text-decoration:underline}
+@keyframes slDeal{from{opacity:0;transform:translateY(80px) rotate(10deg)}to{opacity:1;transform:none}}
+.sl-deal{animation:slDeal .6s cubic-bezier(.2,.9,.25,1.1) backwards;animation-delay:var(--d)}
+@media (prefers-reduced-motion: reduce){.klift,.kplus{transition:none}.klift:hover{transform:none}.tl-img{transition:none}.tl:hover .tl-img{transform:none}.sl-deal{animation:none}}
+.kacct{position:relative}
+.kacct > summary{list-style:none;cursor:pointer}
+.kacct > summary::-webkit-details-marker{display:none}
+.kacct[open] > summary{background:#FFD447 !important}
+.kacct-panel{position:absolute;right:0;top:calc(100% + 12px);z-index:30;width:300px;background:#FFFFFF;color:#17183B;border:3px solid #17183B;border-radius:18px;box-shadow:6px 6px 0 #17183B;padding:18px;display:flex;flex-direction:column;gap:12px;box-sizing:border-box;animation:kacctPop .25s cubic-bezier(.2,.9,.25,1.2);text-align:left}
+.kacct-panel.kacct-m{right:-108px;width:340px}
+.kacct-panel a.kb{width:100%}
+@keyframes kacctPop{from{opacity:0;transform:translateY(-8px) scale(.96)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion: reduce){.kacct-panel{animation:none}}
+</style>
+</helmet>
+<div style="width: 100%; overflow-x: clip; background: #FFD447; color: #17183B; font-family: 'Instrument Sans', system-ui, sans-serif; font-size: 16px; line-height: 1.5">
+<header style="background: #2B44D6; padding: 10px 16px 10px 18px; display: flex; align-items: center; justify-content: space-between; gap: 8px; border-bottom: 3px solid #17183B">
+<a href="KineticMobile.dc.html" aria-label="Captured! Cards home" style="display: block"><img src="/_blob/01497f49b7236fe8f2c4864dbb596a48" alt="Captured! Cards" style="height: 42px; width: auto; display: block"></a>
+<div style="display: flex; gap: 10px">
+<label for="cur-m" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Currency</label><select id="cur-m" class="kcur" style="width: 86px; font-size: 14px; padding: 0 22px 0 10px; height: 44px; border: 3px solid #17183B; border-radius: 999px; background: #FFFFFF url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2210%22 height=%226%22%3E%3Cpath d=%22M1 1l4 4 4-4%22 fill=%22none%22 stroke=%22%2317183B%22 stroke-width=%222%22/%3E%3C/svg%3E') no-repeat right 10px center; color: #17183B; font-family: inherit; font-weight: 700; cursor: pointer; appearance: none; -webkit-appearance: none; box-sizing: border-box"><option value="CAD">CAD $</option><option value="USD">USD $</option><option value="EUR">EUR €</option><option value="GBP">GBP £</option><option value="AUD">AUD $</option><option value="JPY">JPY ¥</option></select>
+<details class="kacct">
+<summary class="kib" aria-label="Account" style="background: #FFFFFF"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"></path></svg></summary>
+<div class="kacct-panel kacct-m">
+<p style="margin: 0; font-size: 20px; font-weight: 600">Account</p>
+<a href="https://capturedcards.com/account" class="kb" style="background: #5A31F4; color: #FFFFFF; border-color: #5A31F4; min-height: 50px; font-size: 16px">Sign in with Shop</a>
+<a href="https://capturedcards.com/account" class="kb" style="background: #000000; color: #FFFFFF; border-color: #000000; min-height: 50px; font-size: 16px">Other sign in options</a>
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px">
+<a href="https://capturedcards.com/account" class="kb kb-out" style="min-height: 48px; padding: 0 10px; font-size: 15px; border-width: 2px; font-weight: 600"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="6" width="16" height="14" rx="2"></rect><path d="M4 10h16M10 14h4"></path></svg>Orders</a>
+<a href="https://capturedcards.com/account/profile" class="kb kb-out" style="min-height: 48px; padding: 0 10px; font-size: 15px; border-width: 2px; font-weight: 600"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"></path></svg>Profile</a>
+</div>
+</div>
+</details>
+<a href="CheckoutMobile.dc.html" class="kib" aria-label="Cart, {{cartCount}} items"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 7h12l-1 13H7L6 7z"></path><path d="M9 7a3 3 0 0 1 6 0"></path></svg><span class="kbadge">{{cartCount}}</span></a>
+<button type="button" class="kib" aria-label="Menu" aria-expanded="{{menuStr}}" onClick="{{toggleMenu}}" style="background: #FFFFFF"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="{{menuIcon}}"></path></svg></button>
+</div>
+</header>
+<sc-if value="{{menuOpen}}" hint-placeholder-val="{{ false }}">
+<nav aria-label="Main" style="background: #17183B; padding: 8px 20px 20px; display: flex; flex-direction: column">
+<a href="ShopMobile.dc.html" style="color: #FFFFFF; text-decoration: none; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 24px; padding: 10px 0; border-bottom: 1px solid #2D2E58;">Shop all</a>
+<a href="CollectionMobile.dc.html" style="color: #FFFFFF; text-decoration: none; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 24px; padding: 10px 0; border-bottom: 1px solid #2D2E58;">Pokémon singles</a>
+<a href="CollectionMobile.dc.html" style="color: #FFFFFF; text-decoration: none; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 24px; padding: 10px 0; border-bottom: 1px solid #2D2E58;">Japanese singles</a>
+<a href="CollectionMobile.dc.html" style="color: #FFFFFF; text-decoration: none; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 24px; padding: 10px 0; border-bottom: 1px solid #2D2E58;">Pokémon sealed</a>
+<a href="CollectionMobile.dc.html" style="color: #FFFFFF; text-decoration: none; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 24px; padding: 10px 0; border-bottom: 1px solid #2D2E58;">Miscellaneous</a>
+<a href="SellMobile.dc.html" aria-current="page" style="color: #FFD447; text-decoration: none; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 24px; padding: 10px 0; border-bottom: 1px solid #2D2E58;">Sell us your cards</a>
+<a href="EventsMobile.dc.html" style="color: #FFFFFF; text-decoration: none; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 24px; padding: 10px 0; border-bottom: 1px solid #2D2E58;">Events</a>
+<a href="ContactMobile.dc.html" style="color: #FFFFFF; text-decoration: none; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 24px; padding: 10px 0;">Contact</a>
+</nav>
+</sc-if>
+<section style="background: #2B44D6; color: #FFFFFF; border-bottom: 3px solid #17183B; padding: 24px 20px 34px; display: flex; flex-direction: column; gap: 16px">
+<span style="align-self: flex-start; border: 3px solid #FFFFFF; border-radius: 999px; padding: 4px 12px; font-size: 13px; font-weight: 700">Buylist · Oct 28</span>
+<div style="display: flex; align-items: flex-end; gap: 14px">
+<h1 class="kh" style="font-size: 80px; line-height: 0.88; letter-spacing: -0.045em">We’re<br><span style="color: #FFD447">buying.</span></h1>
+<span class="kjp" aria-hidden="true" style="background: #17183B; color: #FFD447; border: 3px solid #17183B; border-radius: 12px; font-size: 28px; line-height: 1; padding: 9px 10px; margin-bottom: 8px; transform: rotate(-8deg); box-shadow: 4px 4px 0 #FFFFFF">買取</span>
+</div>
+<p style="margin: 0; font-size: 16px; font-weight: 500">Cash or store credit, same day · CAD · Near Mint, ungraded · Burnaby, BC</p>
+<p style="margin: 0; font-size: 16px; color: #E6E9FF">Check what we’re paying, build your list online and get an offer on your cards.</p>
+<a href="https://buylist.capturedcards.com/retailer/buylist" class="kb kb-yel" style="min-height: 56px; font-size: 18px">Start your buylist →</a>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 8px">
+<sc-for list="{{heroBuys}}" as="b" hint-placeholder-count="4">
+<a href="#wanted" class="klift sl-deal" aria-label="We buy {{b.name}}, {{b.meta}}, for {{b.price}}" style="--d: {{b.delay}}; text-decoration: none; background: #FFFFFF; color: #17183B; border: 3px solid #17183B; border-radius: 16px; box-shadow: 5px 5px 0 #17183B; overflow: hidden; display: flex; flex-direction: column">
+<div style="padding: 10px 10px 8px; display: flex; flex-direction: column; gap: 8px">
+<div style="{{b.art}}"><span style="background: #FFFFFF; color: #17183B; border-radius: 999px; padding: 2px 8px; font-size: 11px; font-weight: 700">Card photo</span></div>
+<div>
+<div style="font-size: 15px; font-weight: 700; line-height: 1.2">{{b.name}}</div>
+<div style="font-size: 12px; color: #3A3B5C">{{b.meta}}</div>
+</div>
+</div>
+<div style="{{b.bar}}"><span class="kjp" style="font-size: 12px">{{b.label}}</span><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 22px; line-height: 1">{{b.price}}</span></div>
+</a>
+
+</sc-for>
+</div>
+</section>
+
+<section style="padding: 40px 20px">
+<h2 class="kh" style="font-size: 40px; letter-spacing: -0.03em; margin-bottom: 18px">Selling takes three steps.</h2>
+<ol style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 14px">
+<li class="kc" style="padding: 18px; display: grid; grid-template-columns: 44px 1fr; gap: 12px; align-items: start"><span class="kh" aria-hidden="true" style="font-size: 48px; color: #2B44D6">1</span><div><h3 style="margin: 0 0 4px; font-size: 19px">Build your list</h3><p style="margin: 0; color: #3A3B5C; font-size: 15px">Search our buylist, add your cards and choose each card’s condition.</p></div></li>
+<li class="kc" style="padding: 18px; display: grid; grid-template-columns: 44px 1fr; gap: 12px; align-items: start"><span class="kh" aria-hidden="true" style="font-size: 48px; color: #2B44D6">2</span><div><h3 style="margin: 0 0 4px; font-size: 19px">Bring in your cards</h3><p style="margin: 0; color: #3A3B5C; font-size: 15px">Drop them off at our Burnaby shop. We check each card against your list. [Add mail-in details if you offer it.]</p></div></li>
+<li class="kc" style="padding: 18px; display: grid; grid-template-columns: 44px 1fr; gap: 12px; align-items: start"><span class="kh" aria-hidden="true" style="font-size: 48px; color: #2B44D6">3</span><div><h3 style="margin: 0 0 4px; font-size: 19px">Get paid the same day</h3><p style="margin: 0; color: #3A3B5C; font-size: 15px">Take cash, or choose trade credit and get more for your cards.</p></div></li>
+</ol>
+</section>
+
+<section id="wanted" style="background: #2B44D6; color: #FFFFFF; border-block: 3px solid #17183B; padding: 34px 20px; display: flex; flex-direction: column; gap: 16px">
+<h2 class="kh" style="font-size: 42px; letter-spacing: -0.035em">Cards we want <span style="color: #FFD447">right now.</span></h2>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px">
+<sc-for list="{{wanted}}" as="b" hint-placeholder-count="20">
+<a href="#wanted" class="klift " aria-label="We buy {{b.name}}, {{b.meta}}, for {{b.price}}" style="--d: {{b.delay}}; text-decoration: none; background: #FFFFFF; color: #17183B; border: 3px solid #17183B; border-radius: 16px; box-shadow: 5px 5px 0 #17183B; overflow: hidden; display: flex; flex-direction: column">
+<div style="padding: 10px 10px 8px; display: flex; flex-direction: column; gap: 8px">
+<div style="{{b.art}}"><span style="background: #FFFFFF; color: #17183B; border-radius: 999px; padding: 2px 8px; font-size: 11px; font-weight: 700">Card photo</span></div>
+<div>
+<div style="font-size: 15px; font-weight: 700; line-height: 1.2">{{b.name}}</div>
+<div style="font-size: 12px; color: #3A3B5C">{{b.meta}}</div>
+</div>
+</div>
+<div style="{{b.bar}}"><span class="kjp" style="font-size: 12px">{{b.label}}</span><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 22px; line-height: 1">{{b.price}}</span></div>
+</a>
+
+</sc-for>
+</div>
+<p style="margin: 0; font-size: 14px; font-weight: 600">20 cards wanted · Prices in CAD · Near Mint, ungraded · Cash or store credit, same day · Valid to [date]</p>
+<a href="https://buylist.capturedcards.com/retailer/buylist" class="kb kb-yel">Sell us your cards →</a>
+</section>
+
+<section style="padding: 36px 20px 10px; display: flex; flex-direction: column; gap: 14px">
+<div class="kc" style="padding: 20px"><h2 class="kh" style="font-size: 28px; margin-bottom: 6px">Take cash</h2><p style="margin: 0; color: #3A3B5C">Walk out with your money the same day.</p></div>
+<div class="kc" style="padding: 20px; background: #17183B; color: #FFFFFF"><h2 class="kh" style="font-size: 28px; color: #FFD447; margin-bottom: 6px">Or get trade credit</h2><p style="margin: 0">Trade credit gets you more: 80% instead of 70% cash on cards not on the buylist. Spend it on singles, sealed and pre-orders.</p></div>
+</section>
+
+<section style="padding: 26px 20px 40px; display: flex; flex-direction: column; gap: 12px">
+<h2 class="kh" style="font-size: 34px; margin-bottom: 4px">Questions sellers ask</h2>
+<details class="kc" style="padding: 0 16px; border-radius: 16px" open><summary style="display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 60px; font-weight: 700">What condition do my cards need to be in? <span class="kplus" aria-hidden="true" style="font-size: 26px">+</span></summary><p style="margin: 0 0 16px; color: #3A3B5C">Buylist prices are for Near Mint, ungraded cards. For other conditions, add them to your list and we’ll adjust the offer, or call us first.</p></details>
+<details class="kc" style="padding: 0 16px; border-radius: 16px"><summary style="display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 60px; font-weight: 700">Do you buy graded cards? <span class="kplus" aria-hidden="true" style="font-size: 26px">+</span></summary><p style="margin: 0 0 16px; color: #3A3B5C">Yes. We buy graded cards. Bring your slabs into the shop and we’ll make you an offer.</p></details>
+<details class="kc" style="padding: 0 16px; border-radius: 16px"><summary style="display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 60px; font-weight: 700">Do you buy Japanese cards or sealed? <span class="kplus" aria-hidden="true" style="font-size: 26px">+</span></summary><p style="margin: 0 0 16px; color: #3A3B5C">[Your answer about Japanese cards and sealed product.]</p></details>
+<details class="kc" style="padding: 0 16px; border-radius: 16px"><summary style="display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 60px; font-weight: 700">Do I need an appointment? <span class="kplus" aria-hidden="true" style="font-size: 26px">+</span></summary><p style="margin: 0 0 16px; color: #3A3B5C">[Your answer, with buying hours.]</p></details>
+<details class="kc" style="padding: 0 16px; border-radius: 16px"><summary style="display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 60px; font-weight: 700">My card isn’t on the list. Will you buy it? <span class="kplus" aria-hidden="true" style="font-size: 26px">+</span></summary><p style="margin: 0 0 16px; color: #3A3B5C">Yes. Offers on cards that aren’t on the buylist start at 70% cash or 80% trade credit [of market value]. Bring them in and we’ll look them over.</p></details>
+</section>
+
+<footer style="background: #17183B; color: #FFFFFF; padding: 32px 20px 40px; display: flex; flex-direction: column; gap: 22px">
+<img src="/_blob/01497f49b7236fe8f2c4864dbb596a48" alt="Captured! Cards" style="height: 54px; width: auto; align-self: flex-start">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<label for="mf-email" style="font-weight: 700">Get new releases in your inbox first</label>
+<input id="mf-email" type="email" placeholder="you@example.com" style="min-height: 50px; border: 3px solid #FFD447; border-radius: 12px; padding: 0 14px; font: inherit; background: #FFFFFF; color: #17183B">
+<button type="button" class="kb kb-yel" style="box-shadow: none; border-color: #FFD447">Join the list</button>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 14px">
+<a href="EventsMobile.dc.html" style="color: #FFFFFF; padding: 8px 0">Events</a><a href="ContactMobile.dc.html" style="color: #FFFFFF; padding: 8px 0">Contact us</a><a href="#policies" style="color: #FFFFFF; padding: 8px 0">Shipping policy</a><a href="#policies" style="color: #FFFFFF; padding: 8px 0">Refund policy</a><a href="#policies" style="color: #FFFFFF; padding: 8px 0">Privacy policy</a><a href="#policies" style="color: #FFFFFF; padding: 8px 0">Terms of service</a>
+<span style="flex-basis: 100%; color: #C9CAE0">© 2026 Captured! Cards, Burnaby, BC</span>
+</div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":7200}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = Object.assign({ menu: false, cart: 0, wish: {}, cond: {} }, { cart: 2 });
+  }
+
+  stripe(i, w) {
+    const S = [['#2B44D6', '#4A60E0'], ['#E4572E', '#EC7A58'], ['#7BC8A4', '#9AD6BA'], ['#17183B', '#2D2E58'], ['#FFD447', '#FFE07A']];
+    const s = S[i % 5];
+    return 'background: repeating-linear-gradient(135deg, ' + s[0] + ' 0 ' + w + 'px, ' + s[1] + ' ' + w + 'px ' + (w + 4) + 'px)';
+  }
+  fmt(n) { return '$' + n.toLocaleString('en-CA', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); }
+  conds() {
+    return [
+      { short: 'NM', full: 'Near Mint', m: 1 },
+      { short: 'LP', full: 'Lightly Played', m: 0.85 },
+      { short: 'MP', full: 'Moderately Played', m: 0.7 },
+      { short: 'HP', full: 'Heavily Played', m: 0.5 }
+    ];
+  }
+  listing(c, i) {
+    const st = this.state;
+    const conds = this.conds();
+    const sel = (st.cond || {})[c.id] || 'NM';
+    const wished = !!(st.wish || {})[c.id];
+    const cur = conds.find((k) => k.short === sel);
+    const sold = c.qty === 0;
+    return {
+      ...c,
+      price: this.fmt(c.price * cur.m),
+      condLabel: cur.full,
+      stock: sold ? 'Sold out' : (c.qty <= 2 ? c.qty + ' left' : 'In stock'),
+      stockColor: sold ? '#B3261E' : '#1B6B3A',
+      sold, notSold: !sold,
+      wishedStr: wished ? 'true' : 'false',
+      heartFill: wished ? 'currentColor' : 'none',
+      art: this.stripe(i, 14) + '; aspect-ratio: 63 / 88; border: 3px solid #17183B; border-radius: 10px; box-sizing: border-box; display: flex; align-items: flex-end; justify-content: center; padding: 10px',
+      toggleWish: () => this.setState({ wish: { ...(this.state.wish || {}), [c.id]: !wished } }),
+      add: () => this.setState({ cart: (this.state.cart || 0) + 1 }),
+      conds: conds.map((k) => {
+        const on = k.short === sel;
+        return {
+          ...k,
+          pressed: on ? 'true' : 'false',
+          pick: () => this.setState({ cond: { ...(this.state.cond || {}), [c.id]: k.short } }),
+          style: 'flex: 1; min-height: 44px; border-radius: 10px; border: 3px solid #17183B; font: inherit; font-size: 14px; font-weight: 700; cursor: pointer; background: ' + (on ? '#2B44D6' : '#FFFFFF') + '; color: ' + (on ? '#FFFFFF' : '#17183B')
+        };
+      })
+    };
+  }
+
+  tile(c, i) {
+    const wished = !!(this.state.wish || {})[c.id];
+    const sold = c.qty === 0;
+    const has = !!c.img;
+    return {
+      ...c, sold, notSold: !sold, hasImg: has, noImg: !has,
+      priceText: '$' + c.price.toLocaleString('en-CA', { minimumFractionDigits: 2, maximumFractionDigits: 2 }),
+      imgOpacity: sold ? '0.55' : '1',
+      art: this.stripe(i, 12) + '; aspect-ratio: 248 / 345; border: 3px solid #17183B; border-radius: 12px; box-sizing: border-box; display: flex; align-items: flex-end; justify-content: center; padding: 10px' + (sold ? '; opacity: 0.55' : ''),
+      wishedStr: wished ? 'true' : 'false', heartFill: wished ? 'currentColor' : 'none',
+      toggleWish: () => this.setState({ wish: { ...(this.state.wish || {}), [c.id]: !wished } })
+    };
+  }
+
+  renderVals() {
+    const v = this.pageVals();
+    return Object.assign({ menuOpen: !!this.state.menu, menuStr: this.state.menu ? 'true' : 'false', menuIcon: this.state.menu ? 'M6 6l12 12M18 6L6 18' : 'M4 7h16M4 12h16M4 17h16', toggleMenu: () => this.setState({ menu: !this.state.menu }), cartCount: this.state.cart || 0 }, v);
+  }
+  pageVals() {
+    const list = [
+      ['Umbreon ex', '161/131 · PRE · SIR'], ['Charizard ex', '199/165 · MEW · SIR'], ['Pikachu ex', '238/191 · SSP · SIR'], ['Umbreon VMAX', '215/203 · EVS · Alt art'],
+      ['Giratina V', '186/196 · LOR · Alt art'], ['Rayquaza VMAX', '218/203 · EVS · Alt art'], ['Lugia V', '186/195 · SIT · Alt art'], ['Charizard ex', '223/197 · OBF · SIR'],
+      ['Blastoise ex', '200/165 · MEW · SIR'], ['Venusaur ex', '198/165 · MEW · SIR'], ['Erika’s Invitation', '203/165 · MEW · SIR'], ['Sylveon ex', '156/131 · PRE · SIR'],
+      ['Espeon ex', '155/131 · PRE · SIR'], ['Mew ex', '232/091 · PAF · SIR'], ['Charizard ex', '234/091 · PAF · SIR'], ['Iono', '269/193 · PAL · SIR'],
+      ['Magikarp', '203/193 · PAL · IR'], ['Gengar VMAX', '271/264 · FST · Alt art'], ['Alakazam ex', '201/165 · MEW · SIR'], ['Zapdos ex', '202/165 · MEW · SIR']
+    ];
+    const mk = (b, i, bw) => ({
+      name: b[0], meta: b[1], price: i === 0 ? '$0,000' : '$000', label: i === 0 ? 'Top buy' : '買取', delay: (0.08 * i + 0.1).toFixed(2) + 's',
+      art: this.stripe(i, 12) + '; aspect-ratio: 63 / 88; border: 3px solid #17183B; border-radius: 9px; box-sizing: border-box; display: flex; align-items: flex-end; justify-content: center; padding: 8px',
+      bar: 'margin-top: auto; padding: 8px 10px; display: flex; justify-content: space-between; align-items: baseline; ' + (i === 0 ? 'background: #17183B; color: #FFD447' : 'background: #FFD447; color: #17183B; border-top: ' + bw + 'px solid #17183B')
+    });
+    return { heroBuys: list.slice(0, 4).map((b, i) => mk(b, i, 3)), wanted: list.map((b, i) => mk(b, i, 3)) };
+
+  }
+}
+</script>
+</body>
+</html>

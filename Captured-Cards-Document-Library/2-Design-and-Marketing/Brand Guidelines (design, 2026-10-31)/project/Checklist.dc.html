@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Accessibility, IP and checklist</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&amp;family=Instrument+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@900&amp;text=%E8%B2%B7%E5%8F%96&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#17183B}a:hover{color:#2B44D6}
+</style>
+</helmet>
+<div style="width: 1440px; height: 1240px; box-sizing: border-box; padding: 64px 72px; background: #F4F3EE; color: #17183B; font-family: 'Instrument Sans', system-ui, sans-serif; font-size: 18px; line-height: 1.5; display: flex; flex-direction: column; gap: 40px; overflow: hidden">
+<header style="display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; border-bottom: 4px solid #17183B; padding-bottom: 20px">
+<div style="display: flex; align-items: baseline; gap: 24px">
+<span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; letter-spacing: -0.03em; font-size: 96px; line-height: 0.85; color: #2B44D6">13</span>
+<h1 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; letter-spacing: -0.03em; font-size: 64px; line-height: 0.95">Accessibility, IP and checklist</h1>
+</div>
+<span style="font-weight: 700; font-size: 15px; letter-spacing: 0.08em; text-transform: uppercase">Applications</span>
+</header>
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px">
+<div style="display: flex; flex-direction: column; gap: 24px">
+<div style="background: #FFFFFF; border: 4px solid #17183B; border-radius: 20px; box-shadow: 6px 6px 0 #17183B; padding: 30px"><p style="margin: 0 0 12px; font-weight: 700; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: #3A3B5C">Accessibility</p><p style="margin: 0; font-size: 16px; line-height: 1.6">Text 4.5:1 minimum, 3:1 for 24 px+ headlines. Never rely on colour alone: stock status is a word, condition chips are labelled. Touch targets 44 px+. Every card image gets alt text in house order: “Umbreon ex, 161/131 Prismatic Evolutions, Near Mint.” Respect reduced motion.</p></div>
+<div style="background: #FFFFFF; border: 4px solid #17183B; border-radius: 20px; box-shadow: 6px 6px 0 #17183B; padding: 30px"><p style="margin: 0 0 12px; font-weight: 700; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: #3A3B5C">Trademarks and IP</p><p style="margin: 0; font-size: 16px; line-height: 1.6">We are an independent retailer. Show Pokémon only through photos and scans of real products we sell. Never use the Pokémon logo, official character art, Poké Ball marks or franchise fonts in our own branding, signage or merch. Web footer and print carry: “Pokémon and its trademarks are © Nintendo, Creatures Inc. and GAME FREAK inc. Captured! Cards is not affiliated with or endorsed by them.”</p></div>
+<div style="background: #17183B; border-radius: 20px; padding: 26px; color: #FFFFFF"><p style="margin: 0 0 12px; font-weight: 700; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: #FFD447">Design tokens · CSS</p><pre style="margin: 0; font-family: ui-monospace, Menlo, monospace; font-size: 14px; line-height: 1.55; color: #E3E3F0; white-space: pre">:root {
+  --cc-blue: #2B44D6;   --cc-ink: #17183B;
+  --cc-yellow: #FFD447; --cc-white: #FFFFFF;
+  --cc-ember: #E4572E;  --cc-mint: #7BC8A4;
+  --cc-ink-soft: #3A3B5C; --cc-ok: #1B6B3A; --cc-bad: #B3261E;
+  --cc-font-display: 'Bricolage Grotesque', sans-serif;
+  --cc-font-text: 'Instrument Sans', system-ui, sans-serif;
+  --cc-stroke: 4px;  --cc-stroke-sm: 3px;
+  --cc-shadow: 6px 6px 0 var(--cc-ink);
+  --cc-radius: 20px; --cc-radius-btn: 14px;
+  --cc-ease: cubic-bezier(.2,.9,.25,1.1);
+}</pre></div>
+</div>
+<div style="background: #FFD447; border: 4px solid #17183B; border-radius: 20px; box-shadow: 6px 6px 0 #17183B; padding: 34px">
+<p style="margin: 0 0 12px; font-weight: 700; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: #17183B">Pre-publish checklist</p>
+<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; letter-spacing: -0.03em; font-size: 40px; line-height: 1.05">Ten checks before anything goes out.</h2>
+<ul style="list-style: none; margin: 24px 0 0; padding: 0; display: flex; flex-direction: column; gap: 12px"><li style="display: flex; gap: 14px; align-items: flex-start; background: #FFFFFF; border: 3px solid #17183B; border-radius: 14px; padding: 12px 16px; font-size: 16px; font-weight: 600"><span aria-hidden="true" style="flex-shrink: 0; width: 26px; height: 26px; border: 3px solid #17183B; border-radius: 7px; box-sizing: border-box"></span>Logo is the real file, the right variant, outside its clear space</li><li style="display: flex; gap: 14px; align-items: flex-start; background: #FFFFFF; border: 3px solid #17183B; border-radius: 14px; padding: 12px 16px; font-size: 16px; font-weight: 600"><span aria-hidden="true" style="flex-shrink: 0; width: 26px; height: 26px; border: 3px solid #17183B; border-radius: 7px; box-sizing: border-box"></span>Only core colours plus one accent at most</li><li style="display: flex; gap: 14px; align-items: flex-start; background: #FFFFFF; border: 3px solid #17183B; border-radius: 14px; padding: 12px 16px; font-size: 16px; font-weight: 600"><span aria-hidden="true" style="flex-shrink: 0; width: 26px; height: 26px; border: 3px solid #17183B; border-radius: 7px; box-sizing: border-box"></span>Bricolage for display, Instrument for text, 買取 used once</li><li style="display: flex; gap: 14px; align-items: flex-start; background: #FFFFFF; border: 3px solid #17183B; border-radius: 14px; padding: 12px 16px; font-size: 16px; font-weight: 600"><span aria-hidden="true" style="flex-shrink: 0; width: 26px; height: 26px; border: 3px solid #17183B; border-radius: 7px; box-sizing: border-box"></span>Every card slot is a real scan in 63:88; no stripes left</li><li style="display: flex; gap: 14px; align-items: flex-start; background: #FFFFFF; border: 3px solid #17183B; border-radius: 14px; padding: 12px 16px; font-size: 16px; font-weight: 600"><span aria-hidden="true" style="flex-shrink: 0; width: 26px; height: 26px; border: 3px solid #17183B; border-radius: 7px; box-sizing: border-box"></span>Card name · number · set · rarity written in house order</li><li style="display: flex; gap: 14px; align-items: flex-start; background: #FFFFFF; border: 3px solid #17183B; border-radius: 14px; padding: 12px 16px; font-size: 16px; font-weight: 600"><span aria-hidden="true" style="flex-shrink: 0; width: 26px; height: 26px; border: 3px solid #17183B; border-radius: 7px; box-sizing: border-box"></span>Price shows $, CAD stated once, condition basis stated</li><li style="display: flex; gap: 14px; align-items: flex-start; background: #FFFFFF; border: 3px solid #17183B; border-radius: 14px; padding: 12px 16px; font-size: 16px; font-weight: 600"><span aria-hidden="true" style="flex-shrink: 0; width: 26px; height: 26px; border: 3px solid #17183B; border-radius: 7px; box-sizing: border-box"></span>Text meets 4.5:1 (3:1 at 24 px+); no white on Ember or Mint</li><li style="display: flex; gap: 14px; align-items: flex-start; background: #FFFFFF; border: 3px solid #17183B; border-radius: 14px; padding: 12px 16px; font-size: 16px; font-weight: 600"><span aria-hidden="true" style="flex-shrink: 0; width: 26px; height: 26px; border: 3px solid #17183B; border-radius: 7px; box-sizing: border-box"></span>Buttons ≥ 48 px, real links and labels; alt text on every scan</li><li style="display: flex; gap: 14px; align-items: flex-start; background: #FFFFFF; border: 3px solid #17183B; border-radius: 14px; padding: 12px 16px; font-size: 16px; font-weight: 600"><span aria-hidden="true" style="flex-shrink: 0; width: 26px; height: 26px; border: 3px solid #17183B; border-radius: 7px; box-sizing: border-box"></span>One CTA, verb first; one exclamation mark at most</li><li style="display: flex; gap: 14px; align-items: flex-start; background: #FFFFFF; border: 3px solid #17183B; border-radius: 14px; padding: 12px 16px; font-size: 16px; font-weight: 600"><span aria-hidden="true" style="flex-shrink: 0; width: 26px; height: 26px; border: 3px solid #17183B; border-radius: 7px; box-sizing: border-box"></span>Pokémon trademark line present on printed and web pieces</li></ul>
+</div>
+</div>
+<footer style="margin-top: auto; display: flex; justify-content: space-between; font-size: 14px; font-weight: 600; opacity: 0.8"><span>Captured! Cards · Brand Guidelines v1.0</span><span>13 / 13</span></footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1240}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>

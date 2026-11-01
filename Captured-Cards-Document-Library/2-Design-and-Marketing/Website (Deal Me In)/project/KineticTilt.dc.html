@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Captured! Cards — Holo Tilt</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400;62..125,600;125,800;125,900&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#0C3326}a:hover{color:#B2361C}
+*:focus-visible{outline:3px solid #0C3326;outline-offset:3px}
+input::placeholder{color:#3F6455}
+@keyframes htIn{from{opacity:0;transform:translateX(120px) rotate(8deg)}to{opacity:1;transform:none}}
+.ph{position:relative;overflow:hidden;aspect-ratio:63/88;border-radius:4.5% / 3.2%;background:#F2FBF6;color:#2E5546;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center;font-size:13px;font-weight:600;box-sizing:border-box;padding:10px}
+.ht-pull{animation:htIn .6s cubic-bezier(.2,.9,.25,1.1) backwards;animation-delay:var(--d);transition:transform .3s cubic-bezier(.2,.9,.25,1.1)}
+.ht-pull:hover{transform:translateY(-10px) rotate(-3deg)}
+@media (prefers-reduced-motion: reduce){.ht-pull{animation:none;transition:none}.ht-pull:hover{transform:none}}
+</style>
+</helmet>
+<div style="background: #C9F2DD; color: #0C3326; font-family: 'Archivo', system-ui, sans-serif; font-size: 16px; line-height: 1.5; overflow-x: hidden">
+
+<header style="max-width: 1280px; margin: 0 auto; padding: 18px 24px; display: flex; flex-wrap: wrap; gap: 14px 28px; align-items: center; justify-content: space-between">
+<a href="#top" style="text-decoration: none; font-weight: 900; font-stretch: 125%; font-size: 24px; letter-spacing: -0.01em">Captured! Cards</a>
+<nav aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 2px 20px; font-weight: 600; font-size: 15px">
+<a href="#cats" style="text-decoration: none; padding: 10px 0">Sealed</a>
+<a href="#singles" style="text-decoration: none; padding: 10px 0">Singles</a>
+<a href="#cats" style="text-decoration: none; padding: 10px 0">Japanese singles</a>
+<a href="#cats" style="text-decoration: none; padding: 10px 0">Miscellaneous</a>
+<a href="#cats" style="text-decoration: none; padding: 10px 0">Sell us your cards</a>
+<a href="#contact" style="text-decoration: none; padding: 10px 0">Contact</a>
+</nav>
+<div style="display: flex; gap: 10px; align-items: center">
+<a href="tel:+17788810076" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; border-radius: 12px; border: 2px solid #0C3326; font-weight: 700; text-decoration: none">778-881-0076</a>
+<button type="button" aria-label="Cart, 0 items" style="width: 44px; height: 44px; border-radius: 12px; border: none; background: #0C3326; color: #C9F2DD; display: grid; place-items: center; cursor: pointer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 7h12l-1 13H7L6 7z"></path><path d="M9 7a3 3 0 0 1 6 0"></path></svg></button>
+</div>
+</header>
+
+<section id="top" style="max-width: 1280px; margin: 0 auto; padding: 24px 24px 64px; display: grid; grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); gap: 48px; align-items: center">
+<div style="display: flex; flex-direction: column; gap: 22px">
+<h1 style="margin: 0; font-weight: 900; font-stretch: 125%; font-size: clamp(40px, 5.6vw, 80px); line-height: 0.95; letter-spacing: -0.02em">Look closely. Then make it yours.</h1>
+<p style="margin: 0; font-size: 19px; max-width: 32em; color: #1E4A3A">Every single in our Burnaby shop comes with a sharp photo, a condition grade and live stock. Search for your card and check it before you buy.</p>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<label for="ht-search" style="font-weight: 700; font-size: 15px">Search the catalog</label>
+<div style="display: flex; flex-wrap: wrap; gap: 10px">
+<input id="ht-search" type="search" placeholder="Card name, set or number" style="flex: 999 1 220px; min-height: 58px; border: 2px solid #0C3326; border-radius: 14px; background: #FFFFFF; font: inherit; font-size: 18px; padding: 0 16px; color: #0C3326">
+<button type="button" style="flex: 1 1 150px; min-height: 58px; border: none; border-radius: 14px; background: #FF6B4A; color: #0C3326; font: inherit; font-weight: 800; font-size: 18px; cursor: pointer; box-shadow: 0 5px 0 #0C3326">Search cards</button>
+</div>
+</div>
+<p style="margin: 0; font-size: 16px">Want a second opinion on a card? <a href="tel:+17788810076" style="font-weight: 700">Call 778-881-0076</a></p>
+</div>
+
+<div style="display: flex; flex-direction: column; align-items: center; gap: 14px">
+<div onMouseMove="{{tilt}}" onMouseLeave="{{untilt}}" style="perspective: 1000px; width: min(100%, 340px); padding: 12px; box-sizing: border-box">
+<div role="img" aria-label="Card photo: Umbreon ex, Special Illustration Rare" style="{{tiltStyle}}">
+<div class="ph" style="border: 1px solid #A7DCC2"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="14" rx="2"></rect><circle cx="12" cy="13" r="3.5"></circle><path d="M8 6l1.5-2h5L16 6"></path></svg><span>High-res card scan</span><span style="font-weight: 400">Umbreon ex, 161/131</span></div>
+<div aria-hidden="true" style="{{glareStyle}}"></div>
+</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 10px 18px; justify-content: center; align-items: baseline; text-align: center">
+<span style="font-weight: 800; font-stretch: 125%; font-size: 20px">Umbreon ex</span>
+<span style="color: #1E4A3A">Prismatic Evolutions, Near Mint</span>
+<span style="font-weight: 800; font-size: 20px">$1,450.00</span>
+</div>
+<p style="margin: 0; font-size: 14px; color: #1E4A3A">Move your cursor over the card to tilt it.</p>
+</div>
+</section>
+
+<section aria-labelledby="pulled" style="background: #0C3326; color: #FFFFFF; overflow: hidden">
+<div style="max-width: 1280px; margin: 0 auto; padding: 48px 24px 56px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 24px">
+<h2 id="pulled" style="margin: 0; font-weight: 900; font-stretch: 125%; font-size: clamp(28px, 3.4vw, 44px)">Just pulled for the shop</h2>
+<a href="#singles" style="color: #C9F2DD; font-weight: 700">See everything new</a>
+</div>
+<div style="display: flex; gap: 18px; overflow-x: auto; padding: 14px 4px 8px">
+<sc-for list="{{pulls}}" as="p" hint-placeholder-count="6">
+<a href="#singles" class="ht-pull" style="--d: {{p.delay}}; flex: 0 0 170px; text-decoration: none; color: #FFFFFF; display: flex; flex-direction: column; gap: 8px">
+<div class="ph" style="font-size: 12px"><span>Card scan</span></div>
+<span style="font-weight: 600; font-size: 15px; line-height: 1.3">{{p.name}}</span>
+<span style="font-weight: 800; color: #C9F2DD">{{p.price}}</span>
+</a>
+</sc-for>
+</div>
+</div>
+</section>
+
+<section id="preorders" style="max-width: 1280px; margin: 0 auto; padding: 72px 24px">
+<div style="background: #FFFFFF; border: 2px solid #0C3326; border-radius: 24px; padding: clamp(24px, 4vw, 44px); display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; align-items: center; box-shadow: 10px 10px 0 #FF6B4A">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<h2 style="margin: 0; font-weight: 900; font-stretch: 125%; font-size: clamp(28px, 3.4vw, 44px); line-height: 1">Delta Reign drops in {{daysText}}</h2>
+<p style="margin: 0; font-size: 17px; color: #1E4A3A">Reserve your sealed product now. Pre-orders release November 6.</p>
+<a href="#preorders" style="align-self: flex-start; display: inline-flex; align-items: center; min-height: 54px; padding: 0 24px; border-radius: 14px; background: #0C3326; color: #FFFFFF; font-weight: 700; text-decoration: none">Pre-order Delta Reign</a>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px">
+<sc-for list="{{preorders}}" as="p" hint-placeholder-count="4">
+<a href="#preorders" style="text-decoration: none; border-radius: 14px; background: #EAF8F0; padding: 16px; display: flex; flex-direction: column; gap: 4px">
+<span style="font-weight: 700; line-height: 1.3">{{p.name}}</span>
+<span style="font-weight: 900; font-size: 20px">{{p.price}}</span>
+<span style="font-size: 13px; font-weight: 700; color: {{p.statusColor}}">{{p.status}}</span>
+</a>
+</sc-for>
+</div>
+</div>
+</section>
+
+<section id="cats" style="max-width: 1280px; margin: 0 auto; padding: 0 24px 72px">
+<h2 style="margin: 0 0 22px; font-weight: 900; font-stretch: 125%; font-size: clamp(28px, 3.4vw, 44px)">Shop by category</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px">
+<a href="#cats" style="text-decoration: none; background: #FFFFFF; border: 2px solid #0C3326; border-radius: 16px; padding: 20px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 800; font-size: 19px">Pokémon sealed</span><span style="color: #1E4A3A">Boxes, ETBs, bundles, tins.</span></a>
+<a href="#singles" style="text-decoration: none; background: #FFFFFF; border: 2px solid #0C3326; border-radius: 16px; padding: 20px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 800; font-size: 19px">Pokémon singles</span><span style="color: #1E4A3A">The exact card, in the condition you want.</span></a>
+<a href="#cats" style="text-decoration: none; background: #FFFFFF; border: 2px solid #0C3326; border-radius: 16px; padding: 20px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 800; font-size: 19px">Japanese singles</span><span style="color: #1E4A3A">Japanese-exclusive art and promos.</span></a>
+<a href="#cats" style="text-decoration: none; background: #FFFFFF; border: 2px solid #0C3326; border-radius: 16px; padding: 20px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 800; font-size: 19px">Miscellaneous</span><span style="color: #1E4A3A">Blind boxes, figures, other TCGs.</span></a>
+<a href="#cats" style="text-decoration: none; background: #FF6B4A; border: 2px solid #0C3326; border-radius: 16px; padding: 20px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 800; font-size: 19px">Sell us your cards</span><span>Build your list, get an offer.</span></a>
+</div>
+</section>
+
+<section id="singles" style="max-width: 1280px; margin: 0 auto; padding: 0 24px 72px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 12px; margin-bottom: 22px">
+<h2 style="margin: 0; font-weight: 900; font-stretch: 125%; font-size: clamp(28px, 3.4vw, 44px)">Singles worth a closer look</h2>
+<a href="#singles" style="font-weight: 700">Browse all singles</a>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 22px">
+<sc-for list="{{cards}}" as="c" hint-placeholder-count="4">
+<article style="background: #FFFFFF; border: 2px solid #0C3326; border-radius: 20px; padding: 14px; display: flex; flex-direction: column; gap: 12px">
+<div style="position: relative">
+<div class="ph" role="img" aria-label="Card photo: {{c.name}}"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="14" rx="2"></rect><circle cx="12" cy="13" r="3.5"></circle><path d="M8 6l1.5-2h5L16 6"></path></svg><span>High-res card scan</span></div>
+<button type="button" aria-label="Add {{c.name}} to wishlist" aria-pressed="{{c.wishedStr}}" onClick="{{c.toggleWish}}" style="position: absolute; top: 10px; right: 10px; width: 44px; height: 44px; border-radius: 12px; border: 2px solid #0C3326; background: #FFFFFF; color: #B2361C; display: grid; place-items: center; cursor: pointer"><svg width="20" height="20" viewBox="0 0 24 24" fill="{{c.heartFill}}" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"></path></svg></button>
+</div>
+<div>
+<h3 style="margin: 0; font-size: 18px; font-weight: 800; line-height: 1.25">{{c.name}}</h3>
+<p style="margin: 2px 0 0; font-size: 14px; color: #2E5546">{{c.set}}</p>
+<p style="margin: 0; font-size: 14px; color: #2E5546">{{c.rarity}}</p>
+</div>
+<fieldset style="border: none; margin: 0; padding: 0">
+<legend style="font-size: 13px; font-weight: 700; margin-bottom: 6px">Condition: {{c.condLabel}}</legend>
+<div style="display: flex; gap: 6px">
+<sc-for list="{{c.conds}}" as="k" hint-placeholder-count="4">
+<button type="button" aria-label="{{k.full}}" aria-pressed="{{k.pressed}}" onClick="{{k.pick}}" style="{{k.style}}">{{k.short}}</button>
+</sc-for>
+</div>
+</fieldset>
+<div style="display: flex; justify-content: space-between; align-items: baseline">
+<span style="font-weight: 900; font-stretch: 125%; font-size: 24px">{{c.price}}</span>
+<span style="font-size: 14px; font-weight: 700; color: #1B6B3A">{{c.stock}}</span>
+</div>
+<button type="button" style="min-height: 48px; border: none; border-radius: 12px; background: #FF6B4A; color: #0C3326; font: inherit; font-weight: 800; cursor: pointer">Add to cart</button>
+</article>
+</sc-for>
+</div>
+</section>
+
+<section style="background: #0C3326; color: #FFFFFF">
+<div style="max-width: 1280px; margin: 0 auto; padding: 64px 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 22px; align-content: start">
+<div><h3 style="margin: 0 0 6px; font-size: 18px; color: #C9F2DD">Condition on every card</h3><p style="margin: 0; color: #DCEFE5">NM, LP, MP or HP, listed up front.</p></div>
+<div><h3 style="margin: 0 0 6px; font-size: 18px; color: #C9F2DD">Fresh stock daily</h3><p style="margin: 0; color: #DCEFE5">Wishlist a card to hear when it’s in.</p></div>
+<div><h3 style="margin: 0 0 6px; font-size: 18px; color: #C9F2DD">Free shipping over $300</h3><p style="margin: 0; color: #DCEFE5">Across Canada and worldwide.</p></div>
+<div><h3 style="margin: 0 0 6px; font-size: 18px; color: #C9F2DD">Sell or grade</h3><p style="margin: 0; color: #DCEFE5">Get a buylist offer or ask about grading.</p></div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 14px">
+<p style="margin: 0; font-weight: 700; color: #C9F2DD">[Rating] stars from [number] Google reviews</p>
+<figure style="margin: 0; border: 1px solid #3F6455; border-radius: 16px; padding: 20px"><blockquote style="margin: 0 0 10px; font-size: 17px">“[Real Google review from a collector or family shopper.]”</blockquote><figcaption style="font-weight: 700">[First name], [shopper type]</figcaption></figure>
+<figure style="margin: 0; border: 1px solid #3F6455; border-radius: 16px; padding: 20px"><blockquote style="margin: 0 0 10px; font-size: 17px">“[Real Google review from a TCG player.]”</blockquote><figcaption style="font-weight: 700">[First name], [player]</figcaption></figure>
+</div>
+</div>
+</section>
+
+<section id="contact" style="max-width: 1280px; margin: 0 auto; padding: 56px 24px; display: flex; flex-wrap: wrap; gap: 24px; align-items: center; justify-content: space-between">
+<div>
+<h2 style="margin: 0 0 8px; font-weight: 900; font-stretch: 125%; font-size: clamp(26px, 3vw, 40px)">Visit us in Burnaby</h2>
+<p style="margin: 0; font-size: 17px">[Street address], Burnaby, BC. [Opening hours]</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<a href="tel:+17788810076" style="display: inline-flex; align-items: center; min-height: 54px; padding: 0 24px; border-radius: 14px; background: #0C3326; color: #FFFFFF; font-weight: 700; text-decoration: none">Call 778-881-0076</a>
+<a href="mailto:captured.cardsco@gmail.com" style="display: inline-flex; align-items: center; min-height: 54px; padding: 0 24px; border-radius: 14px; border: 2px solid #0C3326; font-weight: 700; text-decoration: none">Email us</a>
+</div>
+</section>
+
+<footer style="max-width: 1280px; margin: 0 auto; padding: 0 24px 40px; display: flex; flex-wrap: wrap; gap: 8px 20px; font-size: 14px">
+<a href="#policies">Shipping policy</a><a href="#policies">Refund policy</a><a href="#policies">Privacy policy</a><a href="#policies">Terms of service</a>
+<span style="flex-basis: 100%; color: #2E5546">© 2026 Captured! Cards, Burnaby, BC</span>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":4400}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { wish: {}, cond: {}, rx: 0, ry: 0, gx: 30, gy: 20, active: false };
+  }
+  renderVals() {
+    const INK = '#0C3326';
+    const reduced = typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const s = this.state;
+    const tilt = (e) => {
+      if (reduced) return;
+      const r = e.currentTarget.getBoundingClientRect();
+      const x = (e.clientX - r.left) / r.width;
+      const y = (e.clientY - r.top) / r.height;
+      this.setState({ rx: (0.5 - y) * 20, ry: (x - 0.5) * 26, gx: x * 100, gy: y * 100, active: true });
+    };
+    const untilt = () => this.setState({ rx: 0, ry: 0, gx: 30, gy: 20, active: false });
+    const tiltStyle = 'position: relative; border-radius: 4.5% / 3.2%; transform: rotateX(' + s.rx.toFixed(2) + 'deg) rotateY(' + s.ry.toFixed(2) + 'deg) scale(' + (s.active ? 1.04 : 1) + '); transition: transform ' + (s.active ? '0.08s' : '0.5s') + ' ease-out; box-shadow: ' + (-s.ry).toFixed(1) + 'px ' + (14 + s.rx).toFixed(1) + 'px 36px rgba(12,51,38,0.35)';
+    const glareStyle = 'position: absolute; inset: 0; border-radius: 4.5% / 3.2%; pointer-events: none; mix-blend-mode: soft-light; background: radial-gradient(circle at ' + s.gx.toFixed(1) + '% ' + s.gy.toFixed(1) + '%, rgba(255,255,255,0.95), rgba(255,255,255,0) 55%), linear-gradient(' + (115 + s.ry * 2).toFixed(0) + 'deg, rgba(255,107,74,0.35), rgba(116,232,240,0.35), rgba(168,139,255,0.35)); opacity: ' + (s.active ? 1 : 0.55);
+    const conds = [
+      { short: 'NM', full: 'Near Mint', m: 1 },
+      { short: 'LP', full: 'Lightly Played', m: 0.85 },
+      { short: 'MP', full: 'Moderately Played', m: 0.7 },
+      { short: 'HP', full: 'Heavily Played', m: 0.5 }
+    ];
+    const fmt = (n) => '$' + n.toLocaleString('en-CA', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    const pullBase = [
+      ['Mega Charizard X ex', '$8.00'], ['Pikachu ex', '$420.00'], ['Mew ex', '$6.50'],
+      ['Gardevoir ex', '[price]'], ['Greninja ex', '[price]'], ['Lugia V', '[price]'], ['Eevee', '[price]']
+    ];
+    const pulls = pullBase.map((p, i) => ({ name: p[0], price: p[1], delay: (0.1 * i + 0.2).toFixed(2) + 's' }));
+    const days = Math.ceil((Date.UTC(2026, 10, 6, 8) - Date.now()) / 86400000);
+    const daysText = days > 1 ? days + ' days' : days === 1 ? '1 day' : 'stores now';
+    const base = [
+      { id: 'mcx', name: 'Mega Charizard X ex', set: '013/094, Phantasmal Flames', rarity: 'Double Rare, Holofoil', price: 8, stock: 'In stock' },
+      { id: 'umb', name: 'Umbreon ex', set: '161/131, Prismatic Evolutions', rarity: 'Special Illustration Rare', price: 1450, stock: '1 left' },
+      { id: 'pik', name: 'Pikachu ex', set: '238/191, Surging Sparks', rarity: 'Special Illustration Rare', price: 420, stock: '2 left' },
+      { id: 'mew', name: 'Mew ex', set: '151/165, Scarlet & Violet 151', rarity: 'Double Rare', price: 6.5, stock: 'In stock' }
+    ];
+    const cards = base.map((c) => {
+      const sel = s.cond[c.id] || 'NM';
+      const wished = !!s.wish[c.id];
+      const cur = conds.find((k) => k.short === sel);
+      return {
+        ...c,
+        price: fmt(c.price * cur.m),
+        condLabel: cur.full,
+        wishedStr: wished ? 'true' : 'false',
+        heartFill: wished ? 'currentColor' : 'none',
+        toggleWish: () => this.setState({ wish: { ...this.state.wish, [c.id]: !wished } }),
+        conds: conds.map((k) => {
+          const on = k.short === sel;
+          return {
+            ...k,
+            pressed: on ? 'true' : 'false',
+            pick: () => this.setState({ cond: { ...this.state.cond, [c.id]: k.short } }),
+            style: 'flex: 1; min-height: 44px; border-radius: 10px; border: 2px solid ' + INK + '; font: inherit; font-size: 14px; font-weight: 700; cursor: pointer; background: ' + (on ? INK : '#FFFFFF') + '; color: ' + (on ? '#FFFFFF' : INK)
+          };
+        })
+      };
+    });
+    const preorders = [
+      { name: 'Booster Box', price: '$339.99', status: 'Pre-order open', statusColor: '#1B6B3A' },
+      { name: 'Elite Trainer Box', price: '$99.99', status: 'Sold out', statusColor: '#B3261E' },
+      { name: 'Booster Bundle', price: '$57.99', status: 'Pre-order open', statusColor: '#1B6B3A' },
+      { name: 'Sleeved Booster Pack', price: '$8.99', status: 'Pre-order open', statusColor: '#1B6B3A' }
+    ];
+    return { tilt, untilt, tiltStyle, glareStyle, pulls, daysText, cards, preorders };
+  }
+}
+</script>
+</body>
+</html>

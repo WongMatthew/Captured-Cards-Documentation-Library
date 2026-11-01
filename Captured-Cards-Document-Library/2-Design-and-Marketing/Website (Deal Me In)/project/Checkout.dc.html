@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Cart and checkout — Captured! Cards</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&amp;family=Instrument+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@900&amp;text=%E8%B2%B7%E5%8F%96&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#17183B}a:hover{color:#2B44D6}
+*:focus-visible{outline:3px solid #2B44D6;outline-offset:3px}
+input::placeholder,textarea::placeholder{color:#5A5B78}
+.kw{max-width:1280px;margin:0 auto;padding-left:24px;padding-right:24px;box-sizing:border-box}
+.kh{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;letter-spacing:-0.025em;line-height:1;margin:0}
+.kjp{font-family:'Noto Sans JP',sans-serif;font-weight:900}
+.kb{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:0 24px;border-radius:14px;border:3px solid #17183B;font-family:inherit;font-size:17px;font-weight:700;text-decoration:none;cursor:pointer;box-sizing:border-box}
+.kb-blue,.kb-blue:hover{background:#2B44D6;color:#FFFFFF}.kb-yel,.kb-yel:hover{background:#FFD447;color:#17183B;box-shadow:5px 5px 0 #17183B}.kb-ink,.kb-ink:hover{background:#17183B;color:#FFD447}.kb-out,.kb-out:hover{background:#FFFFFF;color:#17183B}.kb-ghost,.kb-ghost:hover{background:transparent;color:#FFFFFF;border-color:#FFFFFF}
+.kc{background:#FFFFFF;border:4px solid #17183B;border-radius:20px;box-shadow:6px 6px 0 #17183B}
+.knav{display:flex;flex-wrap:wrap;gap:2px 20px;font-weight:600;font-size:15px}
+.knav a{text-decoration:none;padding:10px 0}
+.knav a[aria-current="page"]{text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:7px}
+.ki{width:44px;height:44px;border-radius:50%;border:3px solid #17183B;background:#FFFFFF;color:#17183B;display:grid;place-items:center;cursor:pointer;box-sizing:border-box;flex-shrink:0}
+.kfield{width:100%;min-height:52px;border:3px solid #17183B;border-radius:12px;background:#FFFFFF;color:#17183B;font:inherit;font-size:16px;padding:0 14px;box-sizing:border-box}
+.klabel{display:block;font-weight:700;font-size:15px;margin-bottom:6px}
+.klift{transition:transform .25s cubic-bezier(.2,.9,.25,1.1)}
+.klift:hover{transform:translateY(-6px) rotate(-1deg)}
+.mscroll{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 20px 18px;scrollbar-width:none}
+.mscroll > *{scroll-snap-align:start}
+details > summary{cursor:pointer;list-style:none}
+details > summary::-webkit-details-marker{display:none}
+details[open] .kplus{transform:rotate(45deg)}
+.kplus{transition:transform .2s}
+.knav a{color:#FFFFFF}.knav a:hover{color:#FFD447}.knav a[aria-current="page"]{color:#FFD447}
+.kib{width:44px;height:44px;border-radius:50%;border:3px solid #17183B;background:#FFD447;color:#17183B;display:grid;place-items:center;cursor:pointer;box-sizing:border-box;position:relative;text-decoration:none}
+.kbadge{position:absolute;top:-6px;right:-6px;min-width:20px;height:20px;border-radius:999px;background:#17183B;color:#FFFFFF;font-size:12px;font-weight:700;display:grid;place-items:center;padding:0 5px;box-sizing:border-box}
+.tl-img{display:block;position:relative;border-radius:12px;transition:transform .3s cubic-bezier(.2,.9,.25,1.1),box-shadow .3s}
+.tl:hover .tl-img{transform:translateY(-6px) rotate(-1.5deg);box-shadow:6px 6px 0 #17183B}
+.tl-heart{position:absolute;right:6px;bottom:6px;width:40px;height:40px;border-radius:50%;border:2px solid #17183B;background:rgba(255,255,255,.92);color:#2B44D6;display:grid;place-items:center;cursor:pointer}
+.tl-title{font-size:14px;line-height:1.35;text-decoration:none;color:#17183B}
+.tl-title:hover{text-decoration:underline}
+.co-bar{transition:width .5s cubic-bezier(.2,.9,.25,1.1)}
+@keyframes coPop{from{opacity:0;transform:scale(.4) rotate(-30deg)}to{opacity:1;transform:rotate(-6deg)}}
+.co-pop{animation:coPop .6s cubic-bezier(.2,.9,.25,1.4) both}
+.kacct{position:relative}
+.kacct > summary{list-style:none;cursor:pointer}
+.kacct > summary::-webkit-details-marker{display:none}
+.kacct[open] > summary{background:#FFD447 !important}
+.kacct-panel{position:absolute;right:0;top:calc(100% + 12px);z-index:30;width:300px;background:#FFFFFF;color:#17183B;border:3px solid #17183B;border-radius:18px;box-shadow:6px 6px 0 #17183B;padding:18px;display:flex;flex-direction:column;gap:12px;box-sizing:border-box;animation:kacctPop .25s cubic-bezier(.2,.9,.25,1.2);text-align:left}
+.kacct-panel.kacct-m{right:-108px;width:340px}
+.kacct-panel a.kb{width:100%}
+@keyframes kacctPop{from{opacity:0;transform:translateY(-8px) scale(.96)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion: reduce){.kacct-panel{animation:none}}
+
+@media (prefers-reduced-motion: reduce){.klift,.kplus{transition:none}.klift:hover{transform:none}.tl-img{transition:none}.tl:hover .tl-img{transform:none}.co-bar{transition:none}.co-pop{animation:none}}
+.knav-m{display:none;position:relative}
+.knav-m > summary{list-style:none;cursor:pointer}
+.knav-m > summary::-webkit-details-marker{display:none}
+.knav-m[open] > summary{background:#FFD447 !important}
+.knav-m-panel{position:absolute;right:0;top:calc(100% + 12px);z-index:31;width:280px;background:#17183B;border:3px solid #17183B;border-radius:18px;box-shadow:6px 6px 0 #FFD447;padding:8px 18px;display:flex;flex-direction:column;animation:kacctPop .25s cubic-bezier(.2,.9,.25,1.2)}
+.knav-m-panel a{color:#FFFFFF;text-decoration:none;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:22px;padding:10px 0;border-bottom:1px solid #2D2E58}
+.knav-m-panel a:last-child{border-bottom:none}
+.knav-m-panel a:hover{color:#FFD447}
+@media (max-width: 1023px){.knav{display:none !important}.knav-m{display:block}}
+@media (min-width: 1600px){.kw{max-width:1560px}[style*="max-width: 1280px"]{max-width:1560px !important}}
+</style>
+</helmet>
+<div style=" background: #FFD447; color: #17183B; font-family: 'Instrument Sans', system-ui, sans-serif; font-size: 16px; line-height: 1.5">
+<sc-if value="{{isCart}}" hint-placeholder-val="{{ true }}">
+<header style="background: #2B44D6; border-bottom: 4px solid #17183B">
+<div class="kw" style="padding-top: 14px; padding-bottom: 14px; display: flex; flex-wrap: wrap; gap: 14px 28px; align-items: center; justify-content: space-between">
+<a href="Kinetic.dc.html" aria-label="Captured! Cards home" style="display: block"><img src="/_blob/01497f49b7236fe8f2c4864dbb596a48" alt="Captured! Cards" style="height: 56px; width: auto; display: block"></a>
+<nav aria-label="Main" class="knav">
+<a href="Shop.dc.html">Shop all</a>
+<a href="Collection.dc.html">Singles</a>
+<a href="Collection.dc.html">Japanese singles</a>
+<a href="Collection.dc.html">Sealed</a>
+<a href="Collection.dc.html">Miscellaneous</a>
+<a href="Sell.dc.html">Sell us your cards</a>
+<a href="Events.dc.html">Events</a>
+<a href="Contact.dc.html">Contact</a>
+</nav>
+<div style="display: flex; gap: 10px; align-items: center">
+<label for="cur-d" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Currency</label><select id="cur-d" class="kcur" style="min-width: 100px; font-size: 15px; padding: 0 28px 0 14px; height: 44px; border: 3px solid #17183B; border-radius: 999px; background: #FFFFFF url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2210%22 height=%226%22%3E%3Cpath d=%22M1 1l4 4 4-4%22 fill=%22none%22 stroke=%22%2317183B%22 stroke-width=%222%22/%3E%3C/svg%3E') no-repeat right 10px center; color: #17183B; font-family: inherit; font-weight: 700; cursor: pointer; appearance: none; -webkit-appearance: none; box-sizing: border-box"><option value="CAD">CAD $</option><option value="USD">USD $</option><option value="EUR">EUR €</option><option value="GBP">GBP £</option><option value="AUD">AUD $</option><option value="JPY">JPY ¥</option></select>
+<details class="knav-m">
+<summary class="kib" aria-label="Menu" style="background: #FFFFFF"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></summary>
+<nav aria-label="Main" class="knav-m-panel">
+<a href="Shop.dc.html">Shop all</a>
+<a href="Collection.dc.html">Singles</a>
+<a href="Collection.dc.html">Japanese singles</a>
+<a href="Collection.dc.html">Sealed</a>
+<a href="Collection.dc.html">Miscellaneous</a>
+<a href="Sell.dc.html">Sell us your cards</a>
+<a href="Events.dc.html">Events</a>
+<a href="Contact.dc.html">Contact</a>
+</nav>
+</details>
+<details class="kacct">
+<summary class="kib" aria-label="Account" style="background: #FFFFFF"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"></path></svg></summary>
+<div class="kacct-panel">
+<p style="margin: 0; font-size: 20px; font-weight: 600">Account</p>
+<a href="https://capturedcards.com/account" class="kb" style="background: #5A31F4; color: #FFFFFF; border-color: #5A31F4; min-height: 50px; font-size: 16px">Sign in with Shop</a>
+<a href="https://capturedcards.com/account" class="kb" style="background: #000000; color: #FFFFFF; border-color: #000000; min-height: 50px; font-size: 16px">Other sign in options</a>
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px">
+<a href="https://capturedcards.com/account" class="kb kb-out" style="min-height: 48px; padding: 0 10px; font-size: 15px; border-width: 2px; font-weight: 600"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="6" width="16" height="14" rx="2"></rect><path d="M4 10h16M10 14h4"></path></svg>Orders</a>
+<a href="https://capturedcards.com/account/profile" class="kb kb-out" style="min-height: 48px; padding: 0 10px; font-size: 15px; border-width: 2px; font-weight: 600"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"></path></svg>Profile</a>
+</div>
+</div>
+</details>
+<button type="button" class="kib" aria-label="Wishlist" style="background: #FFFFFF"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"></path></svg></button>
+<a href="Checkout.dc.html" class="kib" aria-label="Cart, {{cartCount}} items"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 7h12l-1 13H7L6 7z"></path><path d="M9 7a3 3 0 0 1 6 0"></path></svg><span class="kbadge">{{cartCount}}</span></a>
+</div>
+</div>
+</header>
+</sc-if>
+<sc-if value="{{notCart}}" hint-placeholder-val="{{ false }}">
+<header style="background: #2B44D6; border-bottom: 4px solid #17183B"><div class="kw" style="padding-top: 14px; padding-bottom: 14px; display: flex; align-items: center; justify-content: space-between"><a href="Kinetic.dc.html" aria-label="Captured! Cards home" style="display: block"><img src="/_blob/01497f49b7236fe8f2c4864dbb596a48" alt="Captured! Cards" style="height: 52px; width: auto; display: block"></a><span style="display: inline-flex; align-items: center; gap: 8px; color: #FFFFFF; font-weight: 700"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"></rect><path d="M8 11V8a4 4 0 0 1 8 0v3"></path></svg> Secure checkout</span></div></header>
+</sc-if>
+<sc-if value="{{isCart}}" hint-placeholder-val="{{ true }}">
+<section class="kw" style="padding-top: 36px; padding-bottom: 80px">
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin-bottom: 24px">
+<h1 class="kh" style="font-size: clamp(44px, 5vw, 68px); letter-spacing: -0.03em">Your cart</h1>
+<a href="Collection.dc.html" style="font-weight: 700">Keep shopping</a>
+</div>
+<sc-if value="{{hasItems}}" hint-placeholder-val="{{ true }}">
+<div style="display: flex; flex-wrap: wrap; gap: 32px 48px; align-items: flex-start">
+<div style="flex: 999 1 560px; min-width: 0">
+<div style="display: grid; grid-template-columns: 1fr 140px 110px; gap: 12px; padding: 0 0 10px; border-bottom: 3px solid #17183B; font-size: 14px; font-weight: 700"><span>Card</span><span>Quantity</span><span style="text-align: right">Total</span></div>
+<ul style="list-style: none; margin: 0; padding: 0">
+<sc-for list="{{items}}" as="it" hint-placeholder-count="3">
+<li style="display: grid; grid-template-columns: 1fr 140px 110px; gap: 12px; align-items: center; padding: 18px 0; border-bottom: 2px solid #17183B">
+<div style="display: grid; grid-template-columns: 84px 1fr; gap: 16px; align-items: center">
+<img src="{{it.img}}" alt="" style="width: 84px; aspect-ratio: 248 / 345; object-fit: cover; border-radius: 8px; border: 2px solid #17183B; display: block">
+<div style="display: flex; flex-direction: column; gap: 4px"><a href="Product.dc.html" style="font-weight: 700; text-decoration: none">{{it.title}}</a><span style="font-size: 14px; color: #3A3B5C">{{it.cond}} · {{it.unit}} each</span><button type="button" onClick="{{it.remove}}" style="align-self: flex-start; border: none; background: none; font: inherit; font-size: 14px; font-weight: 600; text-decoration: underline; cursor: pointer; color: #17183B; padding: 0; min-height: 36px">Remove</button></div>
+</div>
+<div role="group" aria-label="Quantity for {{it.short}}" style="display: flex; align-items: center; justify-self: start; border: 3px solid #17183B; border-radius: 12px; background: #FFFFFF">
+<button type="button" aria-label="Decrease quantity" onClick="{{it.dec}}" style="width: 40px; height: 44px; border: none; background: none; font: inherit; font-size: 20px; font-weight: 700; cursor: pointer; color: #17183B">−</button>
+<span style="min-width: 28px; text-align: center; font-weight: 700">{{it.qty}}</span>
+<button type="button" aria-label="Increase quantity" onClick="{{it.inc}}" style="width: 40px; height: 44px; border: none; background: none; font: inherit; font-size: 20px; font-weight: 700; cursor: pointer; color: #17183B">+</button>
+</div>
+<span style="text-align: right; font-weight: 700; font-size: 18px">{{it.lineTotal}}</span>
+</li>
+</sc-for>
+</ul>
+</div>
+<aside class="kc" style="flex: 1 1 320px; max-width: 420px; padding: 24px; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<p style="margin: 0; font-size: 15px; font-weight: 700">{{shipMsg}}</p>
+<div style="height: 12px; border: 2px solid #17183B; border-radius: 999px; background: #F3F1E6; overflow: hidden"><div class="co-bar" style="{{barStyle}}"></div></div>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: baseline; border-top: 2px solid #17183B; padding-top: 16px"><span style="font-weight: 700; font-size: 18px">Subtotal</span><span class="kh" style="font-size: 34px">{{subtotal}}</span></div>
+<p style="margin: -8px 0 0; font-size: 14px; color: #3A3B5C">Taxes and shipping are calculated at checkout.</p>
+<button type="button" class="kb kb-ink" onClick="{{goInfo}}" style="min-height: 58px; font-size: 18px">Check out</button>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px">
+<button type="button" class="kb" style="background: #5A31F4; color: #FFFFFF; min-height: 48px; padding: 0 6px; font-size: 14px; border-width: 2px">Shop Pay</button>
+<button type="button" class="kb" style="background: #000000; color: #FFFFFF; min-height: 48px; padding: 0 6px; font-size: 14px; border-width: 2px">Apple Pay</button>
+<button type="button" class="kb kb-out" style="min-height: 48px; padding: 0 6px; font-size: 14px; border-width: 2px">G Pay</button>
+</div>
+</aside>
+</div>
+</sc-if>
+<sc-if value="{{noItems}}" hint-placeholder-val="{{ false }}">
+<div class="kc" style="padding: 32px; display: flex; flex-direction: column; gap: 14px; align-items: flex-start; max-width: 520px"><h2 class="kh" style="font-size: 32px">Your cart is empty.</h2><div style="display: flex; gap: 12px; flex-wrap: wrap"><a href="Collection.dc.html" class="kb kb-blue">Shop singles</a><button type="button" class="kb kb-out" onClick="{{refill}}">Restore sample cart</button></div></div>
+</sc-if>
+</section>
+</sc-if>
+
+<sc-if value="{{notCart}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-wrap: wrap; min-height: 900px">
+<div style="flex: 999 1 560px; min-width: 0; display: flex; justify-content: flex-end; padding: 36px clamp(20px, 4vw, 56px) 64px">
+<div style="width: 100%; max-width: 580px; display: flex; flex-direction: column; gap: 20px">
+<nav aria-label="Checkout steps"><ol style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 10px; font-size: 14px; font-weight: 600">
+<sc-for list="{{crumbs}}" as="cr" hint-placeholder-count="4"><li style="{{cr.style}}" aria-current="{{cr.current}}">{{cr.label}}</li></sc-for>
+</ol></nav>
+<sc-if value="{{isInfo}}" hint-placeholder-val="{{ false }}">
+<section style="display: flex; flex-direction: column; gap: 18px">
+<p style="margin: 0; text-align: center; font-size: 14px; font-weight: 600">Express checkout</p>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin-top: -8px">
+<button type="button" class="kb" style="background: #5A31F4; color: #FFFFFF; min-height: 50px; padding: 0 6px; font-size: 15px; border-width: 2px">Shop Pay</button>
+<button type="button" class="kb" style="background: #000000; color: #FFFFFF; min-height: 50px; padding: 0 6px; font-size: 15px; border-width: 2px">Apple Pay</button>
+<button type="button" class="kb kb-out" style="min-height: 50px; padding: 0 6px; font-size: 15px; border-width: 2px">G Pay</button>
+</div>
+<div aria-hidden="true" style="display: flex; align-items: center; gap: 12px; font-size: 13px; font-weight: 700"><span style="flex: 1; height: 2px; background: #17183B"></span>OR<span style="flex: 1; height: 2px; background: #17183B"></span></div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<h2 class="kh" style="font-size: 24px">Contact</h2>
+<div><label for="co-email" class="klabel">Email</label><input id="co-email" type="email" class="kfield" autocomplete="email" value="{{email}}" onChange="{{onEmail}}" aria-invalid="{{emailInvalid}}" aria-describedby="co-email-err"><sc-if value="{{emailErr}}" hint-placeholder-val="{{ false }}"><p id="co-email-err" style="margin: 6px 0 0; color: #B3261E; font-weight: 700; font-size: 14px">Enter an email so we can send your receipt.</p></sc-if></div>
+<label for="co-news" style="display: flex; align-items: center; gap: 10px; min-height: 44px; font-size: 15px"><input id="co-news" type="checkbox" style="width: 20px; height: 20px; accent-color: #2B44D6">Email me about new releases and pre-orders</label>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<h2 class="kh" style="font-size: 24px">Delivery</h2>
+<div role="radiogroup" aria-label="Delivery method" style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px">
+<sc-for list="{{deliv}}" as="d" hint-placeholder-count="2"><button type="button" role="radio" aria-checked="{{d.checked}}" onClick="{{d.pick}}" style="{{d.style}}">{{d.label}}</button></sc-for>
+</div>
+<sc-if value="{{isShip}}" hint-placeholder-val="{{ true }}">
+<div><label for="co-country" class="klabel">Country</label><select id="co-country" class="kfield"><option>Canada</option><option>United States</option></select></div>
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px"><div><label for="co-fn" class="klabel">First name</label><input id="co-fn" class="kfield" autocomplete="given-name"></div><div><label for="co-ln" class="klabel">Last name</label><input id="co-ln" class="kfield" autocomplete="family-name"></div></div>
+<div><label for="co-addr" class="klabel">Address</label><input id="co-addr" class="kfield" autocomplete="address-line1"></div>
+<div><label for="co-apt" class="klabel">Apartment, suite, etc. (optional)</label><input id="co-apt" class="kfield" autocomplete="address-line2"></div>
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px"><div><label for="co-city" class="klabel">City</label><input id="co-city" class="kfield" autocomplete="address-level2"></div><div><label for="co-prov" class="klabel">Province</label><select id="co-prov" class="kfield"><option>British Columbia</option><option>Alberta</option><option>Ontario</option><option>Quebec</option></select></div></div>
+<div><label for="co-post" class="klabel">Postal code</label><input id="co-post" class="kfield" autocomplete="postal-code"></div>
+<div><label for="co-phone" class="klabel">Phone (optional, for delivery updates)</label><input id="co-phone" class="kfield" type="tel" autocomplete="tel"></div>
+</sc-if>
+<sc-if value="{{isPickup}}" hint-placeholder-val="{{ false }}">
+<div class="kc" style="padding: 16px; border-radius: 14px; box-shadow: none; border-width: 3px"><p style="margin: 0; font-weight: 700">Captured! Cards, Burnaby</p><p style="margin: 4px 0 0; font-size: 14px; color: #3A3B5C">4991 Imperial St, Burnaby, BC V5H 0J8. [Pickup timing, for example: usually ready in 24 hours.]</p></div>
+</sc-if>
+</div>
+<button type="button" class="kb kb-ink" onClick="{{goShip}}" style="min-height: 58px; font-size: 18px">{{infoNext}}</button>
+<button type="button" onClick="{{goCart}}" style="border: none; background: none; font: inherit; font-weight: 700; color: #2B44D6; min-height: 44px; cursor: pointer">Return to cart</button>
+</section>
+</sc-if>
+
+<sc-if value="{{isShipStep}}" hint-placeholder-val="{{ false }}">
+<section style="display: flex; flex-direction: column; gap: 18px">
+<dl class="kc" style="margin: 0; padding: 4px 16px; border-radius: 14px; box-shadow: none; border-width: 3px">
+<div style="display: grid; grid-template-columns: 70px 1fr auto; gap: 10px; padding: 12px 0; border-bottom: 1px solid #C9C8D3; font-size: 14px"><dt style="color: #3A3B5C">Contact</dt><dd style="margin: 0; word-break: break-all">{{email}}</dd><button type="button" onClick="{{goInfo}}" style="border: none; background: none; font: inherit; color: #2B44D6; font-weight: 700; cursor: pointer">Change</button></div>
+<div style="display: grid; grid-template-columns: 70px 1fr auto; gap: 10px; padding: 12px 0; font-size: 14px"><dt style="color: #3A3B5C">Ship to</dt><dd style="margin: 0">[Address entered on the last step]</dd><button type="button" onClick="{{goInfo}}" style="border: none; background: none; font: inherit; color: #2B44D6; font-weight: 700; cursor: pointer">Change</button></div>
+</dl>
+<h2 class="kh" style="font-size: 24px">Shipping method</h2>
+<div role="radiogroup" aria-label="Shipping method" style="display: flex; flex-direction: column; gap: 10px">
+<sc-for list="{{rates}}" as="r" hint-placeholder-count="2"><button type="button" role="radio" aria-checked="{{r.checked}}" onClick="{{r.pick}}" style="{{r.style}}"><span style="display: flex; flex-direction: column; text-align: left"><span style="font-weight: 700">{{r.label}}</span><span style="font-size: 13px; color: #3A3B5C">{{r.sub}}</span></span><span style="font-weight: 700">{{r.priceText}}</span></button></sc-for>
+</div>
+<button type="button" class="kb kb-ink" onClick="{{goPay}}" style="min-height: 58px; font-size: 18px">Continue to payment</button>
+<button type="button" onClick="{{goInfo}}" style="border: none; background: none; font: inherit; font-weight: 700; color: #2B44D6; min-height: 44px; cursor: pointer">Return to information</button>
+</section>
+</sc-if>
+
+<sc-if value="{{isPay}}" hint-placeholder-val="{{ false }}">
+<section style="display: flex; flex-direction: column; gap: 16px">
+<h2 class="kh" style="font-size: 24px">Payment</h2>
+<p style="margin: -8px 0 0; font-size: 14px; color: #3A3B5C">All transactions are secure and encrypted.</p>
+<div class="kc" style="padding: 16px; border-radius: 14px; box-shadow: none; border-width: 3px; display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; font-weight: 700">Credit card</p>
+<div><label for="co-card" class="klabel">Card number</label><input id="co-card" class="kfield" inputmode="numeric" autocomplete="cc-number" placeholder="1234 1234 1234 1234"></div>
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px"><div><label for="co-exp" class="klabel">Expiry (MM / YY)</label><input id="co-exp" class="kfield" inputmode="numeric" autocomplete="cc-exp"></div><div><label for="co-cvc" class="klabel">Security code</label><input id="co-cvc" class="kfield" inputmode="numeric" autocomplete="cc-csc"></div></div>
+<div><label for="co-name" class="klabel">Name on card</label><input id="co-name" class="kfield" autocomplete="cc-name"></div>
+<label for="co-bill" style="display: flex; align-items: center; gap: 10px; min-height: 44px; font-size: 15px"><input id="co-bill" type="checkbox" checked="{{billSame}}" onChange="{{toggleBill}}" style="width: 20px; height: 20px; accent-color: #2B44D6">Use shipping address as billing address</label>
+</div>
+<button type="button" class="kb kb-blue" onClick="{{payNow}}" style="min-height: 60px; font-size: 19px; box-shadow: 5px 5px 0 #17183B">Pay {{total}}</button>
+<button type="button" onClick="{{goShipStep}}" style="border: none; background: none; font: inherit; font-weight: 700; color: #2B44D6; min-height: 44px; cursor: pointer">Return to shipping</button>
+</section>
+</sc-if>
+
+<sc-if value="{{isDone}}" hint-placeholder-val="{{ false }}">
+<section style="display: flex; flex-direction: column; gap: 16px">
+<div class="co-pop kjp" aria-hidden="true" style="align-self: flex-start; background: #2B44D6; color: #FFD447; border: 3px solid #17183B; border-radius: 14px; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 34px; line-height: 1; padding: 12px 14px; transform: rotate(-6deg); box-shadow: 5px 5px 0 #17183B">Captured!</div>
+<p style="margin: 6px 0 0; font-weight: 700; color: #3A3B5C">Order #[1042]</p>
+<h1 class="kh" style="font-size: 52px; letter-spacing: -0.03em">Thanks! Your order is confirmed.</h1>
+<p style="margin: 0; font-size: 17px">We’ve emailed your receipt to {{email}}. You’ll get another email with tracking when your cards ship.</p>
+<div class="kc" style="padding: 16px; border-radius: 14px; box-shadow: 4px 4px 0 #17183B"><dl style="margin: 0; display: grid; grid-template-columns: 1fr auto; gap: 6px; font-size: 15px"><dt>Items</dt><dd style="margin: 0">{{itemCount}}</dd><dt>Shipping</dt><dd style="margin: 0">{{shipText}}</dd><dt style="font-weight: 700">Total paid</dt><dd style="margin: 0; font-weight: 700">CAD {{total}}</dd></dl></div>
+<a href="Collection.dc.html" class="kb kb-yel">Keep shopping</a>
+<button type="button" class="kb kb-out" onClick="{{restart}}">Restart the checkout demo</button>
+</section>
+</sc-if>
+
+</div>
+</div>
+<aside aria-label="Order summary" style="flex: 1 1 380px; background: #FFFFFF; border-left: 3px solid #17183B; padding: 36px clamp(20px, 4vw, 56px) 64px">
+<div style="max-width: 440px; display: flex; flex-direction: column; gap: 16px; position: sticky; top: 24px">
+<sc-for list="{{items}}" as="it" hint-placeholder-count="3">
+<div style="display: grid; grid-template-columns: 60px 1fr auto; gap: 14px; align-items: center">
+<div style="position: relative"><img src="{{it.img}}" alt="" style="width: 60px; aspect-ratio: 248 / 345; object-fit: cover; border-radius: 6px; border: 2px solid #17183B; display: block"><span style="position: absolute; top: -8px; right: -8px; min-width: 22px; height: 22px; border-radius: 999px; background: #17183B; color: #FFFFFF; font-size: 12px; font-weight: 700; display: grid; place-items: center">{{it.qty}}</span></div>
+<span style="font-size: 14px; line-height: 1.35">{{it.title}}<br><span style="color: #3A3B5C">{{it.cond}}</span></span>
+<span style="font-weight: 700">{{it.lineTotal}}</span>
+</div>
+</sc-for>
+<div style="display: flex; gap: 8px"><label for="cd-disc" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Discount code or gift card</label><input id="cd-disc" class="kfield" placeholder="Discount code or gift card" style="flex: 1; width: auto; min-height: 48px; border-width: 2px"><button type="button" class="kb kb-out" style="min-height: 48px; padding: 0 16px; border-width: 2px; font-size: 15px">Apply</button></div>
+<dl style="margin: 0; display: grid; grid-template-columns: 1fr auto; gap: 8px; font-size: 15px">
+<dt>Subtotal</dt><dd style="margin: 0">{{subtotal}}</dd>
+<dt>Shipping</dt><dd style="margin: 0">{{shipText}}</dd>
+<dt>Estimated taxes</dt><dd style="margin: 0">{{taxes}}</dd>
+<dt style="font-weight: 700; font-size: 20px; padding-top: 8px; border-top: 2px solid #17183B">Total</dt><dd style="margin: 0; font-weight: 700; font-size: 20px; padding-top: 8px; border-top: 2px solid #17183B">CAD {{total}}</dd>
+</dl>
+</div>
+</aside>
+</div>
+</sc-if>
+
+<sc-if value="{{isCart}}" hint-placeholder-val="{{ true }}">
+<footer style="background: #17183B; color: #FFFFFF">
+<div class="kw" style="padding-top: 48px; padding-bottom: 48px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<img src="/_blob/01497f49b7236fe8f2c4864dbb596a48" alt="Captured! Cards" style="height: 64px; width: auto; align-self: flex-start">
+<span style="color: #C9CAE0">4991 Imperial St, Burnaby, BC V5H 0J8</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<label for="f-email" style="font-weight: 700">Get new releases in your inbox first</label>
+<input id="f-email" type="email" placeholder="you@example.com" style="min-height: 50px; border: 3px solid #FFD447; border-radius: 12px; padding: 0 14px; font: inherit; background: #FFFFFF; color: #17183B">
+<button type="button" class="kb kb-yel" style="box-shadow: none; min-height: 50px; border-color: #FFD447; align-self: flex-start">Join the list</button>
+</div>
+<nav aria-label="Footer" style="display: flex; flex-direction: column; gap: 6px">
+<a href="Shop.dc.html" style="color: #FFFFFF">Shop all</a><a href="Collection.dc.html" style="color: #FFFFFF">Pokémon singles</a><a href="Sell.dc.html" style="color: #FFFFFF">Sell us your cards</a><a href="Events.dc.html" style="color: #FFFFFF">Events &amp; releases</a><a href="Contact.dc.html" style="color: #FFFFFF">Contact us</a>
+</nav>
+<nav aria-label="Policies" style="display: flex; flex-direction: column; gap: 6px">
+<a href="#policies" style="color: #FFFFFF">Shipping policy</a><a href="#policies" style="color: #FFFFFF">Refund policy</a><a href="#policies" style="color: #FFFFFF">Privacy policy</a><a href="#policies" style="color: #FFFFFF">Terms of service</a>
+<span style="color: #C9CAE0; margin-top: 8px">© 2026 Captured! Cards</span>
+</nav>
+</div>
+</footer>
+</sc-if>
+<sc-if value="{{notCart}}" hint-placeholder-val="{{ false }}"><footer style="border-top: 3px solid #17183B"><div class="kw" style="padding-top: 18px; padding-bottom: 28px; display: flex; flex-wrap: wrap; gap: 4px 20px; font-size: 14px"><a href="#policies" style="padding: 8px 0">Refund policy</a><a href="#policies" style="padding: 8px 0">Shipping policy</a><a href="#policies" style="padding: 8px 0">Privacy policy</a><a href="#policies" style="padding: 8px 0">Terms of service</a></div></footer></sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1500}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = Object.assign({ menu: false, cart: 0, wish: {}, cond: {} }, { step: 'cart', qtys: { meowth: 1, piplup: 1, gengar: 2 }, deliv: 'ship', rate: 'std', email: '', tried: false, sum: false, billSame: true });
+  }
+
+  stripe(i, w) {
+    const S = [['#2B44D6', '#4A60E0'], ['#E4572E', '#EC7A58'], ['#7BC8A4', '#9AD6BA'], ['#17183B', '#2D2E58'], ['#FFD447', '#FFE07A']];
+    const s = S[i % 5];
+    return 'background: repeating-linear-gradient(135deg, ' + s[0] + ' 0 ' + w + 'px, ' + s[1] + ' ' + w + 'px ' + (w + 4) + 'px)';
+  }
+  fmt(n) { return '$' + n.toLocaleString('en-CA', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); }
+  conds() {
+    return [
+      { short: 'NM', full: 'Near Mint', m: 1 },
+      { short: 'LP', full: 'Lightly Played', m: 0.85 },
+      { short: 'MP', full: 'Moderately Played', m: 0.7 },
+      { short: 'HP', full: 'Heavily Played', m: 0.5 }
+    ];
+  }
+  listing(c, i) {
+    const st = this.state;
+    const conds = this.conds();
+    const sel = (st.cond || {})[c.id] || 'NM';
+    const wished = !!(st.wish || {})[c.id];
+    const cur = conds.find((k) => k.short === sel);
+    const sold = c.qty === 0;
+    return {
+      ...c,
+      price: this.fmt(c.price * cur.m),
+      condLabel: cur.full,
+      stock: sold ? 'Sold out' : (c.qty <= 2 ? c.qty + ' left' : 'In stock'),
+      stockColor: sold ? '#B3261E' : '#1B6B3A',
+      sold, notSold: !sold,
+      wishedStr: wished ? 'true' : 'false',
+      heartFill: wished ? 'currentColor' : 'none',
+      art: this.stripe(i, 14) + '; aspect-ratio: 63 / 88; border: 3px solid #17183B; border-radius: 10px; box-sizing: border-box; display: flex; align-items: flex-end; justify-content: center; padding: 10px',
+      toggleWish: () => this.setState({ wish: { ...(this.state.wish || {}), [c.id]: !wished } }),
+      add: () => this.setState({ cart: (this.state.cart || 0) + 1 }),
+      conds: conds.map((k) => {
+        const on = k.short === sel;
+        return {
+          ...k,
+          pressed: on ? 'true' : 'false',
+          pick: () => this.setState({ cond: { ...(this.state.cond || {}), [c.id]: k.short } }),
+          style: 'flex: 1; min-height: 44px; border-radius: 10px; border: 3px solid #17183B; font: inherit; font-size: 14px; font-weight: 700; cursor: pointer; background: ' + (on ? '#2B44D6' : '#FFFFFF') + '; color: ' + (on ? '#FFFFFF' : '#17183B')
+        };
+      })
+    };
+  }
+
+  tile(c, i) {
+    const wished = !!(this.state.wish || {})[c.id];
+    const sold = c.qty === 0;
+    const has = !!c.img;
+    return {
+      ...c, sold, notSold: !sold, hasImg: has, noImg: !has,
+      priceText: '$' + c.price.toLocaleString('en-CA', { minimumFractionDigits: 2, maximumFractionDigits: 2 }),
+      stock: sold ? 'Sold out' : (c.qty <= 2 ? c.qty + ' left' : 'In stock'),
+      stockColor: sold ? '#B3261E' : '#1B6B3A',
+      imgOpacity: sold ? '0.55' : '1',
+      art: this.stripe(i, 12) + '; aspect-ratio: 248 / 345; border: 3px solid #17183B; border-radius: 10px; box-sizing: border-box; display: flex; align-items: flex-end; justify-content: center; padding: 10px' + (sold ? '; opacity: 0.55' : ''),
+      wishedStr: wished ? 'true' : 'false', heartFill: wished ? 'currentColor' : 'none',
+      toggleWish: () => this.setState({ wish: { ...(this.state.wish || {}), [c.id]: !wished } }),
+      add: () => this.setState({ cart: (this.state.cart || 0) + 1 })
+    };
+  }
+
+  renderVals() {
+    const v = this.pageVals();
+    return Object.assign({  cartCount: this.state.cart || 0 }, v);
+  }
+  pageVals() {
+    const st = this.state;
+    const IM = {"gengar": "/_blob/e04e041fe793850dffb2e84180eade57", "wiggly": "/_blob/d87fa8e8ad1611c33205a52dbf97e15d", "meowth": "/_blob/b3f3b18c1ee428f3b3731a24ffe4530d", "piplup": "/_blob/d9ad0b21b84620110e89f4ed8ff68bcb", "flygon": "/_blob/9f433ae93cc7897c81df3f4511b687ec"};
+    const base = [
+      { id: 'meowth', short: 'Meowth', title: 'Meowth (106) [ME02: Phantasmal Flames] Holofoil', cond: 'Near Mint', price: 22, img: IM.meowth, max: 1 },
+      { id: 'piplup', short: 'Piplup', title: 'Piplup - 098/094 (98) [ME02: Phantasmal Flames] Holofoil', cond: 'Near Mint', price: 17, img: IM.piplup, max: 3 },
+      { id: 'gengar', short: 'Mega Gengar ex', title: 'Mega Gengar ex (56) [ME02: Phantasmal Flames] Holofoil', cond: 'Lightly Played', price: 3, img: IM.gengar, max: 5 }
+    ];
+    const qtys = st.qtys;
+    const setQ = (id, n) => this.setState({ qtys: { ...this.state.qtys, [id]: n } });
+    const items = base.filter((b) => (qtys[b.id] || 0) > 0).map((b) => {
+      const q = qtys[b.id];
+      return { ...b, qty: q, unit: this.fmt(b.price), lineTotal: this.fmt(b.price * q),
+        inc: () => setQ(b.id, Math.min(q + 1, b.max)), dec: () => setQ(b.id, Math.max(q - 1, 1)), remove: () => setQ(b.id, 0) };
+    });
+    const count = items.reduce((s, i) => s + i.qty, 0);
+    const sub = items.reduce((s, i) => s + i.price * i.qty, 0);
+    const FREE = 300;
+    const pickup = st.deliv === 'pickup';
+    const rateList = [
+      { id: 'std', label: 'Tracked shipping', sub: '[Carrier, delivery estimate]', price: 12 },
+      { id: 'exp', label: 'Expedited', sub: '[Carrier, delivery estimate]', price: 20 }
+    ];
+    const rate = rateList.find((r) => r.id === st.rate) || rateList[0];
+    const shipCost = pickup ? 0 : (sub >= FREE ? 0 : rate.price);
+    const shipKnown = st.step === 'pay' || st.step === 'done' || st.step === 'ship';
+    const tax = Math.round(sub * 0.12 * 100) / 100;
+    const total = sub + (shipKnown ? shipCost : 0) + tax;
+    const steps = [['info', 'Information'], ['ship', 'Shipping'], ['pay', 'Payment']];
+    const order = ['cart', 'info', 'ship', 'pay', 'done'];
+    const idx = order.indexOf(st.step);
+    const crumbs = [{ label: 'Cart', style: 'color: #2B44D6', current: 'false' }].concat(steps.map((s) => {
+      const i = order.indexOf(s[0]);
+      return { label: '› ' + s[1], current: i === idx ? 'step' : 'false', style: i === idx ? 'color: #17183B; font-weight: 800' : (i < idx ? 'color: #2B44D6' : 'color: #5A5B78') };
+    }));
+    const opt = (on) => 'min-height: 52px; border-radius: 12px; font: inherit; font-weight: 700; cursor: pointer; border: 3px solid #17183B; background: ' + (on ? '#2B44D6' : '#FFFFFF') + '; color: ' + (on ? '#FFFFFF' : '#17183B');
+    const deliv = [['ship', 'Ship'], ['pickup', 'Pick up in store']].map((d) => ({ label: d[1], checked: (st.deliv === d[0]) ? 'true' : 'false', pick: () => this.setState({ deliv: d[0] }), style: opt(st.deliv === d[0]) }));
+    const rates = rateList.map((r) => {
+      const on = r.id === rate.id;
+      return { label: r.label, sub: r.sub, priceText: sub >= FREE ? 'Free' : this.fmt(r.price), checked: on ? 'true' : 'false', pick: () => this.setState({ rate: r.id }),
+        style: 'min-height: 64px; display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 10px 16px; border-radius: 12px; font: inherit; cursor: pointer; color: #17183B; background: ' + (on ? '#E9ECFF' : '#FFFFFF') + '; border: 3px solid ' + (on ? '#2B44D6' : '#17183B') };
+    });
+    const emailErr = !!st.tried && !(st.email || '').trim();
+    const go = (s) => () => this.setState({ step: s, sum: false });
+    const left = Math.max(FREE - sub, 0);
+    return {
+      cartCount: count,
+      isCart: st.step === 'cart', notCart: st.step !== 'cart', isInfo: st.step === 'info', isShipStep: st.step === 'ship', isPay: st.step === 'pay', isDone: st.step === 'done',
+      inCheckout: st.step === 'info' || st.step === 'ship' || st.step === 'pay',
+      items, hasItems: items.length > 0, noItems: items.length === 0, itemCount: count,
+      subtotal: this.fmt(sub), taxes: this.fmt(tax), total: this.fmt(total),
+      shipText: pickup ? 'Pickup, free' : (shipKnown ? (shipCost === 0 ? 'Free' : this.fmt(shipCost)) : 'Next step'),
+      shipMsg: left > 0 ? 'You’re ' + this.fmt(left) + ' away from free shipping.' : 'You’ve unlocked free shipping.',
+      barStyle: 'height: 100%; background: #2B44D6; width: ' + Math.min(100, Math.round(sub / FREE * 100)) + '%',
+      sumOpen: !!st.sum, sumStr: st.sum ? 'true' : 'false', sumLabel: st.sum ? 'Hide order summary' : 'Show order summary',
+      toggleSum: () => this.setState({ sum: !this.state.sum }),
+      crumbs, deliv, rates, isShip: !pickup, isPickup: pickup,
+      email: st.email || '', onEmail: (e) => this.setState({ email: e.target.value }),
+      emailErr, emailInvalid: emailErr ? 'true' : 'false',
+      infoNext: pickup ? 'Continue to payment' : 'Continue to shipping',
+      billSame: st.billSame !== false, toggleBill: () => this.setState({ billSame: this.state.billSame === false }),
+      goCart: go('cart'), goInfo: go('info'), goShipStep: go(pickup ? 'info' : 'ship'), goPay: go('pay'),
+      goShip: () => { if (!(this.state.email || '').trim()) { this.setState({ tried: true }); return; } this.setState({ tried: false, step: pickup ? 'pay' : 'ship', sum: false }); },
+      payNow: go('done'),
+      refill: () => this.setState({ qtys: { meowth: 1, piplup: 1, gengar: 2 } }),
+      restart: () => this.setState({ step: 'cart', qtys: { meowth: 1, piplup: 1, gengar: 2 }, email: '', tried: false })
+    };
+
+  }
+}
+</script>
+</body>
+</html>

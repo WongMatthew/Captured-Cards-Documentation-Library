@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Typography</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&amp;family=Instrument+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@900&amp;text=%E8%B2%B7%E5%8F%96&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#17183B}a:hover{color:#2B44D6}
+</style>
+</helmet>
+<div style="width: 1440px; height: 1500px; box-sizing: border-box; padding: 64px 72px; background: #F4F3EE; color: #17183B; font-family: 'Instrument Sans', system-ui, sans-serif; font-size: 18px; line-height: 1.5; display: flex; flex-direction: column; gap: 40px; overflow: hidden">
+<header style="display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; border-bottom: 4px solid #17183B; padding-bottom: 20px">
+<div style="display: flex; align-items: baseline; gap: 24px">
+<span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; letter-spacing: -0.03em; font-size: 96px; line-height: 0.85; color: #2B44D6">06</span>
+<h1 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; letter-spacing: -0.03em; font-size: 64px; line-height: 0.95">Typography</h1>
+</div>
+<span style="font-weight: 700; font-size: 15px; letter-spacing: 0.08em; text-transform: uppercase">Identity</span>
+</header>
+<div style="display: grid; grid-template-columns: 1.3fr 1fr; gap: 40px">
+<div style="background: #FFD447; border: 4px solid #17183B; border-radius: 20px; box-shadow: 6px 6px 0 #17183B; padding: 40px; display: flex; flex-direction: column; gap: 18px">
+<p style="margin: 0 0 12px; font-weight: 700; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: #17183B">Display · Bricolage Grotesque 800 / 600</p>
+<p style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; letter-spacing: -0.03em; font-size: 150px; line-height: 0.85; letter-spacing: -0.05em">Aa Gg 01</p>
+<p style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; letter-spacing: -0.03em; font-size: 30px; line-height: 1.15">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789 $ · → “ ” ’ !</p>
+<p style="margin: 0; font-size: 17px">Tight, chunky, a little quirky. For headlines, prices, numbers and the typeset signature. Never below 22 px.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 24px">
+<div style="background: #FFFFFF; border: 4px solid #17183B; border-radius: 20px; box-shadow: 6px 6px 0 #17183B; padding: 32px"><p style="margin: 0 0 12px; font-weight: 700; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: #3A3B5C">Text · Instrument Sans 400–700</p>
+<p style="margin: 0; font-size: 26px; font-weight: 700; line-height: 1.2">Umbreon ex</p>
+<p style="margin: 0; color: #3A3B5C">161/131 · Prismatic Evolutions · SIR</p>
+<p style="margin: 12px 0 0">Buy the exact Pokémon singles you want, open sealed product for the thrill, or sell us the cards you don’t need.</p></div>
+<div style="background: #17183B; color: #FFFFFF; border-radius: 20px; padding: 32px; display: flex; gap: 30px; align-items: center"><span aria-hidden="true" style="display: inline-block; background: #17183B; color: #FFD447; border: 4px solid #FFD447; border-radius: 16px; font-family: 'Noto Sans JP', sans-serif; font-weight: 900; white-space: nowrap; font-size: 56px; line-height: 1; padding: 16px 19px; transform: rotate(-8deg); box-shadow: 5px 5px 0 #FFFFFF">買取</span><div><p style="margin: 0 0 12px; font-weight: 700; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: #C9CAE0">Accent · Noto Sans JP Black</p><p style="margin: 0; font-size: 17px">買取 (kaitori, “we buy”) only. A nod to Japanese card-shop posters. A stamp, never a sentence; always paired with English.</p></div></div>
+</div>
+</div>
+<div><p style="margin: 0 0 12px; font-weight: 700; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: #3A3B5C">Type scale</p>
+<div style="background: #FFFFFF; border: 4px solid #17183B; border-radius: 20px; box-shadow: 6px 6px 0 #17183B; overflow: hidden">
+<div style="display: grid; grid-template-columns: 160px 210px 170px 110px 110px 1fr; gap: 20px; padding: 14px 24px; background: #17183B; color: #FFD447; font-weight: 700; font-size: 14px; letter-spacing: 0.05em; text-transform: uppercase"><span>Role</span><span>Face</span><span>Size px (web / mob)</span><span>Leading</span><span>Tracking</span><span>Sample</span></div>
+<div style="display: grid; grid-template-columns: 160px 210px 170px 110px 110px 1fr; gap: 20px; padding: 12px 24px; border-top: 2px solid #E3E3F0; align-items: center; font-size: 16px"><b>Hero</b><span>Bricolage 800</span><span>108 / 52</span><span>0.92</span><span>−3.5%</span><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; letter-spacing: -0.03em; font-size: 28px; font-weight: 800; white-space: nowrap; overflow: hidden">Skip the pack.</span></div><div style="display: grid; grid-template-columns: 160px 210px 170px 110px 110px 1fr; gap: 20px; padding: 12px 24px; border-top: 2px solid #E3E3F0; align-items: center; font-size: 16px"><b>Display XL</b><span>Bricolage 800</span><span>118–124 social</span><span>0.88</span><span>−4.5%</span><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; letter-spacing: -0.03em; font-size: 28px; font-weight: 800; white-space: nowrap; overflow: hidden">We’re buying.</span></div><div style="display: grid; grid-template-columns: 160px 210px 170px 110px 110px 1fr; gap: 20px; padding: 12px 24px; border-top: 2px solid #E3E3F0; align-items: center; font-size: 16px"><b>H2</b><span>Bricolage 800</span><span>56 / 34</span><span>1.0</span><span>−2%</span><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; letter-spacing: -0.03em; font-size: 28px; font-weight: 800; white-space: nowrap; overflow: hidden">Just hit the shelf</span></div><div style="display: grid; grid-template-columns: 160px 210px 170px 110px 110px 1fr; gap: 20px; padding: 12px 24px; border-top: 2px solid #E3E3F0; align-items: center; font-size: 16px"><b>H3 / tile</b><span>Bricolage 800</span><span>30</span><span>1.0</span><span>−2%</span><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; letter-spacing: -0.03em; font-size: 28px; font-weight: 800; white-space: nowrap; overflow: hidden">Pokémon singles</span></div><div style="display: grid; grid-template-columns: 160px 210px 170px 110px 110px 1fr; gap: 20px; padding: 12px 24px; border-top: 2px solid #E3E3F0; align-items: center; font-size: 16px"><b>Price</b><span>Bricolage 800</span><span>24–40</span><span>1.0</span><span>0</span><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; letter-spacing: -0.03em; font-size: 28px; font-weight: 800; white-space: nowrap; overflow: hidden">$1,450.00</span></div><div style="display: grid; grid-template-columns: 160px 210px 170px 110px 110px 1fr; gap: 20px; padding: 12px 24px; border-top: 2px solid #E3E3F0; align-items: center; font-size: 16px"><b>Lead</b><span>Instrument 500</span><span>19–22</span><span>1.45</span><span>0</span><span style="; font-size: 17px; font-weight: 400; white-space: nowrap; overflow: hidden">Cash or store credit, same day.</span></div><div style="display: grid; grid-template-columns: 160px 210px 170px 110px 110px 1fr; gap: 20px; padding: 12px 24px; border-top: 2px solid #E3E3F0; align-items: center; font-size: 16px"><b>Body</b><span>Instrument 400</span><span>16–18</span><span>1.5</span><span>0</span><span style="; font-size: 17px; font-weight: 400; white-space: nowrap; overflow: hidden">Every single is tagged before you buy.</span></div><div style="display: grid; grid-template-columns: 160px 210px 170px 110px 110px 1fr; gap: 20px; padding: 12px 24px; border-top: 2px solid #E3E3F0; align-items: center; font-size: 16px"><b>Label</b><span>Instrument 700</span><span>13–15</span><span>1.3</span><span>0</span><span style="; font-size: 17px; font-weight: 700; white-space: nowrap; overflow: hidden">Condition: Near Mint</span></div><div style="display: grid; grid-template-columns: 160px 210px 170px 110px 110px 1fr; gap: 20px; padding: 12px 24px; border-top: 2px solid #E3E3F0; align-items: center; font-size: 16px"><b>Overline</b><span>Instrument 700 caps</span><span>14</span><span>1.3</span><span>+8%</span><span style="; font-size: 17px; font-weight: 700; white-space: nowrap; overflow: hidden">BUYLIST · OCT 28</span></div></div></div>
+<footer style="margin-top: auto; display: flex; justify-content: space-between; font-size: 14px; font-weight: 600; opacity: 0.8"><span>Captured! Cards · Brand Guidelines v1.0</span><span>06 / 13</span></footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1500}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>

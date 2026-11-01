@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Your account — Captured! Cards (mobile)</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&amp;family=Instrument+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@900&amp;text=%E8%B2%B7%E5%8F%96&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#17183B}a:hover{color:#2B44D6}
+*:focus-visible{outline:3px solid #2B44D6;outline-offset:3px}
+input::placeholder,textarea::placeholder{color:#5A5B78}
+.kw{max-width:1280px;margin:0 auto;padding-left:24px;padding-right:24px;box-sizing:border-box}
+.kh{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;letter-spacing:-0.025em;line-height:1;margin:0}
+.kjp{font-family:'Noto Sans JP',sans-serif;font-weight:900}
+.kb{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:0 24px;border-radius:14px;border:3px solid #17183B;font-family:inherit;font-size:17px;font-weight:700;text-decoration:none;cursor:pointer;box-sizing:border-box}
+.kb-blue,.kb-blue:hover{background:#2B44D6;color:#FFFFFF}.kb-yel,.kb-yel:hover{background:#FFD447;color:#17183B;box-shadow:5px 5px 0 #17183B}.kb-ink,.kb-ink:hover{background:#17183B;color:#FFD447}.kb-out,.kb-out:hover{background:#FFFFFF;color:#17183B}.kb-ghost,.kb-ghost:hover{background:transparent;color:#FFFFFF;border-color:#FFFFFF}
+.kc{background:#FFFFFF;border:4px solid #17183B;border-radius:20px;box-shadow:6px 6px 0 #17183B}
+.knav{display:flex;flex-wrap:wrap;gap:2px 20px;font-weight:600;font-size:15px}
+.knav a{text-decoration:none;padding:10px 0}
+.knav a[aria-current="page"]{text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:7px}
+.ki{width:44px;height:44px;border-radius:50%;border:3px solid #17183B;background:#FFFFFF;color:#17183B;display:grid;place-items:center;cursor:pointer;box-sizing:border-box;flex-shrink:0}
+.kfield{width:100%;min-height:52px;border:3px solid #17183B;border-radius:12px;background:#FFFFFF;color:#17183B;font:inherit;font-size:16px;padding:0 14px;box-sizing:border-box}
+.klabel{display:block;font-weight:700;font-size:15px;margin-bottom:6px}
+.klift{transition:transform .25s cubic-bezier(.2,.9,.25,1.1)}
+.klift:hover{transform:translateY(-6px) rotate(-1deg)}
+.mscroll{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 20px 18px;scrollbar-width:none}
+.mscroll > *{scroll-snap-align:start}
+details > summary{cursor:pointer;list-style:none}
+details > summary::-webkit-details-marker{display:none}
+details[open] .kplus{transform:rotate(45deg)}
+.kplus{transition:transform .2s}
+.knav a{color:#FFFFFF}.knav a:hover{color:#FFD447}.knav a[aria-current="page"]{color:#FFD447}
+.kib{width:44px;height:44px;border-radius:50%;border:3px solid #17183B;background:#FFD447;color:#17183B;display:grid;place-items:center;cursor:pointer;box-sizing:border-box;position:relative;text-decoration:none}
+.kbadge{position:absolute;top:-6px;right:-6px;min-width:20px;height:20px;border-radius:999px;background:#17183B;color:#FFFFFF;font-size:12px;font-weight:700;display:grid;place-items:center;padding:0 5px;box-sizing:border-box}
+.tl-img{display:block;position:relative;border-radius:12px;transition:transform .3s cubic-bezier(.2,.9,.25,1.1),box-shadow .3s}
+.tl:hover .tl-img{transform:translateY(-6px) rotate(-1.5deg);box-shadow:6px 6px 0 #17183B}
+.tl-heart{position:absolute;right:6px;bottom:6px;width:40px;height:40px;border-radius:50%;border:2px solid #17183B;background:rgba(255,255,255,.92);color:#2B44D6;display:grid;place-items:center;cursor:pointer}
+.tl-title{font-size:14px;line-height:1.35;text-decoration:none;color:#17183B}
+.tl-title:hover{text-decoration:underline}
+.ac-bar{display:block;transition:background .4s}
+@media (prefers-reduced-motion: reduce){.klift,.kplus{transition:none}.klift:hover{transform:none}.tl-img{transition:none}.tl:hover .tl-img{transform:none}}
+</style>
+</helmet>
+<div style="width: 390px; overflow-x: clip; background: #FFD447; color: #17183B; font-family: 'Instrument Sans', system-ui, sans-serif; font-size: 16px; line-height: 1.5">
+<header style="background: #2B44D6; padding: 10px 16px 10px 18px; display: flex; align-items: center; justify-content: space-between; gap: 8px; border-bottom: 3px solid #17183B">
+<a href="KineticMobile.dc.html" aria-label="Captured! Cards home" style="display: block"><img src="/_blob/01497f49b7236fe8f2c4864dbb596a48" alt="Captured! Cards" style="height: 42px; width: auto; display: block"></a>
+<div style="display: flex; gap: 10px">
+<label for="cur-m" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Currency</label><select id="cur-m" class="kcur" style="width: 86px; font-size: 14px; padding: 0 22px 0 10px; height: 44px; border: 3px solid #17183B; border-radius: 999px; background: #FFFFFF url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2210%22 height=%226%22%3E%3Cpath d=%22M1 1l4 4 4-4%22 fill=%22none%22 stroke=%22%2317183B%22 stroke-width=%222%22/%3E%3C/svg%3E') no-repeat right 10px center; color: #17183B; font-family: inherit; font-weight: 700; cursor: pointer; appearance: none; -webkit-appearance: none; box-sizing: border-box"><option value="CAD">CAD $</option><option value="USD">USD $</option><option value="EUR">EUR €</option><option value="GBP">GBP £</option><option value="AUD">AUD $</option><option value="JPY">JPY ¥</option></select>
+<a href="LoginMobile.dc.html" class="kib" aria-label="Sign in or view your account" style="background: #FFFFFF"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"></path></svg></a>
+<a href="CheckoutMobile.dc.html" class="kib" aria-label="Cart, {{cartCount}} items"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 7h12l-1 13H7L6 7z"></path><path d="M9 7a3 3 0 0 1 6 0"></path></svg><span class="kbadge">{{cartCount}}</span></a>
+<button type="button" class="kib" aria-label="Menu" aria-expanded="{{menuStr}}" onClick="{{toggleMenu}}" style="background: #FFFFFF"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="{{menuIcon}}"></path></svg></button>
+</div>
+</header>
+<sc-if value="{{menuOpen}}" hint-placeholder-val="{{ false }}">
+<nav aria-label="Main" style="background: #17183B; padding: 8px 20px 20px; display: flex; flex-direction: column">
+<a href="ShopMobile.dc.html" style="color: #FFFFFF; text-decoration: none; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 24px; padding: 10px 0; border-bottom: 1px solid #2D2E58;">Shop all</a>
+<a href="CollectionMobile.dc.html" style="color: #FFFFFF; text-decoration: none; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 24px; padding: 10px 0; border-bottom: 1px solid #2D2E58;">Pokémon singles</a>
+<a href="CollectionMobile.dc.html" style="color: #FFFFFF; text-decoration: none; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 24px; padding: 10px 0; border-bottom: 1px solid #2D2E58;">Japanese singles</a>
+<a href="CollectionMobile.dc.html" style="color: #FFFFFF; text-decoration: none; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 24px; padding: 10px 0; border-bottom: 1px solid #2D2E58;">Pokémon sealed</a>
+<a href="CollectionMobile.dc.html" style="color: #FFFFFF; text-decoration: none; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 24px; padding: 10px 0; border-bottom: 1px solid #2D2E58;">Miscellaneous</a>
+<a href="SellMobile.dc.html" style="color: #FFD447; text-decoration: none; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 24px; padding: 10px 0; border-bottom: 1px solid #2D2E58;">Sell us your cards</a>
+<a href="ContactMobile.dc.html" style="color: #FFFFFF; text-decoration: none; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 24px; padding: 10px 0;">Contact</a>
+</nav>
+</sc-if>
+<section style="padding: 22px 16px 8px; display: flex; justify-content: space-between; align-items: flex-end; gap: 10px">
+<div><h1 class="kh" style="font-size: 40px; letter-spacing: -0.03em">Hi, Jordan.</h1><p style="margin: 6px 0 0; font-size: 14px; color: #2D2E4D">jordan@example.com</p></div>
+<a href="LoginMobile.dc.html" style="font-weight: 700; font-size: 15px; padding: 10px 0">Sign out</a>
+</section>
+<nav aria-label="Account" class="mscroll" style="padding: 10px 16px 14px">
+<sc-for list="{{tabs}}" as="tb" hint-placeholder-count="7"><button type="button" aria-current="{{tb.current}}" onClick="{{tb.pick}}" style="{{tb.style}}">{{tb.label}}</button></sc-for>
+</nav>
+<section style="padding: 0 16px 40px">
+<sc-if value="{{tOverview}}" hint-placeholder-val="{{ true }}">
+<div style="display: flex; flex-direction: column; gap: 22px">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 18px">
+<button type="button" onClick="{{goCredit}}" class="kc" style="text-align: left; font: inherit; cursor: pointer; color: #FFFFFF; background: #2B44D6; padding: 20px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 700">Store credit</span><span class="kh" style="font-size: 44px; color: #FFD447">$84.50</span><span style="font-size: 14px">Applied at checkout</span></button>
+<button type="button" onClick="{{goOrders}}" class="kc" style="text-align: left; font: inherit; cursor: pointer; color: #17183B; padding: 20px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 700">Open orders</span><span class="kh" style="font-size: 44px">2</span><span style="font-size: 14px; color: #3A3B5C">1 shipped, 1 pre-order</span></button>
+<button type="button" onClick="{{goTrade}}" class="kc" style="text-align: left; font: inherit; cursor: pointer; color: #17183B; padding: 20px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 700">Trade-ins in progress</span><span class="kh" style="font-size: 44px">1</span><span style="font-size: 14px; color: #3A3B5C">TR-2087 is being reviewed</span></button>
+</div>
+<div class="kc" style="padding: 20px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 10px; flex-wrap: wrap"><h2 class="kh" style="font-size: 24px">Latest order</h2><button type="button" onClick="{{goOrders}}" style="border: none; background: none; font: inherit; font-weight: 700; color: #2B44D6; cursor: pointer; min-height: 44px; padding: 0">All orders</button></div>
+<sc-for list="{{orders1}}" as="o" hint-placeholder-count="1"><div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px 16px">
+<div style="display: flex; flex-direction: column"><span style="font-weight: 800; font-size: 18px">Order {{o.num}}</span><span style="font-size: 14px; color: #3A3B5C">{{o.date}} · {{o.count}}</span></div>
+<span style="{{o.pill}}">{{o.status}}</span>
+</div>
+<div style="display: flex; gap: 8px; flex-wrap: wrap">
+<sc-for list="{{o.thumbs}}" as="th" hint-placeholder-count="3"><span style="{{th.style}}"><sc-if value="{{th.hasImg}}" hint-placeholder-val="{{ true }}"><img src="{{th.img}}" alt="{{th.alt}}" style="width: 100%; height: 100%; object-fit: cover; display: block"></sc-if></span></sc-for>
+</div>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px">
+<span style="font-weight: 700">Total {{o.total}}</span>
+<div style="display: flex; gap: 8px; flex-wrap: wrap"><button type="button" class="kb kb-out" style="min-height: 44px; padding: 0 14px; font-size: 14px; border-width: 2px">{{o.action}}</button><button type="button" class="kb kb-ink" style="min-height: 44px; padding: 0 14px; font-size: 14px; border-width: 2px">View order</button></div>
+</div>
+</sc-for>
+</div>
+<div class="kc" style="padding: 20px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 10px; flex-wrap: wrap"><h2 class="kh" style="font-size: 24px">Current trade-in</h2><button type="button" onClick="{{goTrade}}" style="border: none; background: none; font: inherit; font-weight: 700; color: #2B44D6; cursor: pointer; min-height: 44px; padding: 0">All trade-ins</button></div>
+<sc-for list="{{trades1}}" as="t" hint-placeholder-count="1"><div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px 16px">
+<div style="display: flex; flex-direction: column"><span style="font-weight: 800; font-size: 18px">Trade-in {{t.num}}</span><span style="font-size: 14px; color: #3A3B5C">{{t.date}} · {{t.count}} · Paid as {{t.payout}}</span></div>
+<span class="kh" style="font-size: 26px">{{t.value}}</span>
+</div>
+<ol aria-label="Trade-in progress" style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px">
+<sc-for list="{{t.steps}}" as="s" hint-placeholder-count="4"><li aria-current="{{s.current}}" style="display: flex; flex-direction: column; gap: 6px; font-size: 12px; font-weight: 700; color: {{s.text}}"><span class="ac-bar" style="{{s.bar}}"></span>{{s.label}}</li></sc-for>
+</ol>
+<p style="margin: 0; font-size: 14px; color: #3A3B5C">{{t.note}}</p>
+</sc-for>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{tOrders}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; gap: 18px">
+<h2 class="kh" style="font-size: 32px">Orders</h2>
+<sc-for list="{{orders}}" as="o" hint-placeholder-count="3">
+<div class="kc" style="padding: 18px; display: flex; flex-direction: column; gap: 12px"><div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px 16px">
+<div style="display: flex; flex-direction: column"><span style="font-weight: 800; font-size: 18px">Order {{o.num}}</span><span style="font-size: 14px; color: #3A3B5C">{{o.date}} · {{o.count}}</span></div>
+<span style="{{o.pill}}">{{o.status}}</span>
+</div>
+<div style="display: flex; gap: 8px; flex-wrap: wrap">
+<sc-for list="{{o.thumbs}}" as="th" hint-placeholder-count="3"><span style="{{th.style}}"><sc-if value="{{th.hasImg}}" hint-placeholder-val="{{ true }}"><img src="{{th.img}}" alt="{{th.alt}}" style="width: 100%; height: 100%; object-fit: cover; display: block"></sc-if></span></sc-for>
+</div>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px">
+<span style="font-weight: 700">Total {{o.total}}</span>
+<div style="display: flex; gap: 8px; flex-wrap: wrap"><button type="button" class="kb kb-out" style="min-height: 44px; padding: 0 14px; font-size: 14px; border-width: 2px">{{o.action}}</button><button type="button" class="kb kb-ink" style="min-height: 44px; padding: 0 14px; font-size: 14px; border-width: 2px">View order</button></div>
+</div>
+</div>
+</sc-for>
+</div>
+</sc-if>
+
+<sc-if value="{{tCredit}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; gap: 18px">
+<h2 class="kh" style="font-size: 32px">Store credit</h2>
+<div class="kc" style="padding: 24px; background: #2B44D6; color: #FFFFFF; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px">
+<div><p style="margin: 0; font-weight: 700">Available balance</p><p class="kh" style="font-size: 52px; color: #FFD447; margin-top: 6px">$84.50</p></div>
+<div style="display: flex; flex-direction: column; gap: 10px; max-width: 320px"><p style="margin: 0">Your balance is applied automatically when you check out while signed in.</p><a href="CollectionMobile.dc.html" class="kb kb-yel">Spend it now</a></div>
+</div>
+<div class="kc" style="padding: 8px 20px">
+<h3 style="margin: 12px 0 4px; font-size: 18px">History</h3>
+<ul style="list-style: none; margin: 0; padding: 0">
+<sc-for list="{{credits}}" as="h" hint-placeholder-count="3">
+<li style="display: flex; justify-content: space-between; gap: 12px; padding: 12px 0; border-top: 1px solid #C9C8D3"><span style="display: flex; flex-direction: column"><span style="font-weight: 700">{{h.label}}</span><span style="font-size: 13px; color: #3A3B5C">{{h.date}}</span></span><span style="font-weight: 700; color: {{h.color}}; white-space: nowrap">{{h.amount}}</span></li>
+</sc-for>
+</ul>
+</div>
+<p style="margin: 0; font-size: 15px">Get more credit by trading in cards. Trade credit pays 80% on cards not on the buylist, compared with 70% cash. <a href="https://buylist.capturedcards.com/retailer/buylist" style="font-weight: 700">Start a trade-in</a></p>
+</div>
+</sc-if>
+
+<sc-if value="{{tTrade}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; gap: 18px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px"><h2 class="kh" style="font-size: 32px">Trade-ins</h2><a href="https://buylist.capturedcards.com/retailer/buylist" class="kb kb-yel">Start a new trade-in →</a></div>
+<sc-for list="{{trades}}" as="t" hint-placeholder-count="2">
+<div class="kc" style="padding: 18px; display: flex; flex-direction: column; gap: 12px"><div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px 16px">
+<div style="display: flex; flex-direction: column"><span style="font-weight: 800; font-size: 18px">Trade-in {{t.num}}</span><span style="font-size: 14px; color: #3A3B5C">{{t.date}} · {{t.count}} · Paid as {{t.payout}}</span></div>
+<span class="kh" style="font-size: 26px">{{t.value}}</span>
+</div>
+<ol aria-label="Trade-in progress" style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px">
+<sc-for list="{{t.steps}}" as="s" hint-placeholder-count="4"><li aria-current="{{s.current}}" style="display: flex; flex-direction: column; gap: 6px; font-size: 12px; font-weight: 700; color: {{s.text}}"><span class="ac-bar" style="{{s.bar}}"></span>{{s.label}}</li></sc-for>
+</ol>
+<p style="margin: 0; font-size: 14px; color: #3A3B5C">{{t.note}}</p>
+</div>
+</sc-for>
+</div>
+</sc-if>
+
+<sc-if value="{{tWish}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; gap: 18px">
+<h2 class="kh" style="font-size: 32px">Wishlist</h2>
+<sc-if value="{{hasWish}}" hint-placeholder-val="{{ true }}">
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 20px 16px">
+<sc-for list="{{wishTiles}}" as="c" hint-placeholder-count="4">
+<article class="kc" style="padding: 8px; display: flex; flex-direction: column; gap: 8px; border-radius: 14px; box-shadow: 4px 4px 0 #17183B; min-width: 0">
+<div style="position: relative">
+<a href="ProductMobile.dc.html" aria-label="{{c.short}}, {{c.meta}}, {{c.priceText}}" style="display: block">
+<sc-if value="{{c.hasImg}}" hint-placeholder-val="{{ true }}"><img src="{{c.img}}" alt="" style="display: block; width: 100%; aspect-ratio: 248 / 345; object-fit: cover; border: 3px solid #17183B; border-radius: 10px; box-sizing: border-box; opacity: {{c.imgOpacity}}"></sc-if>
+<sc-if value="{{c.noImg}}" hint-placeholder-val="{{ false }}"><div style="{{c.art}}"><span style="background: #FFFFFF; color: #17183B; border-radius: 999px; padding: 2px 8px; font-size: 11px; font-weight: 700">Card photo</span></div></sc-if>
+</a>
+<sc-if value="{{c.sold}}" hint-placeholder-val="{{ false }}"><span style="position: absolute; top: 8px; left: 8px; background: #17183B; color: #FFFFFF; border-radius: 999px; padding: 3px 10px; font-size: 12px; font-weight: 700">Sold out</span></sc-if>
+<button type="button" class="ki" aria-label="Add {{c.short}} to wishlist" aria-pressed="{{c.wishedStr}}" onClick="{{c.toggleWish}}" style="position: absolute; top: 6px; right: 6px; color: #2B44D6"><svg width="18" height="18" viewBox="0 0 24 24" fill="{{c.heartFill}}" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"></path></svg></button>
+</div>
+<div>
+<h3 style="margin: 0; font-size: 15px; font-weight: 700; line-height: 1.25"><a href="ProductMobile.dc.html" style="text-decoration: none">{{c.short}}</a></h3>
+<p style="margin: 2px 0 0; font-size: 13px; color: #3A3B5C">{{c.meta}}</p>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 6px; margin-top: auto">
+<sc-if value="{{c.notSold}}" hint-placeholder-val="{{ true }}"><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 19px">{{c.priceText}}</span></sc-if>
+<sc-if value="{{c.sold}}" hint-placeholder-val="{{ false }}"><s style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 19px; color: #5A5B78">{{c.priceText}}</s></sc-if>
+<span style="font-size: 13px; font-weight: 700; color: {{c.stockColor}}">{{c.stock}}</span>
+</div>
+<sc-if value="{{c.notSold}}" hint-placeholder-val="{{ true }}"><button type="button" class="kb kb-ink" onClick="{{c.add}}" style="min-height: 44px; border-radius: 12px; font-size: 15px; padding: 0 10px">Add to cart</button></sc-if>
+<sc-if value="{{c.sold}}" hint-placeholder-val="{{ false }}"><button type="button" class="kb kb-out" style="min-height: 44px; border-radius: 12px; font-size: 15px; padding: 0 10px">Notify me</button></sc-if>
+</article>
+</sc-for>
+</div>
+</sc-if>
+<sc-if value="{{noWish}}" hint-placeholder-val="{{ false }}"><div class="kc" style="padding: 22px; display: flex; flex-direction: column; gap: 12px; align-items: flex-start"><p style="margin: 0; font-weight: 700">Your wishlist is empty.</p><a href="CollectionMobile.dc.html" class="kb kb-blue">Browse singles</a></div></sc-if>
+</div>
+</sc-if>
+
+<sc-if value="{{tProfile}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; gap: 18px">
+<h2 class="kh" style="font-size: 32px">Profile</h2>
+<div class="kc" style="padding: 8px 20px">
+<dl style="margin: 0">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 14px 0; border-bottom: 1px solid #C9C8D3"><div><dt style="font-size: 13px; color: #3A3B5C">Name</dt><dd style="margin: 0; font-weight: 700">Jordan Lee</dd></div><button type="button" class="kb kb-out" style="min-height: 44px; padding: 0 14px; font-size: 14px; border-width: 2px">Edit</button></div>
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 14px 0; border-bottom: 1px solid #C9C8D3"><div><dt style="font-size: 13px; color: #3A3B5C">Email</dt><dd style="margin: 0; font-weight: 700">jordan@example.com</dd></div><button type="button" class="kb kb-out" style="min-height: 44px; padding: 0 14px; font-size: 14px; border-width: 2px">Edit</button></div>
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 14px 0"><div><dt style="font-size: 13px; color: #3A3B5C">Phone</dt><dd style="margin: 0; font-weight: 700">604-555-0142</dd></div><button type="button" class="kb kb-out" style="min-height: 44px; padding: 0 14px; font-size: 14px; border-width: 2px">Edit</button></div>
+</dl>
+</div>
+<div class="kc" style="padding: 20px; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 10px"><h3 style="margin: 0; font-size: 18px">Addresses</h3><button type="button" class="kb kb-out" style="min-height: 44px; padding: 0 14px; font-size: 14px; border-width: 2px">Add address</button></div>
+<div style="border: 2px solid #17183B; border-radius: 12px; padding: 14px"><span style="display: inline-block; background: #FFD447; border: 2px solid #17183B; border-radius: 999px; padding: 1px 10px; font-size: 12px; font-weight: 700; margin-bottom: 6px">Default</span><p style="margin: 0">Jordan Lee<br>1234 Sample Street<br>Burnaby, BC  V5H 0A0<br>Canada</p></div>
+</div>
+<div class="kc" style="padding: 20px; display: flex; flex-direction: column; gap: 6px">
+<h3 style="margin: 0 0 4px; font-size: 18px">Email preferences</h3>
+<label for="ac-news" style="display: flex; align-items: center; gap: 10px; min-height: 44px"><input id="ac-news" type="checkbox" checked="{{news}}" onChange="{{toggleNews}}" style="width: 20px; height: 20px; accent-color: #2B44D6">New releases and pre-orders</label>
+<label for="ac-buy" style="display: flex; align-items: center; gap: 10px; min-height: 44px"><input id="ac-buy" type="checkbox" checked="{{buyNews}}" onChange="{{toggleBuyNews}}" style="width: 20px; height: 20px; accent-color: #2B44D6">Weekly buylist updates</label>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{tPay}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; gap: 18px">
+<h2 class="kh" style="font-size: 32px">Payment methods</h2>
+<div class="kc" style="padding: 20px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; align-items: center; gap: 14px"><span aria-hidden="true" style="width: 58px; height: 40px; border-radius: 8px; background: #17183B; color: #FFFFFF; display: grid; place-items: center; font-weight: 800; font-size: 13px">VISA</span><div style="display: flex; flex-direction: column"><span style="font-weight: 700">Visa ending in 4242</span><span style="font-size: 14px; color: #3A3B5C">Expires 08/28 · Saved with Shop Pay</span></div></div>
+<p style="margin: 0; font-size: 15px; color: #3A3B5C">Your cards are saved securely with Shop Pay, so you can check out in one tap here and at other Shop Pay stores. Card numbers are never stored on our site.</p>
+<a href="#shop" class="kb" style="background: #5A31F4; color: #FFFFFF; align-self: flex-start">Manage in Shop</a>
+</div>
+<div class="kc" style="padding: 20px; display: flex; flex-direction: column; gap: 8px">
+<h3 style="margin: 0; font-size: 18px">Trade-in payouts</h3>
+<p style="margin: 0; font-size: 15px; color: #3A3B5C">Choose how you’re paid each time you submit a trade-in on the buylist: store credit (added to this account) or cash.</p>
+</div>
+</div>
+</sc-if>
+
+</section>
+<footer style="background: #17183B; color: #FFFFFF; padding: 32px 20px 40px; display: flex; flex-direction: column; gap: 22px">
+<img src="/_blob/01497f49b7236fe8f2c4864dbb596a48" alt="Captured! Cards" style="height: 54px; width: auto; align-self: flex-start">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<label for="mf-email" style="font-weight: 700">Get new releases in your inbox first</label>
+<input id="mf-email" type="email" placeholder="you@example.com" style="min-height: 50px; border: 3px solid #FFD447; border-radius: 12px; padding: 0 14px; font: inherit; background: #FFFFFF; color: #17183B">
+<button type="button" class="kb kb-yel" style="box-shadow: none; border-color: #FFD447">Join the list</button>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 14px">
+<a href="ContactMobile.dc.html" style="color: #FFFFFF; padding: 8px 0">Contact us</a><a href="#policies" style="color: #FFFFFF; padding: 8px 0">Shipping policy</a><a href="#policies" style="color: #FFFFFF; padding: 8px 0">Refund policy</a><a href="#policies" style="color: #FFFFFF; padding: 8px 0">Privacy policy</a><a href="#policies" style="color: #FFFFFF; padding: 8px 0">Terms of service</a>
+<span style="flex-basis: 100%; color: #C9CAE0">© 2026 Captured! Cards, Burnaby, BC</span>
+</div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":2300}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = Object.assign({ menu: false, cart: 0, wish: {}, cond: {} }, { tab: 'overview', cart: 2, wish: { meowth: true, umbreon: true, giratina: true, flygon: true }, news: true, buyNews: false });
+  }
+
+  stripe(i, w) {
+    const S = [['#2B44D6', '#4A60E0'], ['#E4572E', '#EC7A58'], ['#7BC8A4', '#9AD6BA'], ['#17183B', '#2D2E58'], ['#FFD447', '#FFE07A']];
+    const s = S[i % 5];
+    return 'background: repeating-linear-gradient(135deg, ' + s[0] + ' 0 ' + w + 'px, ' + s[1] + ' ' + w + 'px ' + (w + 4) + 'px)';
+  }
+  fmt(n) { return '$' + n.toLocaleString('en-CA', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); }
+  conds() {
+    return [
+      { short: 'NM', full: 'Near Mint', m: 1 },
+      { short: 'LP', full: 'Lightly Played', m: 0.85 },
+      { short: 'MP', full: 'Moderately Played', m: 0.7 },
+      { short: 'HP', full: 'Heavily Played', m: 0.5 }
+    ];
+  }
+  listing(c, i) {
+    const st = this.state;
+    const conds = this.conds();
+    const sel = (st.cond || {})[c.id] || 'NM';
+    const wished = !!(st.wish || {})[c.id];
+    const cur = conds.find((k) => k.short === sel);
+    const sold = c.qty === 0;
+    return {
+      ...c,
+      price: this.fmt(c.price * cur.m),
+      condLabel: cur.full,
+      stock: sold ? 'Sold out' : (c.qty <= 2 ? c.qty + ' left' : 'In stock'),
+      stockColor: sold ? '#B3261E' : '#1B6B3A',
+      sold, notSold: !sold,
+      wishedStr: wished ? 'true' : 'false',
+      heartFill: wished ? 'currentColor' : 'none',
+      art: this.stripe(i, 14) + '; aspect-ratio: 63 / 88; border: 3px solid #17183B; border-radius: 10px; box-sizing: border-box; display: flex; align-items: flex-end; justify-content: center; padding: 10px',
+      toggleWish: () => this.setState({ wish: { ...(this.state.wish || {}), [c.id]: !wished } }),
+      add: () => this.setState({ cart: (this.state.cart || 0) + 1 }),
+      conds: conds.map((k) => {
+        const on = k.short === sel;
+        return {
+          ...k,
+          pressed: on ? 'true' : 'false',
+          pick: () => this.setState({ cond: { ...(this.state.cond || {}), [c.id]: k.short } }),
+          style: 'flex: 1; min-height: 44px; border-radius: 10px; border: 3px solid #17183B; font: inherit; font-size: 14px; font-weight: 700; cursor: pointer; background: ' + (on ? '#2B44D6' : '#FFFFFF') + '; color: ' + (on ? '#FFFFFF' : '#17183B')
+        };
+      })
+    };
+  }
+
+  tile(c, i) {
+    const wished = !!(this.state.wish || {})[c.id];
+    const sold = c.qty === 0;
+    const has = !!c.img;
+    return {
+      ...c, sold, notSold: !sold, hasImg: has, noImg: !has,
+      priceText: '$' + c.price.toLocaleString('en-CA', { minimumFractionDigits: 2, maximumFractionDigits: 2 }),
+      stock: sold ? 'Sold out' : (c.qty <= 2 ? c.qty + ' left' : 'In stock'),
+      stockColor: sold ? '#B3261E' : '#1B6B3A',
+      imgOpacity: sold ? '0.55' : '1',
+      art: this.stripe(i, 12) + '; aspect-ratio: 248 / 345; border: 3px solid #17183B; border-radius: 10px; box-sizing: border-box; display: flex; align-items: flex-end; justify-content: center; padding: 10px' + (sold ? '; opacity: 0.55' : ''),
+      wishedStr: wished ? 'true' : 'false', heartFill: wished ? 'currentColor' : 'none',
+      toggleWish: () => this.setState({ wish: { ...(this.state.wish || {}), [c.id]: !wished } }),
+      add: () => this.setState({ cart: (this.state.cart || 0) + 1 })
+    };
+  }
+
+  renderVals() {
+    const v = this.pageVals();
+    return Object.assign({ menuOpen: !!this.state.menu, menuStr: this.state.menu ? 'true' : 'false', menuIcon: this.state.menu ? 'M6 6l12 12M18 6L6 18' : 'M4 7h16M4 12h16M4 17h16', toggleMenu: () => this.setState({ menu: !this.state.menu }), cartCount: this.state.cart || 0 }, v);
+  }
+  pageVals() {
+    const st = this.state;
+    const IM = {"gengar": "/_blob/e04e041fe793850dffb2e84180eade57", "wiggly": "/_blob/d87fa8e8ad1611c33205a52dbf97e15d", "meowth": "/_blob/b3f3b18c1ee428f3b3731a24ffe4530d", "piplup": "/_blob/d9ad0b21b84620110e89f4ed8ff68bcb", "flygon": "/_blob/9f433ae93cc7897c81df3f4511b687ec"};
+    const fmt = (n) => this.fmt(n);
+    const tab = st.tab || 'overview';
+    const th = (img, alt, i) => ({ img, alt, hasImg: !!img, style: 'width: 46px; height: 64px; border: 2px solid #17183B; border-radius: 6px; overflow: hidden; display: block; box-sizing: border-box; ' + (img ? '' : this.stripe(i, 6)) });
+    const pill = (bg, fg) => 'border: 2px solid #17183B; border-radius: 999px; padding: 3px 12px; font-size: 13px; font-weight: 700; background: ' + bg + '; color: ' + fg;
+    const orders = [
+      { num: '#1042', date: 'Oct 27, 2026', count: '4 items', total: '$62.40', status: 'Shipped', pill: pill('#2B44D6', '#FFFFFF'), action: 'Track package', thumbs: [th(IM.meowth, 'Meowth', 0), th(IM.piplup, 'Piplup', 1), th(IM.gengar, 'Mega Gengar ex', 2)] },
+      { num: '#1031', date: 'Oct 12, 2026', count: '1 item', total: '$64.95', status: 'Pre-order, ships Nov 6', pill: pill('#FFD447', '#17183B'), action: 'Edit pre-order', thumbs: [th('', 'Delta Reign Booster Bundle', 3)] },
+      { num: '#1018', date: 'Sep 28, 2026', count: '2 items', total: '$23.52', status: 'Delivered', pill: pill('#FFFFFF', '#1B6B3A'), action: 'Buy again', thumbs: [th(IM.wiggly, 'Wigglytuff', 0), th(IM.flygon, 'Flygon', 1)] }
+    ];
+    const stepNames = ['Submitted', 'Received', 'Reviewed', 'Paid'];
+    const mkSteps = (n) => stepNames.map((l, i) => ({ label: l, current: i === n ? 'step' : 'false', text: i <= n ? '#17183B' : '#5A5B78', bar: 'height: 8px; border-radius: 999px; border: 2px solid #17183B; background: ' + (i <= n ? '#2B44D6' : '#FFFFFF') }));
+    const trades = [
+      { num: 'TR-2087', date: 'Oct 25, 2026', count: '6 cards', payout: 'store credit', value: '$112.00', steps: mkSteps(1), note: 'We have your cards and are checking condition. Your offer is confirmed once review is done.' },
+      { num: 'TR-2051', date: 'Oct 9, 2026', count: '3 cards', payout: 'store credit', value: '$84.50', steps: mkSteps(3), note: 'Paid on Oct 10. $84.50 was added to your store credit.' }
+    ];
+    const credits = [
+      { label: 'Trade-in TR-2051, paid as store credit', date: 'Oct 10, 2026', amount: '+$84.50', color: '#1B6B3A' },
+      { label: 'Used on order #1018', date: 'Sep 28, 2026', amount: '−$40.00', color: '#B3261E' },
+      { label: 'Trade-in TR-1990, paid as store credit', date: 'Sep 2, 2026', amount: '+$40.00', color: '#1B6B3A' }
+    ];
+    const all = [
+      { id: 'gengar', short: 'Mega Gengar ex', meta: '056/094 · Phantasmal Flames', price: 3, qty: 5, img: '/_blob/e04e041fe793850dffb2e84180eade57' },
+      { id: 'wiggly', short: 'Wigglytuff', meta: '105/094 · Phantasmal Flames', price: 11, qty: 2, img: '/_blob/d87fa8e8ad1611c33205a52dbf97e15d' },
+      { id: 'meowth', short: 'Meowth', meta: '106/094 · Phantasmal Flames', price: 22, qty: 1, img: '/_blob/b3f3b18c1ee428f3b3731a24ffe4530d' },
+      { id: 'piplup', short: 'Piplup', meta: '098/094 · Phantasmal Flames', price: 17, qty: 3, img: '/_blob/d9ad0b21b84620110e89f4ed8ff68bcb' },
+      { id: 'flygon', short: 'Flygon', meta: '101/094 · Phantasmal Flames', price: 10, qty: 0, img: '/_blob/9f433ae93cc7897c81df3f4511b687ec' },
+      { id: 'mcx', short: 'Mega Charizard X ex', meta: '013/094 · Phantasmal Flames', price: 8, qty: 4, img: '' },
+      { id: 'lucario', short: 'Lucario VSTAR', meta: 'SWSH291 · Sword & Shield Promos', price: 13, qty: 2, img: '' },
+      { id: 'iris', short: 'Iris’s Fighting Spirit', meta: '180/159 · Journey Together', price: 3, qty: 6, img: '' },
+      { id: 'pika5', short: 'Pikachu', meta: '005/025 · Celebrations', price: 10, qty: 3, img: '' },
+      { id: 'umbreon', short: 'Umbreon ex', meta: '161/131 · Prismatic Evolutions', price: 1450, qty: 1, img: '' },
+      { id: 'sylveon', short: 'Sylveon ex', meta: '156/131 · Prismatic Evolutions', price: 190, qty: 3, img: '' },
+      { id: 'espeon', short: 'Espeon ex', meta: '155/131 · Prismatic Evolutions', price: 240, qty: 2, img: '' },
+      { id: 'pikaex', short: 'Pikachu ex', meta: '238/191 · Surging Sparks', price: 420, qty: 0, img: '' },
+      { id: 'chz151', short: 'Charizard ex', meta: '199/165 · Pokémon 151', price: 380, qty: 1, img: '' },
+      { id: 'blast', short: 'Blastoise ex', meta: '200/165 · Pokémon 151', price: 110, qty: 2, img: '' },
+      { id: 'venu', short: 'Venusaur ex', meta: '198/165 · Pokémon 151', price: 95, qty: 3, img: '' },
+      { id: 'erika', short: 'Erika’s Invitation', meta: '203/165 · Pokémon 151', price: 120, qty: 1, img: '' },
+      { id: 'mewpaf', short: 'Mew ex', meta: '232/091 · Paldean Fates', price: 85, qty: 4, img: '' },
+      { id: 'iono', short: 'Iono', meta: '269/193 · Paldea Evolved', price: 95, qty: 2, img: '' },
+      { id: 'magi', short: 'Magikarp', meta: '203/193 · Paldea Evolved', price: 70, qty: 0, img: '' },
+      { id: 'umbvmax', short: 'Umbreon VMAX', meta: '215/203 · Evolving Skies', price: 1900, qty: 1, img: '' },
+      { id: 'rayvmax', short: 'Rayquaza VMAX', meta: '218/203 · Evolving Skies', price: 720, qty: 1, img: '' },
+      { id: 'giratina', short: 'Giratina V', meta: '186/196 · Lost Origin', price: 640, qty: 0, img: '' },
+      { id: 'lugia', short: 'Lugia V', meta: '186/195 · Silver Tempest', price: 260, qty: 2, img: '' }
+    ];
+    const wish = st.wish || {};
+    const wishTiles = all.filter((c) => wish[c.id]).map((c) => this.tile(c, all.indexOf(c)));
+    const tabs = [['overview', 'Overview'], ['orders', 'Orders'], ['credit', 'Store credit'], ['trade', 'Trade-ins'], ['wish', 'Wishlist'], ['profile', 'Profile'], ['pay', 'Payment methods']].map((t) => {
+      const on = tab === t[0];
+      return { label: t[1], current: on ? 'page' : 'false', pick: () => this.setState({ tab: t[0] }), style: 'min-height: 44px; padding: 0 16px; border-radius: 999px; font: inherit; font-size: 15px; font-weight: 700; cursor: pointer; white-space: nowrap; border: 3px solid #17183B; background: ' + (on ? '#17183B' : '#FFFFFF') + '; color: ' + (on ? '#FFD447' : '#17183B') };
+    });
+    const go = (t) => () => this.setState({ tab: t });
+    return {
+      tabs, orders, orders1: [orders[0]], trades, trades1: [trades[0]], credits, wishTiles,
+      hasWish: wishTiles.length > 0, noWish: wishTiles.length === 0,
+      tOverview: tab === 'overview', tOrders: tab === 'orders', tCredit: tab === 'credit', tTrade: tab === 'trade', tWish: tab === 'wish', tProfile: tab === 'profile', tPay: tab === 'pay',
+      goOrders: go('orders'), goCredit: go('credit'), goTrade: go('trade'),
+      news: st.news !== false, buyNews: !!st.buyNews,
+      toggleNews: () => this.setState({ news: this.state.news === false }),
+      toggleBuyNews: () => this.setState({ buyNews: !this.state.buyNews })
+    };
+
+  }
+}
+</script>
+</body>
+</html>

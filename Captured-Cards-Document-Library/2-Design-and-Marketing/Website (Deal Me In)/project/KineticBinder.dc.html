@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Captured! Cards — Binder Flip</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;800&amp;family=Figtree:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#10224A}a:hover{color:#B8430A}
+*:focus-visible{outline:3px solid #F2661B;outline-offset:3px}
+input::placeholder{color:#55617F}
+@keyframes bdFlip{from{transform:rotateY(180deg) scale(.9);opacity:0}to{transform:rotateY(0) scale(1);opacity:1}}
+@keyframes bdMarq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.bd-pocket{perspective:900px;background:rgba(255,255,255,.08);border-radius:10px;padding:6px}
+.bd-card{animation:bdFlip .65s cubic-bezier(.2,.8,.2,1) backwards;animation-delay:var(--d);transition:transform .3s cubic-bezier(.2,.9,.25,1.1),box-shadow .3s}
+.bd-pocket:hover .bd-card{transform:translateY(-8px) rotate(-2deg) scale(1.05);box-shadow:0 18px 30px rgba(0,0,0,.35)}
+.ph{position:relative;overflow:hidden;aspect-ratio:63/88;border-radius:4.5% / 3.2%;background:#EEF3FA;color:#3E4B6B;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center;font-size:12px;font-weight:600;box-sizing:border-box;padding:8px}
+.ph::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 38%,rgba(255,255,255,.85) 50%,transparent 62%);transform:translateX(-110%);transition:transform .7s ease}
+.bd-pocket:hover .ph::after,.bd-item:hover .ph::after{transform:translateX(110%)}
+.bd-track{display:flex;width:max-content;animation:bdMarq 40s linear infinite}
+.bd-band:hover .bd-track{animation-play-state:paused}
+@media (prefers-reduced-motion: reduce){.bd-card{animation:none;transition:none}.bd-track{animation:none;flex-wrap:wrap;width:auto}.ph::after{display:none}}
+</style>
+</helmet>
+<div style="background: #D6ECFF; color: #10224A; font-family: 'Figtree', system-ui, sans-serif; font-size: 16px; line-height: 1.5; overflow-x: hidden">
+
+<header style="max-width: 1280px; margin: 0 auto; padding: 18px 24px; display: flex; flex-wrap: wrap; gap: 14px 28px; align-items: center; justify-content: space-between">
+<a href="#top" style="text-decoration: none; font-family: 'Unbounded', sans-serif; font-weight: 800; font-size: 24px; letter-spacing: -0.02em">Captured! <span style="font-weight: 600">Cards</span></a>
+<nav aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 2px 20px; font-weight: 600; font-size: 15px">
+<a href="#cats" style="text-decoration: none; padding: 10px 0">Sealed</a>
+<a href="#singles" style="text-decoration: none; padding: 10px 0">Singles</a>
+<a href="#cats" style="text-decoration: none; padding: 10px 0">Japanese singles</a>
+<a href="#cats" style="text-decoration: none; padding: 10px 0">Miscellaneous</a>
+<a href="#cats" style="text-decoration: none; padding: 10px 0">Sell us your cards</a>
+<a href="#contact" style="text-decoration: none; padding: 10px 0">Contact</a>
+</nav>
+<div style="display: flex; gap: 10px; align-items: center">
+<a href="tel:+17788810076" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; border-radius: 999px; background: #10224A; color: #FFFFFF; font-weight: 700; text-decoration: none">778-881-0076</a>
+<button type="button" aria-label="Wishlist" style="width: 44px; height: 44px; border-radius: 50%; border: 2px solid #10224A; background: #FFFFFF; color: #10224A; display: grid; place-items: center; cursor: pointer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"></path></svg></button>
+<button type="button" aria-label="Cart, 0 items" style="width: 44px; height: 44px; border-radius: 50%; border: 2px solid #10224A; background: #FFFFFF; color: #10224A; display: grid; place-items: center; cursor: pointer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 7h12l-1 13H7L6 7z"></path><path d="M9 7a3 3 0 0 1 6 0"></path></svg></button>
+</div>
+</header>
+
+<section id="top" style="max-width: 1280px; margin: 0 auto; padding: 24px 24px 72px; display: grid; grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); gap: 48px; align-items: center">
+<div style="display: flex; flex-direction: column; gap: 22px">
+<h1 style="margin: 0; font-family: 'Unbounded', sans-serif; font-weight: 800; font-size: clamp(40px, 5.4vw, 76px); line-height: 1; letter-spacing: -0.03em">Your binder has a few empty pockets.</h1>
+<p style="margin: 0; font-size: 19px; max-width: 32em; color: #24365F">Search our Pokémon singles by name, set or number and fill the gaps in your collection. Every listing shows the card’s condition and how many we have left.</p>
+<div style="background: #FFFFFF; border-radius: 20px; padding: 8px; display: flex; flex-wrap: wrap; gap: 8px; box-shadow: 0 6px 0 #10224A; border: 2px solid #10224A">
+<label for="bd-search" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Search the catalog</label>
+<input id="bd-search" type="search" placeholder="Try “Mega Charizard X ex” or “013/094”" style="flex: 999 1 220px; min-width: 0; border: none; font: inherit; font-size: 18px; padding: 14px 14px; color: #10224A; background: transparent">
+<button type="button" style="flex: 1 1 150px; min-height: 56px; border: none; border-radius: 14px; background: #F2661B; color: #10224A; font: inherit; font-weight: 800; font-size: 18px; cursor: pointer">Search cards</button>
+</div>
+<p style="margin: 0; font-size: 16px">Can’t find it? <a href="tel:+17788810076" style="font-weight: 700">Call 778-881-0076</a> and we’ll check the back room.</p>
+</div>
+<div style="background: #10224A; border-radius: 22px; padding: 18px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; box-shadow: 14px 14px 0 #F2661B; max-width: 460px; width: 100%; justify-self: center; box-sizing: border-box">
+<sc-for list="{{pockets}}" as="p" hint-placeholder-count="9">
+<a href="#singles" class="bd-pocket" aria-label="{{p.name}}" style="display: block; text-decoration: none">
+<div class="bd-card" style="--d: {{p.delay}}">
+<div class="ph"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="14" rx="2"></rect><circle cx="12" cy="13" r="3.5"></circle><path d="M8 6l1.5-2h5L16 6"></path></svg><span>{{p.name}}</span></div>
+</div>
+</a>
+</sc-for>
+</div>
+</section>
+
+<div class="bd-band" style="background: #F2661B; overflow: hidden" aria-label="Just added to the shop">
+<div class="bd-track" style="padding: 18px 0; font-family: 'Unbounded', sans-serif; font-weight: 600; font-size: 18px; white-space: nowrap; color: #10224A">
+<sc-for list="{{ticker}}" as="t" hint-placeholder-count="12">
+<span style="padding: 0 28px; display: inline-flex; gap: 10px">{{t.name}} <span style="font-weight: 800">{{t.price}}</span></span>
+</sc-for>
+</div>
+</div>
+
+<section id="preorders" style="max-width: 1280px; margin: 0 auto; padding: 72px 24px">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 36px; align-items: center">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-family: 'Unbounded', sans-serif; font-weight: 800; font-size: clamp(30px, 3.6vw, 50px); line-height: 1.02; letter-spacing: -0.02em">Delta Reign drops in {{daysText}}</h2>
+<p style="margin: 0; font-size: 18px; color: #24365F">Reserve your sealed product now. Pre-orders release November 6.</p>
+<a href="#preorders" style="align-self: flex-start; display: inline-flex; align-items: center; min-height: 54px; padding: 0 26px; border-radius: 14px; background: #10224A; color: #FFFFFF; font-weight: 700; text-decoration: none">See all pre-orders</a>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 14px">
+<sc-for list="{{preorders}}" as="p" hint-placeholder-count="4">
+<a href="#preorders" class="bd-item" style="text-decoration: none; background: #FFFFFF; border: 2px solid #10224A; border-radius: 16px; padding: 12px; display: flex; flex-direction: column; gap: 6px">
+<div class="ph" style="aspect-ratio: 1 / 1; border-radius: 10px"><span>Product photo</span></div>
+<span style="font-weight: 700; line-height: 1.3; font-size: 15px">{{p.name}}</span>
+<span style="font-family: 'Unbounded', sans-serif; font-weight: 800; font-size: 18px">{{p.price}}</span>
+<span style="font-size: 13px; font-weight: 700; color: {{p.statusColor}}">{{p.status}}</span>
+</a>
+</sc-for>
+</div>
+</div>
+</section>
+
+<section id="cats" style="background: #10224A; color: #FFFFFF">
+<div style="max-width: 1280px; margin: 0 auto; padding: 64px 24px">
+<h2 style="margin: 0 0 24px; font-family: 'Unbounded', sans-serif; font-weight: 800; font-size: clamp(28px, 3.4vw, 46px); letter-spacing: -0.02em">Shop the shelves</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px">
+<a href="#cats" style="text-decoration: none; color: #10224A; background: #D6ECFF; border-radius: 18px; padding: 22px; min-height: 130px; display: flex; flex-direction: column; justify-content: space-between"><span style="font-family: 'Unbounded', sans-serif; font-weight: 800; font-size: 20px">Pokémon sealed</span><span>Boxes, ETBs, bundles, tins.</span></a>
+<a href="#singles" style="text-decoration: none; color: #10224A; background: #D6ECFF; border-radius: 18px; padding: 22px; min-height: 130px; display: flex; flex-direction: column; justify-content: space-between"><span style="font-family: 'Unbounded', sans-serif; font-weight: 800; font-size: 20px">Pokémon singles</span><span>Pick the exact card and condition.</span></a>
+<a href="#cats" style="text-decoration: none; color: #10224A; background: #D6ECFF; border-radius: 18px; padding: 22px; min-height: 130px; display: flex; flex-direction: column; justify-content: space-between"><span style="font-family: 'Unbounded', sans-serif; font-weight: 800; font-size: 20px">Japanese singles</span><span>Japanese-exclusive art and promos.</span></a>
+<a href="#cats" style="text-decoration: none; color: #10224A; background: #D6ECFF; border-radius: 18px; padding: 22px; min-height: 130px; display: flex; flex-direction: column; justify-content: space-between"><span style="font-family: 'Unbounded', sans-serif; font-weight: 800; font-size: 20px">Miscellaneous</span><span>Blind boxes, figures, other TCGs.</span></a>
+<a href="#cats" style="text-decoration: none; color: #10224A; background: #F2661B; border-radius: 18px; padding: 22px; min-height: 130px; display: flex; flex-direction: column; justify-content: space-between"><span style="font-family: 'Unbounded', sans-serif; font-weight: 800; font-size: 20px">Sell us your cards</span><span>Build your list, get an offer.</span></a>
+</div>
+</div>
+</section>
+
+<section id="singles" style="max-width: 1280px; margin: 0 auto; padding: 72px 24px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 12px; margin-bottom: 24px">
+<h2 style="margin: 0; font-family: 'Unbounded', sans-serif; font-weight: 800; font-size: clamp(28px, 3.4vw, 46px); letter-spacing: -0.02em">Fresh in the binder</h2>
+<a href="#singles" style="font-weight: 700; font-size: 17px">Browse all singles</a>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 22px">
+<sc-for list="{{cards}}" as="c" hint-placeholder-count="4">
+<article class="bd-item" style="background: #FFFFFF; border: 2px solid #10224A; border-radius: 20px; padding: 14px; display: flex; flex-direction: column; gap: 12px">
+<div style="position: relative">
+<div class="ph" role="img" aria-label="Card photo: {{c.name}}"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="14" rx="2"></rect><circle cx="12" cy="13" r="3.5"></circle><path d="M8 6l1.5-2h5L16 6"></path></svg><span>High-res card scan</span></div>
+<button type="button" aria-label="Add {{c.name}} to wishlist" aria-pressed="{{c.wishedStr}}" onClick="{{c.toggleWish}}" style="position: absolute; top: 10px; right: 10px; z-index: 1; width: 44px; height: 44px; border-radius: 50%; border: 2px solid #10224A; background: #FFFFFF; color: #B8430A; display: grid; place-items: center; cursor: pointer"><svg width="20" height="20" viewBox="0 0 24 24" fill="{{c.heartFill}}" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"></path></svg></button>
+</div>
+<div>
+<h3 style="margin: 0; font-size: 18px; font-weight: 700; line-height: 1.25">{{c.name}}</h3>
+<p style="margin: 2px 0 0; font-size: 14px; color: #3E4B6B">{{c.set}}</p>
+<p style="margin: 0; font-size: 14px; color: #3E4B6B">{{c.rarity}}</p>
+</div>
+<fieldset style="border: none; margin: 0; padding: 0">
+<legend style="font-size: 13px; font-weight: 700; margin-bottom: 6px">Condition: {{c.condLabel}}</legend>
+<div style="display: flex; gap: 6px">
+<sc-for list="{{c.conds}}" as="k" hint-placeholder-count="4">
+<button type="button" aria-label="{{k.full}}" aria-pressed="{{k.pressed}}" onClick="{{k.pick}}" style="{{k.style}}">{{k.short}}</button>
+</sc-for>
+</div>
+</fieldset>
+<div style="display: flex; justify-content: space-between; align-items: baseline">
+<span style="font-family: 'Unbounded', sans-serif; font-weight: 800; font-size: 24px">{{c.price}}</span>
+<span style="font-size: 14px; font-weight: 700; color: #1B6B3A">{{c.stock}}</span>
+</div>
+<button type="button" style="min-height: 48px; border: none; border-radius: 12px; background: #10224A; color: #FFFFFF; font: inherit; font-weight: 700; cursor: pointer">Add to cart</button>
+</article>
+</sc-for>
+</div>
+</section>
+
+<section style="max-width: 1280px; margin: 0 auto; padding: 0 24px 72px; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; align-content: start">
+<div><h3 style="margin: 0 0 6px; font-size: 18px">See the condition first</h3><p style="margin: 0; color: #24365F">NM, LP, MP or HP on every single.</p></div>
+<div><h3 style="margin: 0 0 6px; font-size: 18px">New stock daily</h3><p style="margin: 0; color: #24365F">Wishlist a card to hear when it’s in.</p></div>
+<div><h3 style="margin: 0 0 6px; font-size: 18px">Free shipping over $300</h3><p style="margin: 0; color: #24365F">Across Canada and worldwide.</p></div>
+<div><h3 style="margin: 0 0 6px; font-size: 18px">Sell or grade</h3><p style="margin: 0; color: #24365F">Get a buylist offer or ask about grading.</p></div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<p style="margin: 0; font-weight: 700">[Rating] stars from [number] Google reviews</p>
+<figure style="margin: 0; background: #FFFFFF; border: 2px solid #10224A; border-radius: 18px; padding: 22px"><blockquote style="margin: 0 0 10px; font-size: 17px">“[Real Google review from a collector or family shopper.]”</blockquote><figcaption style="font-weight: 700">[First name], [shopper type]</figcaption></figure>
+<figure style="margin: 0; background: #FFFFFF; border: 2px solid #10224A; border-radius: 18px; padding: 22px"><blockquote style="margin: 0 0 10px; font-size: 17px">“[Real Google review from a TCG player.]”</blockquote><figcaption style="font-weight: 700">[First name], [player]</figcaption></figure>
+</div>
+</section>
+
+<section id="contact" style="background: #F2661B">
+<div style="max-width: 1280px; margin: 0 auto; padding: 56px 24px; display: flex; flex-wrap: wrap; gap: 24px; align-items: center; justify-content: space-between">
+<div>
+<h2 style="margin: 0 0 8px; font-family: 'Unbounded', sans-serif; font-weight: 800; font-size: clamp(26px, 3vw, 40px)">Visit us in Burnaby</h2>
+<p style="margin: 0; font-size: 17px">[Street address], Burnaby, BC. [Opening hours]</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<a href="tel:+17788810076" style="display: inline-flex; align-items: center; min-height: 54px; padding: 0 24px; border-radius: 14px; background: #10224A; color: #FFFFFF; font-weight: 700; text-decoration: none">Call 778-881-0076</a>
+<a href="mailto:captured.cardsco@gmail.com" style="display: inline-flex; align-items: center; min-height: 54px; padding: 0 24px; border-radius: 14px; border: 2px solid #10224A; font-weight: 700; text-decoration: none">Email us</a>
+</div>
+</div>
+</section>
+
+<footer style="max-width: 1280px; margin: 0 auto; padding: 40px 24px; display: flex; flex-wrap: wrap; gap: 8px 20px; font-size: 14px">
+<a href="#policies">Shipping policy</a><a href="#policies">Refund policy</a><a href="#policies">Privacy policy</a><a href="#policies">Terms of service</a>
+<span style="flex-basis: 100%; color: #3E4B6B">© 2026 Captured! Cards, Burnaby, BC</span>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":4400}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { wish: {}, cond: {} };
+  }
+  renderVals() {
+    const INK = '#10224A';
+    const conds = [
+      { short: 'NM', full: 'Near Mint', m: 1 },
+      { short: 'LP', full: 'Lightly Played', m: 0.85 },
+      { short: 'MP', full: 'Moderately Played', m: 0.7 },
+      { short: 'HP', full: 'Heavily Played', m: 0.5 }
+    ];
+    const fmt = (n) => '$' + n.toLocaleString('en-CA', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    const names = ['Mega Charizard X ex', 'Umbreon ex', 'Pikachu ex', 'Mew ex', 'Gardevoir ex', 'Greninja ex', 'Lugia V', 'Rayquaza VMAX', 'Eevee'];
+    const pockets = names.map((n, i) => ({ name: n, delay: (0.08 * i + 0.1).toFixed(2) + 's' }));
+    const tickerBase = [
+      { name: 'Pokémon 30th Celebration Mini Tin', price: '$40.00' },
+      { name: 'Funism Palmsize Wonders Blind Box', price: '$32.00' },
+      { name: 'Delta Reign Booster Box', price: '$339.99' },
+      { name: 'Hololive Summer Hologram Booster Box', price: '$90.00' },
+      { name: 'Pokémon Peekrin Figures Blind Box', price: '$35.00' },
+      { name: 'Mini Portfolio 2026 Q4', price: '$10.00' }
+    ];
+    const days = Math.ceil((Date.UTC(2026, 10, 6, 8) - Date.now()) / 86400000);
+    const daysText = days > 1 ? days + ' days' : days === 1 ? '1 day' : 'stores now';
+    const base = [
+      { id: 'mcx', name: 'Mega Charizard X ex', set: '013/094, Phantasmal Flames', rarity: 'Double Rare, Holofoil', price: 8, stock: 'In stock' },
+      { id: 'umb', name: 'Umbreon ex', set: '161/131, Prismatic Evolutions', rarity: 'Special Illustration Rare', price: 1450, stock: '1 left' },
+      { id: 'pik', name: 'Pikachu ex', set: '238/191, Surging Sparks', rarity: 'Special Illustration Rare', price: 420, stock: '2 left' },
+      { id: 'mew', name: 'Mew ex', set: '151/165, Scarlet & Violet 151', rarity: 'Double Rare', price: 6.5, stock: 'In stock' }
+    ];
+    const cards = base.map((c) => {
+      const sel = this.state.cond[c.id] || 'NM';
+      const wished = !!this.state.wish[c.id];
+      const cur = conds.find((k) => k.short === sel);
+      return {
+        ...c,
+        price: fmt(c.price * cur.m),
+        condLabel: cur.full,
+        wishedStr: wished ? 'true' : 'false',
+        heartFill: wished ? 'currentColor' : 'none',
+        toggleWish: () => this.setState({ wish: { ...this.state.wish, [c.id]: !wished } }),
+        conds: conds.map((k) => {
+          const on = k.short === sel;
+          return {
+            ...k,
+            pressed: on ? 'true' : 'false',
+            pick: () => this.setState({ cond: { ...this.state.cond, [c.id]: k.short } }),
+            style: 'flex: 1; min-height: 44px; border-radius: 10px; border: 2px solid ' + INK + '; font: inherit; font-size: 14px; font-weight: 700; cursor: pointer; background: ' + (on ? INK : '#FFFFFF') + '; color: ' + (on ? '#FFFFFF' : INK)
+          };
+        })
+      };
+    });
+    const preorders = [
+      { name: 'Delta Reign Booster Box', price: '$339.99', status: 'Pre-order open', statusColor: '#1B6B3A' },
+      { name: 'Delta Reign Elite Trainer Box', price: '$99.99', status: 'Sold out', statusColor: '#B3261E' },
+      { name: 'Delta Reign Booster Bundle', price: '$57.99', status: 'Pre-order open', statusColor: '#1B6B3A' },
+      { name: 'Delta Reign Sleeved Booster Pack', price: '$8.99', status: 'Pre-order open', statusColor: '#1B6B3A' }
+    ];
+    return { pockets, ticker: tickerBase.concat(tickerBase), daysText, cards, preorders };
+  }
+}
+</script>
+</body>
+</html>

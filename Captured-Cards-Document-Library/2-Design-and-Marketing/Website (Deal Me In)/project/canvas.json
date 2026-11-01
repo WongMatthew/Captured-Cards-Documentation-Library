@@ -1,0 +1,602 @@
+{
+  "v": 3,
+  "attachments": {},
+  "boards": {
+    "CheckoutMobile.dc.html": {
+      "h": 1900,
+      "is_interactive": true,
+      "title": "Cart & checkout · 390 px",
+      "w": 390,
+      "x": 12000,
+      "y": 35400
+    },
+    "Collection.dc.html": {
+      "h": 2900,
+      "is_interactive": true,
+      "title": "Pokémon singles · 1440 px",
+      "w": 1440,
+      "x": 4000,
+      "y": 5600,
+      "expand": "fill"
+    },
+    "CollectionMobile.dc.html": {
+      "h": 6400,
+      "is_interactive": true,
+      "title": "Pokémon singles · 390 px",
+      "w": 390,
+      "x": 4000,
+      "y": 35400
+    },
+    "Contact.dc.html": {
+      "h": 2700,
+      "is_interactive": true,
+      "title": "Contact us · 1440 px",
+      "w": 1440,
+      "x": 10000,
+      "y": 5600,
+      "expand": "fill"
+    },
+    "ContactMobile.dc.html": {
+      "h": 3700,
+      "is_interactive": true,
+      "title": "Contact us · 390 px",
+      "w": 390,
+      "x": 10000,
+      "y": 35400
+    },
+    "Kinetic.dc.html": {
+      "h": 5500,
+      "is_interactive": true,
+      "title": "Home · 1440 px",
+      "w": 1440,
+      "x": 0,
+      "y": 5600,
+      "expand": "fill"
+    },
+    "KineticBinder.dc.html": {
+      "expand": "fill",
+      "h": 4400,
+      "is_interactive": true,
+      "title": "B2 — Binder Flip (Kinetic)",
+      "w": 1440,
+      "x": 3040,
+      "y": 43500
+    },
+    "KineticConveyor.dc.html": {
+      "expand": "fill",
+      "h": 4400,
+      "is_interactive": true,
+      "title": "B4 — Conveyor (Kinetic)",
+      "w": 1440,
+      "x": 6080,
+      "y": 43500
+    },
+    "KineticMobile.dc.html": {
+      "h": 6400,
+      "is_interactive": true,
+      "title": "Home · 390 px",
+      "w": 390,
+      "x": 0,
+      "y": 35400
+    },
+    "KineticTilt.dc.html": {
+      "expand": "fill",
+      "h": 4400,
+      "is_interactive": true,
+      "title": "B3 — Holo Tilt (Kinetic)",
+      "w": 1440,
+      "x": 4560,
+      "y": 43500
+    },
+    "Login.dc.html": {
+      "x": 7600,
+      "y": 43500,
+      "w": 1440,
+      "h": 1500,
+      "title": "Sign in — desktop",
+      "expand": "fill",
+      "is_interactive": true
+    },
+    "LoginMobile.dc.html": {
+      "x": 9120,
+      "y": 43500,
+      "w": 390,
+      "h": 1700,
+      "title": "Sign in — mobile",
+      "is_interactive": true
+    },
+    "Main.dc.html": {
+      "expand": "fill",
+      "h": 4700,
+      "is_interactive": true,
+      "title": "A — Soft Binder (Neumorphic)",
+      "w": 1440,
+      "x": 0,
+      "y": 43500
+    },
+    "Product.dc.html": {
+      "h": 2800,
+      "is_interactive": true,
+      "title": "Product page · 1440 px",
+      "w": 1440,
+      "x": 6000,
+      "y": 5600,
+      "expand": "fill"
+    },
+    "ProductMobile.dc.html": {
+      "h": 3700,
+      "is_interactive": true,
+      "title": "Product page · 390 px",
+      "w": 390,
+      "x": 6000,
+      "y": 35400
+    },
+    "RetroFuture.dc.html": {
+      "expand": "fill",
+      "h": 4700,
+      "is_interactive": true,
+      "title": "C — Card Scanner (Retro-futuristic)",
+      "w": 1440,
+      "x": 1520,
+      "y": 43500
+    },
+    "Sell.dc.html": {
+      "h": 4200,
+      "is_interactive": true,
+      "title": "Sell us your cards · 1440 px",
+      "w": 1440,
+      "x": 8000,
+      "y": 5600,
+      "expand": "fill"
+    },
+    "SellMobile.dc.html": {
+      "h": 7200,
+      "is_interactive": true,
+      "title": "Sell us your cards · 390 px",
+      "w": 390,
+      "x": 8000,
+      "y": 35400
+    },
+    "Shop.dc.html": {
+      "h": 3000,
+      "is_interactive": true,
+      "title": "Shop all · 1440 px",
+      "w": 1440,
+      "x": 2000,
+      "y": 5600,
+      "expand": "fill"
+    },
+    "ShopMobile.dc.html": {
+      "h": 3900,
+      "is_interactive": true,
+      "title": "Shop all · 390 px",
+      "w": 390,
+      "x": 2000,
+      "y": 35400
+    },
+    "Account.dc.html": {
+      "x": 9590,
+      "y": 43500,
+      "w": 1440,
+      "h": 1900,
+      "title": "Account (Shopify customer account + Storepass trade-ins) — desktop",
+      "expand": "fill",
+      "is_interactive": true
+    },
+    "AccountMobile.dc.html": {
+      "x": 11110,
+      "y": 43500,
+      "w": 390,
+      "h": 2300,
+      "title": "Account — mobile",
+      "is_interactive": true
+    },
+    "KineticWide.dc.html": {
+      "x": 0,
+      "y": 0,
+      "w": 1920,
+      "h": 4950,
+      "title": "Home · 1920 px",
+      "is_interactive": true
+    },
+    "KineticTabletL.dc.html": {
+      "x": 0,
+      "y": 11700,
+      "w": 1180,
+      "h": 6324,
+      "title": "Home · 1180 px",
+      "is_interactive": true
+    },
+    "KineticTabletP.dc.html": {
+      "x": 0,
+      "y": 18600,
+      "w": 820,
+      "h": 8800,
+      "title": "Home · 820 px",
+      "is_interactive": true
+    },
+    "KineticPhoneL.dc.html": {
+      "x": 0,
+      "y": 28000,
+      "w": 430,
+      "h": 6080,
+      "title": "Home · 430 px",
+      "is_interactive": true
+    },
+    "ShopWide.dc.html": {
+      "x": 2000,
+      "y": 0,
+      "w": 1920,
+      "h": 2700,
+      "title": "Shop all · 1920 px",
+      "is_interactive": true
+    },
+    "ShopTabletL.dc.html": {
+      "x": 2000,
+      "y": 11700,
+      "w": 1180,
+      "h": 3449,
+      "title": "Shop all · 1180 px",
+      "is_interactive": true
+    },
+    "ShopTabletP.dc.html": {
+      "x": 2000,
+      "y": 18600,
+      "w": 820,
+      "h": 4800,
+      "title": "Shop all · 820 px",
+      "is_interactive": true
+    },
+    "ShopPhoneL.dc.html": {
+      "x": 2000,
+      "y": 28000,
+      "w": 430,
+      "h": 3705,
+      "title": "Shop all · 430 px",
+      "is_interactive": true
+    },
+    "CollectionWide.dc.html": {
+      "x": 4000,
+      "y": 0,
+      "w": 1920,
+      "h": 2610,
+      "title": "Pokémon singles · 1920 px",
+      "is_interactive": true
+    },
+    "CollectionTabletL.dc.html": {
+      "x": 4000,
+      "y": 11700,
+      "w": 1180,
+      "h": 3334,
+      "title": "Pokémon singles · 1180 px",
+      "is_interactive": true
+    },
+    "CollectionTabletP.dc.html": {
+      "x": 4000,
+      "y": 18600,
+      "w": 820,
+      "h": 4640,
+      "title": "Pokémon singles · 820 px",
+      "is_interactive": true
+    },
+    "CollectionPhoneL.dc.html": {
+      "x": 4000,
+      "y": 28000,
+      "w": 430,
+      "h": 6080,
+      "title": "Pokémon singles · 430 px",
+      "is_interactive": true
+    },
+    "ProductWide.dc.html": {
+      "x": 6000,
+      "y": 0,
+      "w": 1920,
+      "h": 2520,
+      "title": "Product page · 1920 px",
+      "is_interactive": true
+    },
+    "ProductTabletL.dc.html": {
+      "x": 6000,
+      "y": 11700,
+      "w": 1180,
+      "h": 3219,
+      "title": "Product page · 1180 px",
+      "is_interactive": true
+    },
+    "ProductTabletP.dc.html": {
+      "x": 6000,
+      "y": 18600,
+      "w": 820,
+      "h": 4480,
+      "title": "Product page · 820 px",
+      "is_interactive": true
+    },
+    "ProductPhoneL.dc.html": {
+      "x": 6000,
+      "y": 28000,
+      "w": 430,
+      "h": 3515,
+      "title": "Product page · 430 px",
+      "is_interactive": true
+    },
+    "SellWide.dc.html": {
+      "x": 8000,
+      "y": 0,
+      "w": 1920,
+      "h": 3780,
+      "title": "Sell us your cards · 1920 px",
+      "is_interactive": true
+    },
+    "SellTabletL.dc.html": {
+      "x": 8000,
+      "y": 11700,
+      "w": 1180,
+      "h": 4830,
+      "title": "Sell us your cards · 1180 px",
+      "is_interactive": true
+    },
+    "SellTabletP.dc.html": {
+      "x": 8000,
+      "y": 18600,
+      "w": 820,
+      "h": 6720,
+      "title": "Sell us your cards · 820 px",
+      "is_interactive": true
+    },
+    "SellPhoneL.dc.html": {
+      "x": 8000,
+      "y": 28000,
+      "w": 430,
+      "h": 6840,
+      "title": "Sell us your cards · 430 px",
+      "is_interactive": true
+    },
+    "ContactWide.dc.html": {
+      "x": 10000,
+      "y": 0,
+      "w": 1920,
+      "h": 2430,
+      "title": "Contact us · 1920 px",
+      "is_interactive": true
+    },
+    "ContactTabletL.dc.html": {
+      "x": 10000,
+      "y": 11700,
+      "w": 1180,
+      "h": 3104,
+      "title": "Contact us · 1180 px",
+      "is_interactive": true
+    },
+    "ContactTabletP.dc.html": {
+      "x": 10000,
+      "y": 18600,
+      "w": 820,
+      "h": 4320,
+      "title": "Contact us · 820 px",
+      "is_interactive": true
+    },
+    "ContactPhoneL.dc.html": {
+      "x": 10000,
+      "y": 28000,
+      "w": 430,
+      "h": 3515,
+      "title": "Contact us · 430 px",
+      "is_interactive": true
+    },
+    "CheckoutWide.dc.html": {
+      "x": 12000,
+      "y": 0,
+      "w": 1920,
+      "h": 1350,
+      "title": "Cart & checkout · 1920 px",
+      "is_interactive": true
+    },
+    "Checkout.dc.html": {
+      "x": 12000,
+      "y": 5600,
+      "w": 1440,
+      "h": 1500,
+      "title": "Cart & checkout · 1440 px",
+      "is_interactive": true,
+      "expand": "fill"
+    },
+    "CheckoutTabletL.dc.html": {
+      "x": 12000,
+      "y": 11700,
+      "w": 1180,
+      "h": 1724,
+      "title": "Cart & checkout · 1180 px",
+      "is_interactive": true
+    },
+    "CheckoutTabletP.dc.html": {
+      "x": 12000,
+      "y": 18600,
+      "w": 820,
+      "h": 2400,
+      "title": "Cart & checkout · 820 px",
+      "is_interactive": true
+    },
+    "CheckoutPhoneL.dc.html": {
+      "x": 12000,
+      "y": 28000,
+      "w": 430,
+      "h": 1805,
+      "title": "Cart & checkout · 430 px",
+      "is_interactive": true
+    },
+    "EventsWide.dc.html": {
+      "x": 14000,
+      "y": 0,
+      "w": 1920,
+      "h": 2070,
+      "title": "Events & releases · 1920 px",
+      "is_interactive": true
+    },
+    "Events.dc.html": {
+      "x": 14000,
+      "y": 5600,
+      "w": 1440,
+      "h": 2300,
+      "title": "Events & releases · 1440 px",
+      "is_interactive": true,
+      "expand": "fill"
+    },
+    "EventsTabletL.dc.html": {
+      "x": 14000,
+      "y": 11700,
+      "w": 1180,
+      "h": 2990,
+      "title": "Events & releases · 1180 px",
+      "is_interactive": true
+    },
+    "EventsTabletP.dc.html": {
+      "x": 14000,
+      "y": 18600,
+      "w": 820,
+      "h": 4370,
+      "title": "Events & releases · 820 px",
+      "is_interactive": true
+    },
+    "EventsPhoneL.dc.html": {
+      "x": 14000,
+      "y": 28000,
+      "w": 430,
+      "h": 3135,
+      "title": "Events & releases · 430 px",
+      "is_interactive": true
+    },
+    "EventsMobile.dc.html": {
+      "x": 14000,
+      "y": 35400,
+      "w": 390,
+      "h": 3300,
+      "title": "Events & releases · 390 px",
+      "is_interactive": true
+    }
+  },
+  "createdOnFiles": {
+    "at": "2026-10-28T18:00:00Z",
+    "v": 1
+  },
+  "designSystems": [],
+  "launch": {
+    "view": "canvas"
+  },
+  "noteOrder": [
+    "heading",
+    "row2",
+    "old"
+  ],
+  "notes": {
+    "row_Wide": {
+      "x": 0,
+      "y": -280,
+      "text": "Wide screen · 1920 px",
+      "kind": "title1",
+      "maxW": 15920
+    },
+    "row_Desktop": {
+      "x": 0,
+      "y": 5320,
+      "text": "Desktop · 1440 px",
+      "kind": "title1",
+      "maxW": 15920
+    },
+    "row_TabletL": {
+      "x": 0,
+      "y": 11420,
+      "text": "iPad landscape · 1180 px",
+      "kind": "title1",
+      "maxW": 15920
+    },
+    "row_TabletP": {
+      "x": 0,
+      "y": 18320,
+      "text": "iPad portrait · 820 px",
+      "kind": "title1",
+      "maxW": 15920
+    },
+    "row_PhoneL": {
+      "x": 0,
+      "y": 27720,
+      "text": "Large phone · 430 px",
+      "kind": "title1",
+      "maxW": 15920
+    },
+    "row_Phone": {
+      "x": 0,
+      "y": 35120,
+      "text": "Phone · 390 px",
+      "kind": "title1",
+      "maxW": 15920
+    },
+    "old": {
+      "x": 0,
+      "y": 43220,
+      "text": "Not needed — select every board in this row and delete it",
+      "kind": "title1",
+      "maxW": 12000
+    }
+  },
+  "order": [
+    "Main.dc.html",
+    "RetroFuture.dc.html",
+    "KineticBinder.dc.html",
+    "KineticTilt.dc.html",
+    "KineticConveyor.dc.html",
+    "Login.dc.html",
+    "LoginMobile.dc.html",
+    "Account.dc.html",
+    "AccountMobile.dc.html",
+    "KineticWide.dc.html",
+    "Kinetic.dc.html",
+    "KineticTabletL.dc.html",
+    "KineticTabletP.dc.html",
+    "KineticPhoneL.dc.html",
+    "KineticMobile.dc.html",
+    "ShopWide.dc.html",
+    "Shop.dc.html",
+    "ShopTabletL.dc.html",
+    "ShopTabletP.dc.html",
+    "ShopPhoneL.dc.html",
+    "ShopMobile.dc.html",
+    "CollectionWide.dc.html",
+    "Collection.dc.html",
+    "CollectionTabletL.dc.html",
+    "CollectionTabletP.dc.html",
+    "CollectionPhoneL.dc.html",
+    "CollectionMobile.dc.html",
+    "ProductWide.dc.html",
+    "Product.dc.html",
+    "ProductTabletL.dc.html",
+    "ProductTabletP.dc.html",
+    "ProductPhoneL.dc.html",
+    "ProductMobile.dc.html",
+    "SellWide.dc.html",
+    "Sell.dc.html",
+    "SellTabletL.dc.html",
+    "SellTabletP.dc.html",
+    "SellPhoneL.dc.html",
+    "SellMobile.dc.html",
+    "ContactWide.dc.html",
+    "Contact.dc.html",
+    "ContactTabletL.dc.html",
+    "ContactTabletP.dc.html",
+    "ContactPhoneL.dc.html",
+    "ContactMobile.dc.html",
+    "CheckoutWide.dc.html",
+    "Checkout.dc.html",
+    "CheckoutTabletL.dc.html",
+    "CheckoutTabletP.dc.html",
+    "CheckoutPhoneL.dc.html",
+    "CheckoutMobile.dc.html",
+    "EventsWide.dc.html",
+    "Events.dc.html",
+    "EventsTabletL.dc.html",
+    "EventsTabletP.dc.html",
+    "EventsPhoneL.dc.html",
+    "EventsMobile.dc.html"
+  ],
+  "pages": [],
+  "title": "Captured! Cards — Website (Deal Me In)"
+}

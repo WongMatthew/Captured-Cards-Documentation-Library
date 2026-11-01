@@ -1,0 +1,180 @@
+{
+  "v": 3,
+  "attachments": {},
+  "boards": {
+    "Brand-Banner-XL.dc.html": {
+      "h": 1080,
+      "title": "C · Web Banner XL 1920×1080 — up to 20 cards (Tweaks: count)",
+      "w": 1920,
+      "x": 2320,
+      "y": 5400
+    },
+    "Brand-Banner.dc.html": {
+      "h": 600,
+      "title": "C · Captured! Cards brand — Web Banner 1920×600",
+      "w": 1920,
+      "x": 2320,
+      "y": 4680
+    },
+    "Brand-Post.dc.html": {
+      "h": 1350,
+      "title": "C · Captured! Cards brand — IG/FB Post 1080×1350",
+      "w": 1080,
+      "x": 0,
+      "y": 4680
+    },
+    "Brand-Story.dc.html": {
+      "h": 1920,
+      "title": "C · Captured! Cards brand — IG Story 1080×1920",
+      "w": 1080,
+      "x": 1160,
+      "y": 4680
+    },
+    "Main.dc.html": {
+      "h": 1920,
+      "title": "A · Typography First — IG Story 1080×1920",
+      "w": 1080,
+      "x": 0,
+      "y": 0
+    },
+    "Slide-Post-Duo.dc.html": {
+      "h": 1350,
+      "title": "C2 · Post slide — Duo (2 cards)",
+      "w": 1080,
+      "x": 1160,
+      "y": 7020
+    },
+    "Slide-Post-Grid.dc.html": {
+      "h": 1350,
+      "title": "C2 · Post slide — Grid (9 cards)",
+      "w": 1080,
+      "x": 2320,
+      "y": 7020
+    },
+    "Slide-Post-Spotlight.dc.html": {
+      "h": 1350,
+      "title": "C2 · Post slide — Spotlight (1 card)",
+      "w": 1080,
+      "x": 0,
+      "y": 7020
+    },
+    "Slide-Story-Grid.dc.html": {
+      "h": 1920,
+      "title": "C2 · Story slide — Grid (12 cards)",
+      "w": 1080,
+      "x": 5800,
+      "y": 7020
+    },
+    "Slide-Story-Spotlight.dc.html": {
+      "h": 1920,
+      "title": "C2 · Story slide — Spotlight (1 card)",
+      "w": 1080,
+      "x": 3480,
+      "y": 7020
+    },
+    "Slide-Story-Trio.dc.html": {
+      "h": 1920,
+      "title": "C2 · Story slide — Trio (3 cards)",
+      "w": 1080,
+      "x": 4640,
+      "y": 7020
+    },
+    "Tech-Banner.dc.html": {
+      "h": 600,
+      "title": "B · Tech Forward — Web Banner 1920×600",
+      "w": 1920,
+      "x": 2320,
+      "y": 2340
+    },
+    "Tech-Post.dc.html": {
+      "h": 1350,
+      "title": "B · Tech Forward — IG/FB Post 1080×1350",
+      "w": 1080,
+      "x": 1160,
+      "y": 2340
+    },
+    "Tech-Story.dc.html": {
+      "h": 1920,
+      "title": "B · Tech Forward — IG Story 1080×1920",
+      "w": 1080,
+      "x": 0,
+      "y": 2340
+    },
+    "Type-Banner.dc.html": {
+      "h": 600,
+      "title": "A · Typography First — Web Banner 1920×600",
+      "w": 1920,
+      "x": 2320,
+      "y": 0
+    },
+    "Type-Post.dc.html": {
+      "h": 1350,
+      "title": "A · Typography First — IG/FB Post 1080×1350",
+      "w": 1080,
+      "x": 1160,
+      "y": 0
+    }
+  },
+  "createdOnFiles": {
+    "at": "2026-10-28T18:00:00Z",
+    "v": 1
+  },
+  "designSystems": [],
+  "launch": {
+    "view": "canvas"
+  },
+  "notes": {
+    "titleA": {
+      "kind": "title1",
+      "maxW": 4240,
+      "text": "A — Typography First",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    },
+    "titleB": {
+      "kind": "title1",
+      "maxW": 4240,
+      "text": "B — Tech Forward",
+      "w": 240,
+      "x": 0,
+      "y": 2040
+    },
+    "titleC": {
+      "kind": "title1",
+      "maxW": 4240,
+      "text": "C — Captured! Cards brand (matches website)",
+      "w": 240,
+      "x": 0,
+      "y": 4380
+    },
+    "titleC2": {
+      "kind": "title1",
+      "maxW": 6880,
+      "text": "C2 — Card-focused carousel slides (after the cover)",
+      "w": 240,
+      "x": 0,
+      "y": 6720
+    }
+  },
+  "order": [
+    "Main.dc.html",
+    "Type-Post.dc.html",
+    "Type-Banner.dc.html",
+    "Tech-Story.dc.html",
+    "Tech-Post.dc.html",
+    "Tech-Banner.dc.html",
+    "Brand-Post.dc.html",
+    "Brand-Story.dc.html",
+    "Brand-Banner.dc.html",
+    "Brand-Banner-XL.dc.html",
+    "Slide-Post-Spotlight.dc.html",
+    "Slide-Post-Duo.dc.html",
+    "Slide-Post-Grid.dc.html",
+    "Slide-Story-Spotlight.dc.html",
+    "Slide-Story-Trio.dc.html",
+    "Slide-Story-Grid.dc.html"
+  ],
+  "pages": [],
+  "title": "Captured Cards — We're Buying Templates"
+}

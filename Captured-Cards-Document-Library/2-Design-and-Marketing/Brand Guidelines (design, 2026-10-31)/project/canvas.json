@@ -1,0 +1,167 @@
+{
+ "v": 3,
+ "createdOnFiles": {
+  "v": 1,
+  "at": "2026-10-29T09:30:00Z"
+ },
+ "title": "Captured! Cards \u2014 Brand Guidelines",
+ "launch": {
+  "view": "canvas"
+ },
+ "pages": [],
+ "boards": {
+  "Main.dc.html": {
+   "x": 0,
+   "y": 0,
+   "w": 1440,
+   "h": 1000,
+   "title": "00 \u00b7 Cover"
+  },
+  "Brand.dc.html": {
+   "x": 1520,
+   "y": 0,
+   "w": 1440,
+   "h": 1240,
+   "title": "01 \u00b7 Who we are"
+  },
+  "Voice.dc.html": {
+   "x": 3040,
+   "y": 0,
+   "w": 1440,
+   "h": 1380,
+   "title": "02 \u00b7 Voice and tone"
+  },
+  "Logo.dc.html": {
+   "x": 0,
+   "y": 1760,
+   "w": 1440,
+   "h": 1500,
+   "title": "03 \u00b7 Logo"
+  },
+  "LogoRules.dc.html": {
+   "x": 1520,
+   "y": 1760,
+   "w": 1440,
+   "h": 1480,
+   "title": "04 \u00b7 Logo rules"
+  },
+  "Colour.dc.html": {
+   "x": 3040,
+   "y": 1760,
+   "w": 1440,
+   "h": 1340,
+   "title": "05 \u00b7 Colour"
+  },
+  "Type.dc.html": {
+   "x": 4560,
+   "y": 1760,
+   "w": 1440,
+   "h": 1500,
+   "title": "06 \u00b7 Typography"
+  },
+  "Graphics.dc.html": {
+   "x": 0,
+   "y": 3640,
+   "w": 1440,
+   "h": 1340,
+   "title": "07 \u00b7 Graphic language"
+  },
+  "Components.dc.html": {
+   "x": 1520,
+   "y": 3640,
+   "w": 1440,
+   "h": 1320,
+   "title": "08 \u00b7 Components"
+  },
+  "Imagery.dc.html": {
+   "x": 3040,
+   "y": 3640,
+   "w": 1440,
+   "h": 1040,
+   "title": "09 \u00b7 Imagery and motion"
+  },
+  "Layout.dc.html": {
+   "x": 4560,
+   "y": 3640,
+   "w": 1440,
+   "h": 1000,
+   "title": "10 \u00b7 Layout and formats"
+  },
+  "Templates.dc.html": {
+   "x": 0,
+   "y": 5360,
+   "w": 1440,
+   "h": 1120,
+   "title": "11 \u00b7 Templates"
+  },
+  "Extensions.dc.html": {
+   "x": 1520,
+   "y": 5360,
+   "w": 1440,
+   "h": 1180,
+   "title": "12 \u00b7 Extending the brand"
+  },
+  "Checklist.dc.html": {
+   "x": 3040,
+   "y": 5360,
+   "w": 1440,
+   "h": 1240,
+   "title": "13 \u00b7 Accessibility, IP and checklist"
+  },
+  "Favicon.dc.html": {
+   "x": 6080,
+   "y": 1760,
+   "w": 1440,
+   "h": 1240,
+   "title": "14 \u00b7 Favicon and app icon"
+  }
+ },
+ "order": [
+  "Main.dc.html",
+  "Brand.dc.html",
+  "Voice.dc.html",
+  "Logo.dc.html",
+  "LogoRules.dc.html",
+  "Colour.dc.html",
+  "Type.dc.html",
+  "Favicon.dc.html",
+  "Graphics.dc.html",
+  "Components.dc.html",
+  "Imagery.dc.html",
+  "Layout.dc.html",
+  "Templates.dc.html",
+  "Extensions.dc.html",
+  "Checklist.dc.html"
+ ],
+ "notes": {
+  "sec0": {
+   "x": 0,
+   "y": -260,
+   "text": "Foundations",
+   "kind": "title1",
+   "maxW": 6000
+  },
+  "sec1": {
+   "x": 0,
+   "y": 1500,
+   "text": "Identity",
+   "kind": "title1",
+   "maxW": 6000
+  },
+  "sec2": {
+   "x": 0,
+   "y": 3380,
+   "text": "System",
+   "kind": "title1",
+   "maxW": 6000
+  },
+  "sec3": {
+   "x": 0,
+   "y": 5100,
+   "text": "Applications",
+   "kind": "title1",
+   "maxW": 6000
+  }
+ },
+ "designSystems": []
+}

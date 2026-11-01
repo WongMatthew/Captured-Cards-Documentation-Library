@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Components</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&amp;family=Instrument+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@900&amp;text=%E8%B2%B7%E5%8F%96&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#17183B}a:hover{color:#2B44D6}
+</style>
+</helmet>
+<div style="width: 1440px; height: 1320px; box-sizing: border-box; padding: 64px 72px; background: #F4F3EE; color: #17183B; font-family: 'Instrument Sans', system-ui, sans-serif; font-size: 18px; line-height: 1.5; display: flex; flex-direction: column; gap: 40px; overflow: hidden">
+<header style="display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; border-bottom: 4px solid #17183B; padding-bottom: 20px">
+<div style="display: flex; align-items: baseline; gap: 24px">
+<span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; letter-spacing: -0.03em; font-size: 96px; line-height: 0.85; color: #2B44D6">08</span>
+<h1 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; letter-spacing: -0.03em; font-size: 64px; line-height: 0.95">Components</h1>
+</div>
+<span style="font-weight: 700; font-size: 15px; letter-spacing: 0.08em; text-transform: uppercase">System</span>
+</header>
+<div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px">
+<div style="display: flex; flex-direction: column; gap: 28px">
+<div style="background: #FFD447; border: 4px solid #17183B; border-radius: 20px; box-shadow: 6px 6px 0 #17183B; padding: 32px; display: flex; flex-direction: column; gap: 22px">
+<p style="margin: 0 0 12px; font-weight: 700; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: #17183B">Buttons · on yellow / white</p>
+<div style="display: flex; gap: 18px; flex-wrap: wrap"><a href="#" style="display: inline-flex; align-items: center; min-height: 56px; padding: 0 26px; border-radius: 14px; background: #2B44D6; color: #FFFFFF; border: 4px solid #2B44D6; font-weight: 700; font-size: 18px; text-decoration: none; white-space: nowrap">Search cards</a><a href="#" style="display: inline-flex; align-items: center; min-height: 56px; padding: 0 26px; border-radius: 14px; background: #17183B; color: #FFD447; border: 4px solid #17183B; font-weight: 700; font-size: 18px; text-decoration: none; white-space: nowrap">Add to cart</a><a href="#" style="display: inline-flex; align-items: center; min-height: 56px; padding: 0 26px; border-radius: 14px; background: #FFFFFF; color: #17183B; border: 4px solid #17183B; font-weight: 700; font-size: 18px; text-decoration: none; white-space: nowrap">Wishlist</a></div>
+<p style="margin: 0 0 12px; font-weight: 700; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: #17183B">Buttons · on blue</p>
+<div style="background: #2B44D6; border: 4px solid #17183B; border-radius: 16px; padding: 22px; display: flex; gap: 18px; flex-wrap: wrap"><a href="#" style="display: inline-flex; align-items: center; min-height: 56px; padding: 0 26px; border-radius: 14px; background: #FFD447; color: #17183B; border: 4px solid #17183B; box-shadow: 6px 6px 0 #17183B; font-weight: 700; font-size: 18px; text-decoration: none; white-space: nowrap">Sell us your cards →</a><a href="#" style="display: inline-flex; align-items: center; min-height: 56px; padding: 0 26px; border-radius: 14px; background: transparent; color: #FFFFFF; border: 4px solid #FFFFFF; font-weight: 700; font-size: 18px; text-decoration: none; white-space: nowrap">Call 778-881-0076</a></div>
+<p style="margin: 0; font-size: 15px">Min height 48 px (56 for hero CTAs). Only the single most important action per view gets the hard shadow.</p>
+</div>
+<div style="background: #FFFFFF; border: 4px solid #17183B; border-radius: 20px; box-shadow: 6px 6px 0 #17183B; padding: 32px">
+<p style="margin: 0 0 12px; font-weight: 700; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: #3A3B5C">Search · the hero component</p>
+<div style="background: #FFFFFF; border: 4px solid #17183B; border-radius: 20px; padding: 8px; display: flex; gap: 8px; box-shadow: 8px 8px 0 #17183B">
+<label for="g-search" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Search the catalog</label>
+<input id="g-search" type="search" placeholder="Search a card, set or product" style="flex: 1; min-width: 0; border: none; font: inherit; font-size: 18px; padding: 14px; color: #17183B; background: transparent">
+<button type="button" style="min-height: 56px; padding: 0 24px; border: none; border-radius: 13px; background: #2B44D6; color: #FFFFFF; font: inherit; font-weight: 700; font-size: 18px">Search cards</button>
+</div>
+<p style="margin: 18px 0 0; font-size: 15px; color: #3A3B5C">Always the first thing on the home page. Popular searches sit under it as plain links.</p>
+</div>
+<div style="background: #FFFFFF; border: 4px solid #17183B; border-radius: 20px; box-shadow: 6px 6px 0 #17183B; padding: 32px; display: flex; gap: 40px; flex-wrap: wrap">
+<div><p style="margin: 0 0 12px; font-weight: 700; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: #3A3B5C">Status</p><div style="display: flex; flex-direction: column; gap: 6px; font-weight: 700"><span style="color: #1B6B3A">In stock</span><span style="color: #1B6B3A">Pre-order open</span><span style="color: #17183B">1 left</span><span style="color: #B3261E">Sold out</span></div></div>
+<div><p style="margin: 0 0 12px; font-weight: 700; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: #3A3B5C">Category tile</p><div style="width: 220px; height: 150px; background: #17183B; color: #FFFFFF; border: 4px solid #17183B; border-radius: 20px; box-shadow: 6px 6px 0 #2B44D6; padding: 20px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between"><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; letter-spacing: -0.03em; font-size: 26px; color: #FFD447; line-height: 1">Pokémon singles</span><span style="font-size: 14px">Pick the exact card and condition.</span></div></div>
+<div><p style="margin: 0 0 12px; font-weight: 700; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: #3A3B5C">Ticker</p><div style="width: 300px; background: #17183B; color: #FFD447; padding: 14px 18px; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 600; letter-spacing: -0.02em; font-size: 20px; white-space: nowrap; overflow: hidden; border-radius: 10px"><span style="color: #FFFFFF">Mini Tin</span> $40.00 &nbsp; <span style="color: #FFFFFF">Delta Reign BB</span> $339.99</div></div>
+</div>
+</div>
+<div style="display: flex; gap: 28px; align-items: flex-start">
+<article style="width: 300px; flex-shrink: 0; background: #FFFFFF; border: 4px solid #17183B; border-radius: 20px; box-shadow: 6px 6px 0 #17183B; padding: 16px; display: flex; flex-direction: column; gap: 12px">
+<div role="img" aria-label="Card photo placeholder" style="aspect-ratio: 63 / 88; border: 3px solid #17183B; border-radius: 12px; background: linear-gradient(160deg, #1F1B3A, #3D3470); display: flex; align-items: flex-end; padding: 12px; box-sizing: border-box; color: #FFFFFF; font-size: 12px; font-weight: 600">Card scan</div>
+<div><h3 style="margin: 0; font-size: 19px">Umbreon ex</h3><p style="margin: 0; font-size: 14px; color: #3A3B5C">161/131, Prismatic Evolutions</p><p style="margin: 0; font-size: 14px; color: #3A3B5C">Special Illustration Rare</p></div>
+<div><p style="margin: 0 0 6px; font-size: 13px; font-weight: 700">Condition: Near Mint</p><div style="display: flex; gap: 6px"><span style="flex: 1; text-align: center; padding: 9px 0; border: 3px solid #17183B; border-radius: 10px; font-weight: 700; font-size: 14px; background: #2B44D6; color: #FFFFFF">NM</span><span style="flex: 1; text-align: center; padding: 9px 0; border: 3px solid #17183B; border-radius: 10px; font-weight: 700; font-size: 14px; background: #FFFFFF; color: #17183B">LP</span><span style="flex: 1; text-align: center; padding: 9px 0; border: 3px solid #17183B; border-radius: 10px; font-weight: 700; font-size: 14px; background: #FFFFFF; color: #17183B">MP</span><span style="flex: 1; text-align: center; padding: 9px 0; border: 3px solid #17183B; border-radius: 10px; font-weight: 700; font-size: 14px; background: #FFFFFF; color: #17183B">HP</span></div></div>
+<div style="display: flex; justify-content: space-between; align-items: baseline"><span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; letter-spacing: -0.03em; font-size: 28px">$1,450.00</span><span style="font-size: 14px; font-weight: 700; color: #1B6B3A">1 left</span></div>
+<button type="button" style="min-height: 48px; border: none; border-radius: 12px; background: #17183B; color: #FFD447; font: inherit; font-weight: 700">Add to cart</button>
+</article>
+<div style="display: flex; flex-direction: column; gap: 14px; font-size: 17px">
+<p style="margin: 0 0 12px; font-weight: 700; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: #3A3B5C">Product tile anatomy</p>
+<div style="display: flex; gap: 12px"><span style="flex-shrink: 0; width: 34px; height: 34px; border-radius: 50%; background: #2B44D6; color: #FFFFFF; display: grid; place-items: center; font-weight: 800">1</span><span><b>Real scan</b><br><span style="color: #3A3B5C; font-size: 15px">63:88, 3 px outline, 12 px radius</span></span></div><div style="display: flex; gap: 12px"><span style="flex-shrink: 0; width: 34px; height: 34px; border-radius: 50%; background: #2B44D6; color: #FFFFFF; display: grid; place-items: center; font-weight: 800">2</span><span><b>Name + metadata</b><br><span style="color: #3A3B5C; font-size: 15px">Instrument 700, then number, set, rarity in Ink Soft</span></span></div><div style="display: flex; gap: 12px"><span style="flex-shrink: 0; width: 34px; height: 34px; border-radius: 50%; background: #2B44D6; color: #FFFFFF; display: grid; place-items: center; font-weight: 800">3</span><span><b>Condition chips</b><br><span style="color: #3A3B5C; font-size: 15px">NM LP MP HP; selected chip is Blue; price updates</span></span></div><div style="display: flex; gap: 12px"><span style="flex-shrink: 0; width: 34px; height: 34px; border-radius: 50%; background: #2B44D6; color: #FFFFFF; display: grid; place-items: center; font-weight: 800">4</span><span><b>Price + stock</b><br><span style="color: #3A3B5C; font-size: 15px">Bricolage 800; green stock, red sold out</span></span></div><div style="display: flex; gap: 12px"><span style="flex-shrink: 0; width: 34px; height: 34px; border-radius: 50%; background: #2B44D6; color: #FFFFFF; display: grid; place-items: center; font-weight: 800">5</span><span><b>One action</b><br><span style="color: #3A3B5C; font-size: 15px">Ink button, yellow label, full width</span></span></div>
+</div>
+</div>
+</div>
+<footer style="margin-top: auto; display: flex; justify-content: space-between; font-size: 14px; font-weight: 600; opacity: 0.8"><span>Captured! Cards · Brand Guidelines v1.0</span><span>08 / 13</span></footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1320}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>
